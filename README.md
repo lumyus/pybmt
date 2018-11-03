@@ -33,20 +33,13 @@ pip install .
 To run a quick demo:
 
 ```
-python pybmt/example/run_example.py
+cd example
+python run_example.py
 ```
 
-## Running the tests
+## Example Experiment
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+To implement your own closed loop experiment logic take a look and `run_example.py` and `pybmt/callback/threshold_callback.py`. The basic idea is that you need to create a new class that inherits from `pybmt.callback.P 
 
 ## Built With
 
