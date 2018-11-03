@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pybmt',
-    version='0.1',
+    version='0.1.0',
     python_requires='>3.6',
     description='Python Ball Motion Tracking (pymbt): A python interface for closed loop fictrac (https://github.com/rjdmoore/fictrac)',
     author='David Turner',
