@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-**pybmt** requires a working version of **FicTrac** to be present on the system. Currently, the only supported version of **FicTrac** is a [forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page]() for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) in the near future. 
+**pybmt** requires a working version of **FicTrac** to be present on the system. Currently, the only supported version of **FicTrac** is a [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page]() for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) in the near future. 
 
 ```
 Give examples
