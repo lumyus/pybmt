@@ -1,4 +1,4 @@
-from pybmt.callback.callback import PyBMTCallback
+from pybmt.callback.base import PyBMTCallback
 from collections import deque
 
 from pybmt.fictrac.state import FicTracState
