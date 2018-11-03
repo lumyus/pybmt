@@ -12,39 +12,35 @@ These instructions will get you a copy of the project up and running on your loc
 
 Below are instructions for installing our version of **FicTrac** on your system.
 
-## Windows
+### Windows
 
 Download our custom pre-built version of **FicTrac** [here](https://github.com/murthylab/fictrac/releases/download/v2.1.0-alpha/fictrac_v2.1.0_control_features_x64_windows.zip). Extract the archive and add the resultant folder to your system path. 
 
-## Linux
+### Linux
 
 Coming soon ...
 
-### Installing 
+### Installing **pybmt**
 
-To install the **pybmt**
+To install **pybmt**:
 
 ```
-git clone 
+git clone https://github.com/murthylab/pybmt.git
+cd pybmt
 pip install .
 ```
 
+To run a quick demo:
 
-End with an example of getting some data out of the system or using it for a little demo
+```
+python pybmt/example/run_example.py
+```
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
 
 Explain what these tests test and why
 
