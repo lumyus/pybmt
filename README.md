@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-**pybmt** requires a working version of **FicTrac** to be present on the system. Currently, the only supported version of **FicTrac** is a [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page](https://github.com/murthylab/fictrac/releases/tag/v2.1.0-alpha) for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) in the near future. 
+**pybmt** requires Python 3.6+ and a working version of **FicTrac** to be present on the system. __IMPORTANT!__ Currently, the only supported version of **FicTrac** is a [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page](https://github.com/murthylab/fictrac/releases/tag/v2.1.0-alpha) for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) in the near future. 
 
 ```
 Give examples
@@ -19,6 +19,10 @@ Give examples
 A step by step series of examples that tell you how to get a development env running
 
 Say what the step will be
+
+## Windows
+
+Download our custom pre-built version of **FicTrac** [here](https://github.com/murthylab/fictrac/releases/download/v2.1.0-alpha/fictrac_v2.1.0_control_features_x64_windows.zip). Extract the archive and add the resultant folder to your system path. 
 
 ```
 Give the example
