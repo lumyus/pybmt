@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='pybmt',
@@ -10,7 +10,7 @@ setup(
     license='Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License',
     keywords='fictive, tracking, animal tracking, webcamera, sphere, closed loop',
     url="https://github.com/murthylab/pybmt",
-    packages=['pybmt'],
+    packages=find_packages(),
     install_requires=[
         'pyzmq',
         'numpy',
