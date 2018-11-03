@@ -1,0 +1,3641 @@
+Initialised logging to fictrac-20181102_224722.log
+///
+/// FicTrac:	A webcam-based method for generating fictive paths.
+///
+/// Usage:	fictrac CONFIG_FN [-v LOG_VERBOSITY]
+///
+/// 	CONFIG_FN	Path to input config file (defaults to config.txt).
+/// 	LOG_VERBOSITY	[Optional] One of DBG, INF, WRN, ERR.
+///
+/// Version:  2.00 (build date: Nov  2 2018)
+///
+
+Set process priority to HIGH!
+Looking for config file: test_config_local.txt ..
+Config file parsed (25 key/value pairs).
+Using source type: video file.
+Warning! Key (output_fn) not found.
+Found sphere ROI centred at [0.002001 0.006799 0.999975], with radius 0.022890 rad.
+Input sphere mask automatically generated using 2 ignore ROIs!
+Warning! Key (sphere_map_fn) not found.
+Warning! No optimisation error threshold specified in config file (opt_max_err) - poor matches will not be dropped!
+Set frame grabbing thread priority to HIGH!
+Publishing data on localhost:5556
+Warning! Using default value for save_raw (0).
+Set processing thread priority to HIGH!
+
+Frame 0
+optimum sphere rotation:	0.000 0.000 0.000  (err=0.000e+00/its=0)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 0.1 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 0.0 [0.0 / 0.0] fps
+
+Frame 1
+optimum sphere rotation:	0.000 0.003 0.002  (err=5.710e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 37.8 [30.0 / 151.0] fps
+
+Frame 2
+optimum sphere rotation:	0.003 0.026 -0.002  (err=4.907e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 68.3 [30.0 / 159.8] fps
+
+Frame 3
+Writing to socket!
+optimum sphere rotation:	0.001 0.023 -0.002  (err=5.022e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 85.4 [30.0 / 136.6] fps
+
+Frame 4
+optimum sphere rotation:	0.002 0.024 0.008  (err=4.912e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.0 / 8.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 94.0 [30.0 / 119.7] fps
+
+Writing to socket!
+Frame 5
+optimum sphere rotation:	0.001 0.009 -0.006  (err=5.106e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.4 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 123.1 [30.0 / 210.7] fps
+
+Frame 6
+Writing to socket!
+optimum sphere rotation:	0.000 0.021 0.004  (err=4.938e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.6 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 123.3 [30.0 / 123.8] fps
+Writing to socket!
+
+Frame 7
+optimum sphere rotation:	-0.001 0.023 -0.000  (err=5.144e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 141.2 [30.0 / 194.9] fps
+
+Frame 8
+optimum sphere rotation:	0.000 0.022 -0.001  (err=4.762e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 153.9 [30.0 / 192.0] fps
+
+Frame 9
+Writing to socket!
+optimum sphere rotation:	0.001 0.018 0.004  (err=5.055e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.4 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 168.8 [30.0 / 213.4] fps
+
+Frame 10
+Writing to socket!
+optimum sphere rotation:	-0.000 0.019 0.000  (err=4.915e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 176.7 [30.0 / 200.6] fps
+
+Writing to socket!
+Frame 11
+optimum sphere rotation:	0.000 0.027 0.001  (err=4.911e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.0 [30.0 / 189.6] fps
+Writing to socket!
+
+Frame 12
+optimum sphere rotation:	0.000 0.026 0.001  (err=4.951e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 185.1 [30.0 / 200.6] fps
+Writing to socket!
+
+Frame 13
+optimum sphere rotation:	0.000 0.006 0.000  (err=4.906e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 185.5 [30.0 / 186.6] fps
+Writing to socket!
+
+Frame 14
+optimum sphere rotation:	-0.001 0.017 -0.000  (err=4.601e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 179.8 [30.0 / 162.6] fps
+
+Frame 15
+optimum sphere rotation:	-0.000 0.017 -0.000  (err=4.802e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.1 [30.0 / 165.1] fps
+
+Frame 16
+optimum sphere rotation:	0.001 0.017 -0.000  (err=4.718e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.8 [30.0 / 182.9] fps
+
+Frame 17
+optimum sphere rotation:	-0.000 0.026 0.000  (err=4.635e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.5 [30.0 / 188.7] fps
+Writing to socket!
+
+Frame 18
+optimum sphere rotation:	0.000 0.025 0.003  (err=4.728e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 155.1] fps
+Writing to socket!
+
+Frame 19
+optimum sphere rotation:	-0.002 0.008 -0.001  (err=4.591e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.7 [30.0 / 176.1] fps
+Writing to socket!
+
+Frame 20
+optimum sphere rotation:	0.001 0.026 -0.001  (err=4.671e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.5 [30.0 / 161.8] fps
+
+Frame 21
+optimum sphere rotation:	0.001 0.021 0.002  (err=4.531e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.7 [30.0 / 188.5] fps
+
+Frame 22
+optimum sphere rotation:	-0.001 0.009 0.002  (err=4.668e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 169.7] fps
+
+Frame 23
+optimum sphere rotation:	0.000 0.026 -0.000  (err=4.641e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 178.9 [30.0 / 193.1] fps
+
+Frame 24
+optimum sphere rotation:	0.000 0.024 0.000  (err=4.596e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.8 [30.0 / 154.4] fps
+
+Frame 25
+optimum sphere rotation:	-0.002 0.025 -0.000  (err=4.758e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 167.9 [30.0 / 153.1] fps
+
+Frame 26
+optimum sphere rotation:	-0.001 0.008 0.001  (err=4.563e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.3 [30.0 / 173.7] fps
+Writing to socket!
+
+Frame 27
+optimum sphere rotation:	0.005 0.028 0.002  (err=4.760e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 162.7 [30.0 / 142.8] fps
+
+Frame 28
+optimum sphere rotation:	-0.004 0.013 -0.003  (err=4.638e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 158.4 [30.0 / 145.5] fps
+
+Frame 29
+optimum sphere rotation:	0.001 0.021 -0.001  (err=4.546e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.6 [30.0 / 143.3] fps
+Writing to socket!
+
+Frame 30
+optimum sphere rotation:	-0.001 0.035 0.004  (err=4.646e+03/its=29)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.1 [30.0 / 132.4] fps
+Writing to socket!
+
+Frame 31
+optimum sphere rotation:	0.002 0.015 -0.002  (err=4.605e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 155.8 [30.0 / 175.8] fps
+
+Frame 32
+optimum sphere rotation:	-0.000 0.006 0.001  (err=4.591e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 158.1 [30.0 / 165.3] fps
+
+Frame 33
+optimum sphere rotation:	0.000 0.031 0.004  (err=4.796e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.9 [30.0 / 145.3] fps
+
+Frame 34
+optimum sphere rotation:	-0.002 0.020 0.002  (err=4.666e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.2 / 7.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.4 [30.0 / 128.7] fps
+
+Frame 35
+optimum sphere rotation:	0.003 0.012 -0.001  (err=4.661e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 144.8 [30.0 / 134.0] fps
+
+Frame 36
+optimum sphere rotation:	-0.000 0.018 -0.003  (err=4.817e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.2 [30.0 / 178.5] fps
+
+Frame 37
+Writing to socket!
+optimum sphere rotation:	-0.001 0.025 0.003  (err=4.786e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 155.8 [30.0 / 163.6] fps
+
+Frame 38
+optimum sphere rotation:	0.000 0.024 -0.001  (err=4.782e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 150.7 [30.0 / 135.2] fps
+
+Frame 39
+optimum sphere rotation:	0.001 0.028 0.001  (err=4.801e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.9 [30.0 / 143.6] fps
+
+Frame 40
+optimum sphere rotation:	0.002 0.015 0.001  (err=4.968e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.9 [30.0 / 164.9] fps
+
+Frame 41
+optimum sphere rotation:	-0.003 0.023 0.003  (err=5.038e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 150.9 [30.0 / 144.9] fps
+
+Frame 42
+optimum sphere rotation:	0.002 0.028 -0.002  (err=4.797e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.7 [30.0 / 174.3] fps
+
+Frame 43
+optimum sphere rotation:	-0.004 0.020 -0.004  (err=4.917e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 159.4 [30.0 / 167.4] fps
+
+Frame 44
+optimum sphere rotation:	0.001 0.006 0.004  (err=4.894e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 164.9 [30.0 / 181.5] fps
+
+Frame 45
+optimum sphere rotation:	-0.000 0.027 -0.001  (err=4.906e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 167.0 [30.0 / 173.3] fps
+Writing to socket!
+
+Frame 46
+optimum sphere rotation:	-0.000 0.019 0.002  (err=4.836e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 163.6 [30.0 / 153.4] fps
+
+Frame 47
+optimum sphere rotation:	0.001 0.021 0.004  (err=4.822e+03/its=18)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.8 [30.0 / 180.3] fps
+Writing to socket!
+
+Frame 48
+optimum sphere rotation:	0.000 0.028 -0.001  (err=4.572e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.0 [30.0 / 176.8] fps
+
+Frame 49
+optimum sphere rotation:	-0.000 0.017 -0.002  (err=4.911e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.6 [30.0 / 188.3] fps
+
+Frame 50
+optimum sphere rotation:	0.001 0.028 0.001  (err=4.921e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.6 [30.0 / 158.6] fps
+
+Writing to socket!
+Frame 51
+optimum sphere rotation:	0.001 0.016 0.001  (err=4.590e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.3 [30.0 / 165.3] fps
+
+Frame 52
+optimum sphere rotation:	0.000 0.022 -0.000  (err=4.789e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.4 [30.0 / 193.8] fps
+
+Writing to socket!
+Frame 53
+optimum sphere rotation:	-0.001 0.017 0.002  (err=4.470e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 172.9 [30.0 / 165.2] fps
+
+Frame 54
+optimum sphere rotation:	-0.000 0.025 0.002  (err=4.643e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.8 [30.0 / 160.4] fps
+
+Frame 55
+optimum sphere rotation:	-0.000 0.019 0.001  (err=4.586e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.6 [30.0 / 189.1] fps
+
+Writing to socket!
+Frame 56
+optimum sphere rotation:	-0.000 0.019 -0.001  (err=4.850e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.6 [30.0 / 170.8] fps
+
+Frame 57
+optimum sphere rotation:	0.000 0.027 -0.000  (err=4.645e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.9 [30.0 / 146.6] fps
+
+Frame 58
+optimum sphere rotation:	0.000 0.016 0.001  (err=4.652e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 164.3 [30.0 / 156.5] fps
+
+Frame 59
+optimum sphere rotation:	0.000 0.017 0.000  (err=4.630e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.5 [30.0 / 165.1] fps
+Writing to socket!
+
+Frame 60
+optimum sphere rotation:	-0.000 0.023 0.000  (err=4.597e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.2 [30.0 / 163.4] fps
+
+Frame 61
+optimum sphere rotation:	-0.000 0.029 0.000  (err=4.664e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.7 [30.0 / 158.1] fps
+Writing to socket!
+
+Frame 62
+optimum sphere rotation:	0.001 0.017 0.000  (err=4.560e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.8 [30.0 / 147.3] fps
+Writing to socket!
+
+Frame 63
+optimum sphere rotation:	0.000 0.016 -0.000  (err=4.620e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.7 [30.0 / 150.4] fps
+
+Frame 64
+optimum sphere rotation:	-0.000 0.015 -0.000  (err=4.877e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.9 [30.0 / 161.4] fps
+Writing to socket!
+
+Frame 65
+optimum sphere rotation:	-0.001 0.028 0.000  (err=4.977e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.1 [30.0 / 170.7] fps
+
+Frame 66
+optimum sphere rotation:	0.001 0.036 0.000  (err=4.843e+03/its=27)
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.0 [30.0 / 128.7] fps
+
+Frame 67
+Writing to socket!
+optimum sphere rotation:	-0.001 0.028 0.002  (err=4.665e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.2 [30.0 / 125.6] fps
+Writing to socket!
+
+Frame 68
+optimum sphere rotation:	-0.001 0.025 0.000  (err=4.929e+03/its=17)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 150.7 [30.0 / 164.1] fps
+
+Frame 69
+optimum sphere rotation:	0.000 0.021 -0.000  (err=4.846e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.1 [30.0 / 160.6] fps
+
+Frame 70
+optimum sphere rotation:	0.001 0.010 0.001  (err=4.583e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.5 [30.0 / 170.6] fps
+
+Frame 71
+optimum sphere rotation:	-0.003 0.032 0.001  (err=4.849e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 155.7 [30.0 / 150.2] fps
+
+Frame 72
+optimum sphere rotation:	0.008 0.013 0.004  (err=5.096e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.9 [30.0 / 148.5] fps
+
+Frame 73
+optimum sphere rotation:	-0.007 0.023 -0.001  (err=5.040e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.6 [30.0 / 136.7] fps
+
+Frame 74
+optimum sphere rotation:	0.001 0.016 -0.000  (err=4.716e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 143.4 [30.0 / 124.8] fps
+
+Frame 75
+optimum sphere rotation:	-0.002 0.027 -0.001  (err=5.012e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.3 / 7.9 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 136.4 [30.0 / 115.3] fps
+
+Frame 76
+optimum sphere rotation:	0.002 0.022 0.001  (err=5.008e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 142.1 [30.0 / 159.4] fps
+
+Frame 77
+optimum sphere rotation:	0.000 0.023 0.001  (err=4.981e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.3 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.7 [30.0 / 160.4] fps
+
+Frame 78
+optimum sphere rotation:	0.000 0.023 0.001  (err=4.867e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.2 [30.0 / 156.5] fps
+
+Frame 79
+optimum sphere rotation:	-0.000 0.027 -0.000  (err=4.846e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.9 [30.0 / 148.2] fps
+
+Frame 80
+optimum sphere rotation:	-0.000 0.024 0.001  (err=5.007e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.6 [30.0 / 139.6] fps
+
+Frame 81
+optimum sphere rotation:	-0.001 0.014 -0.001  (err=4.761e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.2 [30.0 / 173.1] fps
+
+Frame 82
+optimum sphere rotation:	0.001 0.023 0.001  (err=4.805e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 157.7 [30.0 / 171.3] fps
+
+Frame 83
+optimum sphere rotation:	-0.001 0.030 0.000  (err=4.625e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 158.9 [30.0 / 162.5] fps
+
+Frame 84
+optimum sphere rotation:	0.001 0.032 0.001  (err=4.573e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.9 [30.0 / 174.7] fps
+Writing to socket!
+
+Frame 85
+optimum sphere rotation:	-0.001 0.014 0.005  (err=4.973e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 152.6 [30.0 / 121.6] fps
+
+Frame 86
+optimum sphere rotation:	0.000 0.006 -0.004  (err=4.578e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.8 [30.0 / 149.6] fps
+
+Frame 87
+optimum sphere rotation:	0.001 0.023 -0.000  (err=4.829e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.3 [30.0 / 129.8] fps
+
+Frame 88
+optimum sphere rotation:	-0.001 0.028 0.001  (err=4.585e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.5 [30.0 / 167.1] fps
+
+Frame 89
+optimum sphere rotation:	0.000 0.024 -0.001  (err=4.623e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.4 [30.0 / 170.9] fps
+
+Frame 90
+optimum sphere rotation:	0.000 0.026 0.000  (err=4.638e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 147.8 [30.0 / 122.1] fps
+
+Frame 91
+optimum sphere rotation:	-0.000 0.016 -0.000  (err=4.525e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 150.8 [30.0 / 160.0] fps
+
+Frame 92
+optimum sphere rotation:	-0.000 0.021 0.003  (err=4.429e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.4 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.4 [30.0 / 185.2] fps
+
+Frame 93
+optimum sphere rotation:	-0.000 0.021 -0.001  (err=4.191e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.0 [30.0 / 169.6] fps
+Writing to socket!
+
+Frame 94
+optimum sphere rotation:	0.001 0.020 -0.001  (err=4.247e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.5 [30.0 / 148.0] fps
+
+Frame 95
+optimum sphere rotation:	0.000 0.024 0.001  (err=4.315e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 163.1 [30.0 / 177.1] fps
+
+Frame 96
+optimum sphere rotation:	-0.000 0.028 -0.000  (err=4.192e+03/its=28)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.5 [30.0 / 128.5] fps
+Writing to socket!
+
+Frame 97
+optimum sphere rotation:	-0.000 0.028 0.000  (err=4.347e+03/its=18)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.4 [30.0 / 170.2] fps
+
+Frame 98
+optimum sphere rotation:	-0.000 0.023 0.004  (err=4.434e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.2 [30.0 / 157.5] fps
+
+Frame 99
+optimum sphere rotation:	0.001 0.017 -0.002  (err=4.425e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.7 [30.0 / 132.3] fps
+
+Frame 100
+optimum sphere rotation:	-0.000 0.022 0.001  (err=4.306e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.3 [30.0 / 162.1] fps
+
+Frame 101
+optimum sphere rotation:	-0.001 0.015 -0.001  (err=4.040e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.5 [30.0 / 146.9] fps
+Writing to socket!
+
+Frame 102
+optimum sphere rotation:	0.001 0.026 0.002  (err=3.849e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.3 [30.0 / 140.0] fps
+
+Frame 103
+optimum sphere rotation:	-0.000 0.023 0.003  (err=4.063e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.9 [30.0 / 147.4] fps
+
+Frame 104
+optimum sphere rotation:	0.001 0.015 -0.000  (err=4.084e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.5 [30.0 / 171.5] fps
+
+Frame 105
+optimum sphere rotation:	-0.000 0.032 0.002  (err=4.194e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.2 [30.0 / 121.3] fps
+
+Frame 106
+optimum sphere rotation:	0.000 0.027 -0.003  (err=4.241e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.4 [30.0 / 179.1] fps
+
+Frame 107
+optimum sphere rotation:	-0.000 0.012 0.006  (err=4.049e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.5 [30.0 / 178.9] fps
+
+Frame 108
+optimum sphere rotation:	0.000 0.023 -0.002  (err=3.957e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.5 [30.0 / 168.5] fps
+
+Frame 109
+optimum sphere rotation:	-0.000 0.019 -0.001  (err=4.049e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.9 [30.0 / 184.1] fps
+
+Frame 110
+optimum sphere rotation:	-0.000 0.017 0.002  (err=3.889e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.8 [30.0 / 155.6] fps
+
+Frame 111
+optimum sphere rotation:	-0.001 0.016 -0.004  (err=4.000e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.1 [30.0 / 157.9] fps
+Writing to socket!
+
+Frame 112
+optimum sphere rotation:	-0.001 0.018 -0.002  (err=3.896e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.9 [30.0 / 166.2] fps
+
+Frame 113
+optimum sphere rotation:	0.003 0.040 0.006  (err=3.851e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.5 [30.0 / 150.5] fps
+
+Frame 114
+optimum sphere rotation:	-0.001 0.025 -0.002  (err=3.822e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.0 [30.0 / 130.4] fps
+
+Frame 115
+optimum sphere rotation:	-0.001 0.016 -0.000  (err=4.051e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.0 [30.0 / 165.1] fps
+Writing to socket!
+
+Frame 116
+optimum sphere rotation:	0.001 0.013 0.000  (err=3.743e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.0 [30.0 / 139.9] fps
+
+Frame 117
+optimum sphere rotation:	-0.001 0.022 0.001  (err=3.901e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.7 [30.0 / 130.8] fps
+
+Frame 118
+optimum sphere rotation:	0.000 0.023 0.000  (err=4.085e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 145.5 [30.0 / 141.7] fps
+
+Frame 119
+optimum sphere rotation:	-0.000 0.021 -0.000  (err=3.955e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.0 [30.0 / 171.7] fps
+Writing to socket!
+
+Frame 120
+optimum sphere rotation:	-0.000 0.021 -0.001  (err=4.027e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 162.4 [30.0 / 193.7] fps
+
+Frame 121
+optimum sphere rotation:	0.000 0.016 0.002  (err=4.152e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 162.1 [30.0 / 161.2] fps
+
+Frame 122
+optimum sphere rotation:	-0.001 0.025 -0.001  (err=4.015e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.4 [30.0 / 139.1] fps
+
+Frame 123
+optimum sphere rotation:	0.000 0.023 -0.001  (err=4.173e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.6 [30.0 / 177.4] fps
+
+Frame 124
+optimum sphere rotation:	0.001 0.017 0.001  (err=4.006e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 161.4 [30.0 / 160.9] fps
+
+Frame 125
+optimum sphere rotation:	0.001 0.026 0.003  (err=4.150e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.8 [30.0 / 186.9] fps
+Writing to socket!
+
+Frame 126
+optimum sphere rotation:	-0.000 0.022 0.000  (err=4.185e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.5 [30.0 / 154.7] fps
+
+Frame 127
+optimum sphere rotation:	0.001 0.031 0.002  (err=4.097e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.0 [30.0 / 198.5] fps
+
+Frame 128
+optimum sphere rotation:	0.002 0.014 -0.000  (err=4.267e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 168.1 [30.0 / 153.3] fps
+
+Frame 129
+optimum sphere rotation:	-0.000 0.022 0.001  (err=4.334e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.9 [30.0 / 175.3] fps
+
+Frame 130
+optimum sphere rotation:	0.000 0.020 0.000  (err=4.340e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.3 [30.0 / 191.4] fps
+
+Frame 131
+optimum sphere rotation:	-0.000 0.021 0.000  (err=4.362e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 182.6 [30.0 / 204.5] fps
+
+Frame 132
+optimum sphere rotation:	-0.003 0.023 -0.002  (err=4.294e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.8 [30.0 / 159.5] fps
+Writing to socket!
+
+Frame 133
+optimum sphere rotation:	0.000 0.017 -0.000  (err=4.290e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.0 [30.0 / 153.8] fps
+
+Frame 134
+optimum sphere rotation:	-0.001 0.003 -0.000  (err=4.377e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.1 [30.0 / 147.1] fps
+Writing to socket!
+
+Frame 135
+optimum sphere rotation:	0.001 0.027 0.001  (err=4.249e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.0 [30.0 / 160.8] fps
+
+Frame 136
+optimum sphere rotation:	-0.000 0.025 0.000  (err=4.382e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.7 [30.0 / 190.9] fps
+
+Frame 137
+optimum sphere rotation:	-0.001 0.020 -0.000  (err=4.285e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 173.6 [30.0 / 182.4] fps
+
+Frame 138
+optimum sphere rotation:	0.001 0.022 0.001  (err=4.211e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.4 [30.0 / 200.6] fps
+
+Frame 139
+optimum sphere rotation:	-0.000 0.022 0.001  (err=4.089e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 177.6 [30.0 / 169.3] fps
+
+Frame 140
+optimum sphere rotation:	-0.000 0.026 -0.001  (err=4.130e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.8 [30.0 / 182.2] fps
+Writing to socket!
+
+Frame 141
+optimum sphere rotation:	0.000 0.022 0.001  (err=4.642e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 160.5] fps
+
+Frame 142
+optimum sphere rotation:	0.003 0.005 0.005  (err=4.334e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 168.7 [30.0 / 152.1] fps
+
+Frame 143
+optimum sphere rotation:	0.001 0.026 -0.000  (err=4.407e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 172.4 [30.0 / 183.7] fps
+
+Frame 144
+optimum sphere rotation:	0.000 0.023 0.000  (err=4.333e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.0 [30.0 / 190.6] fps
+
+Frame 145
+optimum sphere rotation:	-0.001 0.011 0.001  (err=4.225e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 178.7 [30.0 / 184.0] fps
+
+Frame 146
+optimum sphere rotation:	-0.001 0.016 -0.001  (err=4.661e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.2 [30.0 / 184.7] fps
+
+Frame 147
+optimum sphere rotation:	0.001 0.034 0.004  (err=4.497e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 181.4 [30.0 / 185.0] fps
+
+Frame 148
+optimum sphere rotation:	-0.001 0.009 -0.002  (err=4.553e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 178.4 [30.0 / 169.1] fps
+
+Frame 149
+optimum sphere rotation:	0.001 0.019 -0.001  (err=4.475e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 177.7 [30.0 / 175.7] fps
+
+Frame 150
+optimum sphere rotation:	-0.000 0.030 0.001  (err=4.567e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.6 [30.0 / 169.2] fps
+
+Frame 151
+optimum sphere rotation:	0.003 0.013 0.002  (err=4.598e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 177.3 [30.0 / 182.6] fps
+
+Frame 152
+optimum sphere rotation:	-0.001 0.021 -0.002  (err=4.512e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.5 [30.0 / 154.0] fps
+Writing to socket!
+
+Frame 153
+optimum sphere rotation:	-0.000 0.023 0.000  (err=4.469e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.1 [30.0 / 157.8] fps
+
+Frame 154
+optimum sphere rotation:	-0.000 0.023 -0.000  (err=4.220e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 176.1 [30.0 / 200.0] fps
+
+Frame 155
+optimum sphere rotation:	-0.000 0.023 -0.000  (err=4.596e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 182.6 [30.0 / 202.1] fps
+
+Frame 156
+optimum sphere rotation:	-0.000 0.022 0.001  (err=4.574e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.8 [30.0 / 167.6] fps
+Writing to socket!
+
+Frame 157
+optimum sphere rotation:	0.000 0.020 0.002  (err=4.729e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.3 [30.0 / 180.6] fps
+Writing to socket!
+
+Frame 158
+optimum sphere rotation:	-0.003 0.031 -0.004  (err=4.879e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 178.8 [30.0 / 177.6] fps
+
+Frame 159
+optimum sphere rotation:	0.004 0.020 0.006  (err=4.869e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 176.5 [30.0 / 169.7] fps
+
+Frame 160
+optimum sphere rotation:	-0.003 0.017 0.003  (err=5.101e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.1 [30.0 / 166.8] fps
+
+Frame 161
+optimum sphere rotation:	0.003 0.010 -0.006  (err=4.811e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 168.6 [30.0 / 152.3] fps
+
+Frame 162
+optimum sphere rotation:	-0.002 0.025 -0.001  (err=4.762e+03/its=34)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 157.5 [30.0 / 124.2] fps
+
+Frame 163
+optimum sphere rotation:	0.001 0.024 -0.000  (err=4.917e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 163.2 [30.0 / 180.2] fps
+
+Frame 164
+optimum sphere rotation:	0.002 0.025 0.003  (err=4.995e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.3 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 164.9 [30.0 / 169.8] fps
+
+Frame 165
+optimum sphere rotation:	-0.001 0.019 -0.001  (err=4.845e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 171.5 [30.0 / 191.3] fps
+
+Frame 166
+optimum sphere rotation:	0.000 0.018 0.001  (err=4.957e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.3 [30.0 / 182.9] fps
+
+Frame 167
+optimum sphere rotation:	0.000 0.022 0.003  (err=5.103e+03/its=18)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 185.9 [30.0 / 220.8] fps
+
+Frame 168
+optimum sphere rotation:	-0.002 0.028 -0.003  (err=4.717e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 185.5 [30.0 / 184.0] fps
+
+Frame 169
+optimum sphere rotation:	0.002 0.009 -0.000  (err=4.890e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.5 [30.0 / 157.4] fps
+
+Frame 170
+optimum sphere rotation:	0.001 0.021 0.002  (err=4.918e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 181.7 [30.0 / 191.6] fps
+Writing to socket!
+
+Frame 171
+optimum sphere rotation:	0.001 0.035 0.003  (err=4.912e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.3 [30.0 / 147.9] fps
+
+Frame 172
+optimum sphere rotation:	-0.000 0.029 0.004  (err=4.866e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 181.9 [30.0 / 207.9] fps
+
+Frame 173
+optimum sphere rotation:	0.004 0.023 0.000  (err=5.052e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 180.6 [30.0 / 176.8] fps
+
+Frame 174
+optimum sphere rotation:	-0.002 0.017 -0.005  (err=5.057e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.1 [30.0 / 162.5] fps
+
+Frame 175
+optimum sphere rotation:	-0.000 0.012 0.001  (err=4.968e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.8 [30.0 / 194.9] fps
+Writing to socket!
+
+Frame 176
+optimum sphere rotation:	-0.000 0.019 0.001  (err=5.194e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.8 [30.0 / 176.9] fps
+Writing to socket!
+
+Frame 177
+optimum sphere rotation:	0.001 0.032 0.000  (err=5.240e+03/its=28)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 171.5 [30.0 / 146.5] fps
+
+Frame 178
+optimum sphere rotation:	0.003 0.011 0.003  (err=4.939e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 170.1 [30.0 / 166.0] fps
+
+Frame 179
+optimum sphere rotation:	-0.001 0.024 -0.004  (err=5.064e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 171.6 [30.0 / 176.0] fps
+
+Frame 180
+optimum sphere rotation:	0.000 0.023 0.004  (err=5.121e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.8 [30.0 / 152.5] fps
+
+Frame 181
+optimum sphere rotation:	-0.000 0.032 -0.001  (err=5.398e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 173.0 [30.0 / 191.6] fps
+
+Frame 182
+optimum sphere rotation:	0.002 0.018 0.005  (err=5.581e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 179.7 [30.0 / 199.7] fps
+
+Frame 183
+optimum sphere rotation:	-0.001 0.023 -0.004  (err=5.242e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.9 [30.0 / 180.6] fps
+
+Frame 184
+optimum sphere rotation:	0.000 0.016 0.001  (err=5.477e+03/its=18)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 188.5 [30.0 / 214.1] fps
+
+Frame 185
+optimum sphere rotation:	0.001 0.017 0.001  (err=5.464e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 191.0 [30.0 / 198.7] fps
+
+Frame 186
+optimum sphere rotation:	-0.001 0.030 -0.002  (err=5.670e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 195.5 [30.0 / 209.0] fps
+
+Frame 187
+optimum sphere rotation:	-0.001 0.017 -0.002  (err=5.839e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 192.3 [30.0 / 182.7] fps
+Writing to socket!
+
+Frame 188
+optimum sphere rotation:	-0.002 0.021 0.007  (err=5.983e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 184.1 [30.0 / 159.5] fps
+
+Frame 189
+optimum sphere rotation:	0.003 0.017 -0.003  (err=5.790e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.5 [30.0 / 145.5] fps
+Writing to socket!
+
+Frame 190
+optimum sphere rotation:	-0.000 0.022 0.002  (err=5.775e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.6 [30.0 / 154.9] fps
+Writing to socket!
+
+Frame 191
+optimum sphere rotation:	-0.001 0.021 0.002  (err=5.613e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 169.6 [30.0 / 169.6] fps
+
+Frame 192
+optimum sphere rotation:	0.002 0.027 -0.001  (err=5.487e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.4 [30.0 / 160.9] fps
+
+Frame 193
+optimum sphere rotation:	-0.001 0.016 0.001  (err=5.646e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.1 [30.0 / 162.3] fps
+Writing to socket!
+
+Frame 194
+optimum sphere rotation:	-0.001 0.025 0.001  (err=5.665e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.0 [30.0 / 173.5] fps
+Writing to socket!
+
+Frame 195
+optimum sphere rotation:	-0.001 0.025 0.002  (err=5.574e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.5 [30.0 / 198.1] fps
+Writing to socket!
+
+Frame 196
+optimum sphere rotation:	-0.001 0.013 0.002  (err=5.539e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.2 [30.0 / 174.2] fps
+Writing to socket!
+
+Frame 197
+optimum sphere rotation:	0.000 0.015 -0.002  (err=5.652e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 183.4 [30.0 / 208.2] fps
+
+Frame 198
+optimum sphere rotation:	0.001 0.018 -0.003  (err=5.870e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.5 [30.0 / 119.8] fps
+
+Frame 199
+optimum sphere rotation:	0.001 0.020 -0.002  (err=5.562e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.8 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 173.9 [30.0 / 192.9] fps
+
+Frame 200
+optimum sphere rotation:	0.000 0.022 0.001  (err=5.575e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 172.7 [30.0 / 169.3] fps
+
+Frame 201
+optimum sphere rotation:	0.001 0.030 0.001  (err=5.602e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.2 [30.0 / 150.7] fps
+
+Frame 202
+optimum sphere rotation:	-0.002 0.023 0.003  (err=5.633e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.4 [30.0 / 164.0] fps
+Writing to socket!
+
+Frame 203
+optimum sphere rotation:	-0.000 0.023 0.001  (err=5.819e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.7 [30.0 / 175.7] fps
+
+Frame 204
+optimum sphere rotation:	-0.000 0.022 0.001  (err=5.658e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 176.0 [30.0 / 197.8] fps
+
+Frame 205
+optimum sphere rotation:	-0.001 0.009 -0.003  (err=5.840e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.8 [30.0 / 179.2] fps
+
+Frame 206
+optimum sphere rotation:	0.002 0.022 -0.005  (err=6.294e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.2 [30.0 / 154.6] fps
+
+Frame 207
+Writing to socket!
+optimum sphere rotation:	-0.000 0.033 0.007  (err=5.852e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 172.4 [30.0 / 175.7] fps
+Writing to socket!
+
+Frame 208
+optimum sphere rotation:	-0.001 0.011 0.001  (err=5.705e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.6 [30.0 / 153.4] fps
+Writing to socket!
+
+Frame 209
+optimum sphere rotation:	0.001 0.008 -0.001  (err=5.684e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.8 [30.0 / 180.5] fps
+Writing to socket!
+
+Frame 210
+optimum sphere rotation:	0.001 0.034 0.002  (err=5.814e+03/its=28)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 163.6 [30.0 / 142.0] fps
+Writing to socket!
+
+Frame 211
+optimum sphere rotation:	-0.002 0.032 -0.000  (err=5.994e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.2 [30.0 / 174.0] fps
+Writing to socket!
+
+Frame 212
+optimum sphere rotation:	0.002 0.011 -0.003  (err=6.028e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.9 [30.0 / 168.8] fps
+
+Frame 213
+optimum sphere rotation:	-0.001 0.013 -0.004  (err=5.936e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.7 [30.0 / 170.0] fps
+Writing to socket!
+
+Frame 214
+optimum sphere rotation:	0.000 0.019 0.003  (err=5.981e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 172.5 [30.0 / 187.1] fps
+Writing to socket!
+
+Frame 215
+optimum sphere rotation:	0.000 0.031 0.001  (err=5.861e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 178.1 [30.0 / 194.7] fps
+Writing to socket!
+
+Frame 216
+optimum sphere rotation:	0.001 0.027 -0.002  (err=5.960e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 179.2 [30.0 / 182.5] fps
+Writing to socket!
+
+Frame 217
+optimum sphere rotation:	-0.001 0.020 0.006  (err=5.790e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.6 [30.0 / 160.7] fps
+Writing to socket!
+
+Frame 218
+optimum sphere rotation:	-0.001 0.010 0.002  (err=5.616e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.1 [30.0 / 144.7] fps
+Writing to socket!
+
+Frame 219
+optimum sphere rotation:	0.000 0.020 -0.002  (err=5.620e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 195.5] fps
+Writing to socket!
+
+Frame 220
+optimum sphere rotation:	0.001 0.021 -0.001  (err=5.612e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.8 [30.0 / 180.8] fps
+
+Frame 221
+optimum sphere rotation:	-0.000 0.010 0.001  (err=5.526e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.5 [30.0 / 150.6] fps
+
+Frame 222
+Writing to socket!
+optimum sphere rotation:	-0.000 0.028 0.001  (err=5.564e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 168.4 [30.0 / 165.0] fps
+
+Frame 223
+optimum sphere rotation:	-0.000 0.025 0.001  (err=5.938e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.2 [30.0 / 119.6] fps
+
+Frame 224
+optimum sphere rotation:	-0.000 0.021 0.001  (err=5.774e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 150.8 [30.0 / 134.6] fps
+
+Frame 225
+optimum sphere rotation:	0.000 0.026 -0.002  (err=5.874e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.1 [30.0 / 171.8] fps
+
+Frame 226
+optimum sphere rotation:	0.001 0.009 0.006  (err=5.656e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.4 [30.0 / 197.6] fps
+
+Frame 227
+Writing to socket!
+optimum sphere rotation:	-0.001 0.018 -0.000  (err=5.616e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.9 [30.0 / 156.2] fps
+
+Frame 228
+optimum sphere rotation:	-0.003 0.026 -0.004  (err=5.619e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.4 [30.0 / 158.0] fps
+Writing to socket!
+
+Frame 229
+optimum sphere rotation:	-0.001 0.013 -0.001  (err=5.784e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.0 [30.0 / 156.6] fps
+Writing to socket!
+
+Frame 230
+optimum sphere rotation:	0.002 0.021 0.001  (err=5.747e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.5 [30.0 / 162.9] fps
+Writing to socket!
+
+Frame 231
+optimum sphere rotation:	0.001 0.023 0.002  (err=5.401e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.7 [30.0 / 194.6] fps
+Writing to socket!
+
+Frame 232
+optimum sphere rotation:	0.000 0.024 0.000  (err=5.513e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 172.2 [30.0 / 179.5] fps
+
+Frame 233
+optimum sphere rotation:	0.001 0.018 0.000  (err=5.318e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.6 [30.0 / 149.9] fps
+
+Frame 234
+optimum sphere rotation:	-0.000 0.021 0.003  (err=5.583e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.8 [30.0 / 163.2] fps
+
+Frame 235
+optimum sphere rotation:	-0.001 0.029 -0.000  (err=5.352e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.5 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.6 [30.0 / 205.0] fps
+Writing to socket!
+
+Frame 236
+optimum sphere rotation:	-0.001 0.012 -0.001  (err=5.184e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.0 [30.0 / 177.1] fps
+Writing to socket!
+
+Frame 237
+optimum sphere rotation:	0.002 0.022 0.001  (err=5.292e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.8 [30.0 / 171.3] fps
+Writing to socket!
+
+Frame 238
+optimum sphere rotation:	-0.000 0.015 0.003  (err=5.521e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 179.7 [30.0 / 194.6] fps
+Writing to socket!
+
+Frame 239
+optimum sphere rotation:	0.001 0.022 -0.002  (err=5.136e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.5 [30.0 / 139.0] fps
+Writing to socket!
+
+Frame 240
+optimum sphere rotation:	-0.001 0.023 -0.001  (err=5.050e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.9 [30.0 / 162.9] fps
+
+Frame 241
+optimum sphere rotation:	-0.000 0.023 -0.002  (err=5.175e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.1 [30.0 / 169.0] fps
+Writing to socket!
+
+Frame 242
+optimum sphere rotation:	0.000 0.032 0.001  (err=5.257e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.3 [30.0 / 140.9] fps
+
+Frame 243
+optimum sphere rotation:	0.000 0.032 0.000  (err=5.258e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 154.8 [30.0 / 135.1] fps
+
+Frame 244
+optimum sphere rotation:	0.003 0.009 0.006  (err=5.217e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 146.7 [30.0 / 122.5] fps
+
+Frame 245
+optimum sphere rotation:	0.001 0.016 0.004  (err=5.493e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 144.0 [30.0 / 136.1] fps
+
+Frame 246
+optimum sphere rotation:	0.000 0.028 0.000  (err=5.266e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 8.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 136.3 [30.0 / 113.2] fps
+
+Frame 247
+optimum sphere rotation:	-0.000 0.006 0.002  (err=5.159e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 135.5 [30.0 / 133.1] fps
+
+Frame 248
+optimum sphere rotation:	0.000 0.026 0.001  (err=5.164e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 135.0 [30.0 / 133.5] fps
+
+Frame 249
+optimum sphere rotation:	-0.001 0.025 -0.001  (err=5.122e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 136.4 [30.0 / 140.6] fps
+Writing to socket!
+
+Frame 250
+optimum sphere rotation:	0.001 0.030 0.000  (err=4.925e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 138.2 [30.0 / 143.8] fps
+
+Frame 251
+optimum sphere rotation:	-0.000 0.026 0.000  (err=5.495e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 134.7 [30.0 / 124.1] fps
+
+Frame 252
+optimum sphere rotation:	0.001 0.016 0.001  (err=5.086e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 135.2 [30.0 / 136.6] fps
+
+Frame 253
+optimum sphere rotation:	0.001 0.017 0.001  (err=5.073e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 140.0 [30.0 / 154.4] fps
+
+Frame 254
+optimum sphere rotation:	-0.001 0.018 -0.000  (err=4.804e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.4 [30.0 / 165.5] fps
+
+Frame 255
+optimum sphere rotation:	-0.002 0.030 0.003  (err=5.107e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.7 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 144.5 [30.0 / 139.1] fps
+
+Frame 256
+optimum sphere rotation:	0.003 0.019 -0.000  (err=4.617e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 142.0 [30.0 / 134.3] fps
+
+Frame 257
+optimum sphere rotation:	-0.002 0.016 0.001  (err=5.039e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 8.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 136.1 [30.0 / 118.3] fps
+
+Frame 258
+optimum sphere rotation:	-0.002 0.014 -0.000  (err=4.718e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 141.6 [30.0 / 158.1] fps
+
+Frame 259
+optimum sphere rotation:	0.000 0.030 -0.000  (err=4.641e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 145.8 [30.0 / 158.4] fps
+
+Frame 260
+optimum sphere rotation:	0.000 0.029 -0.000  (err=4.587e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 147.6 [30.0 / 153.2] fps
+
+Frame 261
+optimum sphere rotation:	0.002 0.024 0.004  (err=4.620e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 140.7 [30.0 / 120.1] fps
+
+Frame 262
+optimum sphere rotation:	0.000 0.003 -0.003  (err=4.781e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 8.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 134.3 [30.0 / 114.8] fps
+
+Frame 263
+optimum sphere rotation:	-0.003 0.014 0.000  (err=4.559e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.3 / 7.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 130.4 [30.0 / 118.8] fps
+
+Frame 264
+optimum sphere rotation:	0.001 0.026 -0.001  (err=4.287e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 131.4 [30.0 / 134.6] fps
+
+Frame 265
+optimum sphere rotation:	-0.001 0.020 0.002  (err=4.496e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 139.1 [30.0 / 162.2] fps
+
+Frame 266
+optimum sphere rotation:	0.001 0.021 -0.000  (err=4.571e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 140.3 [30.0 / 143.7] fps
+
+Frame 267
+optimum sphere rotation:	0.001 0.020 0.001  (err=4.145e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 142.7 [30.0 / 150.2] fps
+
+Frame 268
+optimum sphere rotation:	-0.000 0.017 0.001  (err=4.057e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 138.8 [30.0 / 126.8] fps
+
+Frame 269
+optimum sphere rotation:	-0.002 0.021 0.000  (err=4.399e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 141.0 [30.0 / 147.6] fps
+
+Frame 270
+optimum sphere rotation:	0.001 0.027 0.000  (err=4.298e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.2 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 143.1 [30.0 / 149.6] fps
+
+Frame 271
+optimum sphere rotation:	-0.001 0.015 -0.001  (err=4.092e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 147.0 [30.0 / 158.6] fps
+
+Frame 272
+optimum sphere rotation:	0.000 0.023 0.000  (err=3.935e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.2 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 142.3 [30.0 / 128.3] fps
+
+Frame 273
+optimum sphere rotation:	0.001 0.021 0.000  (err=3.871e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.2 [30.0 / 165.9] fps
+
+Frame 274
+optimum sphere rotation:	0.000 0.015 -0.003  (err=3.829e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 150.8 [30.0 / 158.5] fps
+
+Frame 275
+optimum sphere rotation:	-0.000 0.017 0.004  (err=3.686e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.0 [30.0 / 131.6] fps
+
+Frame 276
+optimum sphere rotation:	-0.000 0.027 0.002  (err=3.732e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.4 [30.0 / 155.6] fps
+
+Frame 277
+optimum sphere rotation:	-0.000 0.019 -0.001  (err=3.732e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.2 [30.0 / 171.6] fps
+
+Frame 278
+optimum sphere rotation:	0.000 0.009 -0.001  (err=3.591e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.9 [30.0 / 181.1] fps
+
+Frame 279
+optimum sphere rotation:	0.001 0.028 -0.002  (err=3.557e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.3 [30.0 / 154.6] fps
+
+Frame 280
+optimum sphere rotation:	0.001 0.017 0.002  (err=3.451e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.0 [30.0 / 162.0] fps
+
+Frame 281
+optimum sphere rotation:	-0.001 0.018 0.003  (err=3.475e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.7 [30.0 / 130.7] fps
+
+Frame 282
+optimum sphere rotation:	-0.001 0.021 -0.000  (err=2.993e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.9 [30.0 / 157.6] fps
+
+Frame 283
+optimum sphere rotation:	0.001 0.020 0.001  (err=2.970e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.2 [30.0 / 158.9] fps
+
+Frame 284
+optimum sphere rotation:	-0.001 0.019 -0.000  (err=3.018e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.0 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.4 [30.0 / 132.1] fps
+
+Frame 285
+optimum sphere rotation:	-0.000 0.022 -0.001  (err=2.937e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.7 [30.0 / 138.5] fps
+
+Frame 286
+optimum sphere rotation:	0.001 0.020 0.002  (err=2.620e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 147.9 [30.0 / 151.6] fps
+
+Frame 287
+optimum sphere rotation:	0.001 0.019 0.001  (err=2.663e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.1 [30.0 / 164.6] fps
+
+Frame 288
+optimum sphere rotation:	0.001 0.018 0.001  (err=2.584e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.3 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.2 [30.0 / 148.4] fps
+
+Frame 289
+optimum sphere rotation:	-0.000 0.021 0.002  (err=2.584e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.7 [30.0 / 145.3] fps
+
+Frame 290
+optimum sphere rotation:	-0.000 0.027 -0.000  (err=2.200e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 146.8 [30.0 / 137.9] fps
+
+Frame 291
+optimum sphere rotation:	-0.000 0.027 0.000  (err=2.103e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.1 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.4 [30.0 / 177.4] fps
+
+Frame 292
+optimum sphere rotation:	0.001 0.011 -0.001  (err=2.310e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.8 [30.0 / 156.1] fps
+
+Frame 293
+optimum sphere rotation:	-0.001 0.012 0.001  (err=2.088e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.0 [30.0 / 155.7] fps
+
+Frame 294
+optimum sphere rotation:	0.001 0.025 -0.001  (err=2.040e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.4 [30.0 / 156.3] fps
+
+Frame 295
+optimum sphere rotation:	-0.001 0.020 0.000  (err=2.074e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.9 [30.0 / 153.6] fps
+
+Frame 296
+optimum sphere rotation:	0.001 0.010 -0.000  (err=2.028e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.3 [30.0 / 144.6] fps
+
+Frame 297
+optimum sphere rotation:	-0.001 0.029 0.001  (err=2.001e+03/its=29)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 144.7 [30.0 / 121.9] fps
+
+Frame 298
+optimum sphere rotation:	0.002 0.015 0.001  (err=2.093e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 141.7 [30.0 / 132.5] fps
+
+Frame 299
+optimum sphere rotation:	0.000 0.016 0.000  (err=2.029e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 144.5 [30.0 / 153.1] fps
+
+Frame 300
+optimum sphere rotation:	-0.001 0.030 0.001  (err=1.874e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 147.8 [30.0 / 157.5] fps
+
+Frame 301
+optimum sphere rotation:	-0.001 0.017 0.001  (err=2.078e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.8 [30.0 / 168.0] fps
+
+Frame 302
+optimum sphere rotation:	0.000 0.023 -0.001  (err=1.426e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.2 [30.0 / 158.3] fps
+
+Frame 303
+optimum sphere rotation:	0.001 0.025 -0.002  (err=1.536e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.7 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 150.5 [30.0 / 139.4] fps
+
+Frame 304
+optimum sphere rotation:	-0.001 0.022 0.003  (err=1.858e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.8 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 142.7 [30.0 / 119.3] fps
+
+Frame 305
+optimum sphere rotation:	0.002 0.011 0.001  (err=1.889e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 149.8 [30.0 / 171.2] fps
+
+Frame 306
+optimum sphere rotation:	-0.000 0.019 0.001  (err=1.765e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.6 [30.0 / 156.8] fps
+
+Frame 307
+optimum sphere rotation:	0.000 0.028 0.001  (err=1.960e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.0 [30.0 / 181.3] fps
+
+Frame 308
+optimum sphere rotation:	0.001 0.027 -0.000  (err=2.297e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.3 [30.0 / 148.3] fps
+
+Frame 309
+optimum sphere rotation:	-0.000 0.022 -0.002  (err=2.162e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.1 [30.0 / 135.5] fps
+
+Frame 310
+optimum sphere rotation:	-0.001 0.013 0.001  (err=2.083e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.4 [30.0 / 180.4] fps
+
+Frame 311
+optimum sphere rotation:	0.000 0.014 0.001  (err=2.140e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.3 [30.0 / 182.1] fps
+
+Frame 312
+optimum sphere rotation:	0.001 0.023 0.000  (err=2.536e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.1 [30.0 / 135.4] fps
+
+Frame 313
+optimum sphere rotation:	-0.001 0.028 0.001  (err=2.153e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.6 [30.0 / 150.9] fps
+
+Frame 314
+optimum sphere rotation:	-0.001 0.012 -0.001  (err=2.234e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.4 [30.0 / 154.8] fps
+
+Frame 315
+optimum sphere rotation:	0.000 0.023 0.001  (err=1.942e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 160.5 [30.0 / 175.7] fps
+
+Frame 316
+optimum sphere rotation:	0.000 0.023 0.000  (err=2.331e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 168.2 [30.0 / 191.6] fps
+
+Frame 317
+optimum sphere rotation:	-0.000 0.021 0.003  (err=2.097e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.7 [30.0 / 206.2] fps
+Writing to socket!
+
+Frame 318
+optimum sphere rotation:	-0.003 0.028 0.001  (err=2.224e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.8 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.7 [30.0 / 157.5] fps
+Writing to socket!
+
+Frame 319
+optimum sphere rotation:	0.002 0.019 0.001  (err=2.078e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.4 [30.0 / 175.3] fps
+
+Frame 320
+optimum sphere rotation:	0.001 0.020 0.001  (err=2.417e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.7 [30.0 / 158.6] fps
+
+Frame 321
+Writing to socket!
+optimum sphere rotation:	-0.002 0.027 -0.000  (err=2.255e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.2 [30.0 / 155.6] fps
+
+Frame 322
+optimum sphere rotation:	0.001 0.010 -0.000  (err=2.178e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.9 [30.0 / 157.2] fps
+
+Frame 323
+optimum sphere rotation:	0.000 0.017 0.000  (err=2.289e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.3 [30.0 / 173.5] fps
+
+Frame 324
+optimum sphere rotation:	-0.000 0.024 0.001  (err=2.485e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 170.2 [30.0 / 181.9] fps
+
+Frame 325
+optimum sphere rotation:	-0.000 0.024 -0.002  (err=2.554e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.5 [30.0 / 183.6] fps
+
+Frame 326
+optimum sphere rotation:	0.000 0.013 0.000  (err=2.304e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.5 [30.0 / 181.3] fps
+
+Frame 327
+optimum sphere rotation:	0.000 0.030 0.001  (err=2.357e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.1 [30.0 / 149.9] fps
+Writing to socket!
+
+Frame 328
+optimum sphere rotation:	0.000 0.015 -0.000  (err=2.634e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.2 [30.0 / 181.5] fps
+
+Frame 329
+optimum sphere rotation:	-0.001 0.018 0.000  (err=2.246e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.8 [30.0 / 198.7] fps
+Writing to socket!
+
+Frame 330
+optimum sphere rotation:	0.002 0.026 -0.000  (err=2.330e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.8 [30.0 / 174.7] fps
+
+Frame 331
+optimum sphere rotation:	-0.002 0.026 0.001  (err=2.289e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 176.5 [30.0 / 172.5] fps
+
+Frame 332
+optimum sphere rotation:	0.000 0.017 0.002  (err=2.200e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 177.3 [30.0 / 180.0] fps
+
+Frame 333
+optimum sphere rotation:	0.000 0.021 -0.001  (err=2.480e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 181.9 [30.0 / 195.5] fps
+
+Frame 334
+optimum sphere rotation:	0.000 0.014 0.003  (err=2.415e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 186.7 [30.0 / 201.0] fps
+
+Frame 335
+optimum sphere rotation:	-0.001 0.022 -0.000  (err=2.434e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 186.8 [30.0 / 187.2] fps
+
+Frame 336
+optimum sphere rotation:	0.000 0.012 -0.002  (err=2.451e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 187.2 [30.0 / 188.3] fps
+
+Frame 337
+optimum sphere rotation:	0.001 0.024 0.002  (err=2.519e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 184.7 [30.0 / 177.2] fps
+Writing to socket!
+
+Frame 338
+optimum sphere rotation:	0.000 0.020 -0.000  (err=2.641e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.5 [30.0 / 139.9] fps
+
+Frame 339
+optimum sphere rotation:	0.000 0.020 -0.000  (err=2.883e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.0 [30.0 / 179.5] fps
+
+Frame 340
+optimum sphere rotation:	0.000 0.022 0.001  (err=2.958e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.7 [30.0 / 173.7] fps
+
+Frame 341
+optimum sphere rotation:	-0.001 0.022 0.001  (err=2.748e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.0 [30.0 / 195.8] fps
+
+Frame 342
+optimum sphere rotation:	-0.000 0.027 0.001  (err=2.899e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.1 [30.0 / 168.6] fps
+
+Frame 343
+optimum sphere rotation:	-0.000 0.014 -0.000  (err=2.820e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 165.5] fps
+
+Frame 344
+optimum sphere rotation:	0.001 0.025 0.001  (err=2.826e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.5 [30.0 / 183.3] fps
+
+Frame 345
+optimum sphere rotation:	-0.000 0.023 -0.000  (err=2.898e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 179.5 [30.0 / 188.4] fps
+Writing to socket!
+
+Frame 346
+optimum sphere rotation:	-0.000 0.022 0.000  (err=3.072e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 180.0 [30.0 / 181.8] fps
+
+Frame 347
+optimum sphere rotation:	-0.001 0.011 -0.000  (err=2.870e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 173.7 [30.0 / 154.8] fps
+
+Frame 348
+optimum sphere rotation:	-0.000 0.030 0.001  (err=2.941e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.6 [30.0 / 133.4] fps
+Writing to socket!
+
+Frame 349
+optimum sphere rotation:	0.001 0.010 0.000  (err=2.497e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.9 [30.0 / 164.5] fps
+Writing to socket!
+
+Frame 350
+optimum sphere rotation:	0.000 0.025 -0.001  (err=2.774e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.3 [30.0 / 173.6] fps
+
+Frame 351
+optimum sphere rotation:	0.000 0.028 0.003  (err=2.580e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.3 [30.0 / 146.3] fps
+Writing to socket!
+
+Frame 352
+optimum sphere rotation:	0.001 0.022 -0.001  (err=2.567e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.9 [30.0 / 171.7] fps
+
+Frame 353
+optimum sphere rotation:	-0.000 0.013 0.001  (err=2.654e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 168.6 [30.0 / 182.5] fps
+
+Frame 354
+optimum sphere rotation:	-0.001 0.019 -0.001  (err=2.862e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.0 [30.0 / 150.3] fps
+Writing to socket!
+
+Frame 355
+optimum sphere rotation:	0.000 0.014 0.003  (err=2.656e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.0 [30.0 / 176.1] fps
+Writing to socket!
+
+Frame 356
+optimum sphere rotation:	-0.000 0.023 0.000  (err=2.919e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.8 [30.0 / 146.0] fps
+
+Frame 357
+optimum sphere rotation:	0.000 0.024 0.001  (err=2.896e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.2 [30.0 / 191.4] fps
+
+Frame 358
+optimum sphere rotation:	0.000 0.027 0.002  (err=2.949e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 189.2] fps
+
+Frame 359
+optimum sphere rotation:	-0.000 0.027 -0.001  (err=2.831e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.2 [30.0 / 178.3] fps
+Writing to socket!
+
+Frame 360
+optimum sphere rotation:	0.001 0.017 0.000  (err=3.079e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.2 [30.0 / 155.1] fps
+Writing to socket!
+
+Frame 361
+optimum sphere rotation:	0.001 0.019 -0.001  (err=2.852e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.1 [30.0 / 177.9] fps
+
+Frame 362
+optimum sphere rotation:	0.001 0.019 -0.000  (err=3.257e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.2 [30.0 / 160.3] fps
+
+Frame 363
+optimum sphere rotation:	-0.001 0.020 0.002  (err=3.144e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.3 [30.0 / 165.5] fps
+
+Frame 364
+optimum sphere rotation:	0.000 0.019 0.000  (err=3.118e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 167.8 [30.0 / 166.5] fps
+
+Frame 365
+optimum sphere rotation:	0.000 0.021 0.001  (err=3.774e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.6 [30.0 / 175.0] fps
+
+Frame 366
+optimum sphere rotation:	0.001 0.031 -0.002  (err=3.463e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.4 [30.0 / 128.6] fps
+
+Frame 367
+optimum sphere rotation:	-0.002 0.025 0.003  (err=2.887e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.6 [30.0 / 144.3] fps
+
+Frame 368
+optimum sphere rotation:	0.000 0.018 0.000  (err=2.850e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 162.1 [30.0 / 181.6] fps
+
+Frame 369
+optimum sphere rotation:	0.000 0.031 0.000  (err=2.715e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.6 [30.0 / 140.0] fps
+Writing to socket!
+
+Frame 370
+optimum sphere rotation:	-0.000 0.019 0.001  (err=3.051e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.9 [30.0 / 177.7] fps
+
+Frame 371
+optimum sphere rotation:	-0.002 0.022 0.004  (err=2.706e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.2 [30.0 / 143.4] fps
+Writing to socket!
+
+Frame 372
+optimum sphere rotation:	0.000 0.024 0.001  (err=2.784e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.0 [30.0 / 172.2] fps
+
+Frame 373
+optimum sphere rotation:	-0.000 0.023 -0.000  (err=3.089e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.6 [30.0 / 179.6] fps
+
+Frame 374
+optimum sphere rotation:	-0.000 0.023 0.001  (err=3.248e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.8 [30.0 / 194.2] fps
+
+Frame 375
+optimum sphere rotation:	0.000 0.023 -0.002  (err=3.064e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.7 [30.0 / 180.6] fps
+Writing to socket!
+
+Frame 376
+optimum sphere rotation:	0.001 0.012 -0.000  (err=3.226e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.4 [30.0 / 173.3] fps
+Writing to socket!
+
+Frame 377
+optimum sphere rotation:	-0.000 0.023 0.002  (err=3.159e+03/its=31)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.6 [30.0 / 127.4] fps
+Writing to socket!
+
+Frame 378
+optimum sphere rotation:	0.000 0.033 0.001  (err=2.860e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.5 [30.0 / 170.0] fps
+
+Frame 379
+optimum sphere rotation:	-0.001 0.031 0.000  (err=3.124e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.2 [30.0 / 163.4] fps
+
+Frame 380
+Writing to socket!
+optimum sphere rotation:	0.001 0.013 0.000  (err=2.796e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 163.7 [30.0 / 162.3] fps
+
+Frame 381
+optimum sphere rotation:	0.001 0.027 -0.000  (err=2.913e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.7 [30.0 / 147.7] fps
+Writing to socket!
+
+Frame 382
+optimum sphere rotation:	-0.001 0.018 0.000  (err=2.772e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.5 [30.0 / 147.0] fps
+Writing to socket!
+
+Frame 383
+optimum sphere rotation:	0.000 0.016 0.000  (err=2.841e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.8 [30.0 / 185.7] fps
+Writing to socket!
+
+Frame 384
+optimum sphere rotation:	0.000 0.034 -0.000  (err=2.801e+03/its=27)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.9 [30.0 / 144.1] fps
+Writing to socket!
+
+Frame 385
+optimum sphere rotation:	-0.000 0.030 0.001  (err=3.303e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.5 [30.0 / 181.4] fps
+
+Frame 386
+optimum sphere rotation:	-0.001 0.008 0.001  (err=2.858e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 168.2 [30.0 / 179.1] fps
+
+Frame 387
+optimum sphere rotation:	0.002 0.014 -0.001  (err=3.087e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.5 [30.0 / 193.4] fps
+
+Frame 388
+optimum sphere rotation:	-0.001 0.022 -0.009  (err=3.731e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.5 [30.0 / 138.6] fps
+
+Frame 389
+Writing to socket!
+optimum sphere rotation:	0.000 0.031 0.012  (err=2.855e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.7 [30.0 / 150.3] fps
+Writing to socket!
+
+Frame 390
+optimum sphere rotation:	0.000 0.023 -0.001  (err=2.624e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.2 [30.0 / 155.6] fps
+
+Frame 391
+optimum sphere rotation:	0.000 0.020 -0.000  (err=2.665e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.0 [30.0 / 171.6] fps
+Writing to socket!
+
+Frame 392
+optimum sphere rotation:	0.001 0.021 0.000  (err=2.439e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.5 [30.0 / 152.9] fps
+
+Frame 393
+optimum sphere rotation:	-0.000 0.023 0.001  (err=2.255e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.0 [30.0 / 154.3] fps
+Writing to socket!
+
+Frame 394
+optimum sphere rotation:	-0.000 0.020 -0.001  (err=2.302e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.1 [30.0 / 155.5] fps
+Writing to socket!
+
+Frame 395
+optimum sphere rotation:	0.001 0.016 0.001  (err=2.291e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.9 [30.0 / 145.4] fps
+Writing to socket!
+
+Frame 396
+optimum sphere rotation:	-0.000 0.021 0.001  (err=2.562e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.6 [30.0 / 177.8] fps
+Writing to socket!
+
+Frame 397
+optimum sphere rotation:	-0.000 0.029 0.002  (err=2.273e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.7 [30.0 / 168.9] fps
+
+Frame 398
+optimum sphere rotation:	-0.000 0.020 -0.001  (err=2.237e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.3 [30.0 / 177.1] fps
+Writing to socket!
+
+Frame 399
+optimum sphere rotation:	0.000 0.023 0.000  (err=2.426e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.3 [30.0 / 182.3] fps
+Writing to socket!
+
+Frame 400
+optimum sphere rotation:	-0.001 0.016 0.001  (err=2.431e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.2 [30.0 / 157.7] fps
+Writing to socket!
+
+Frame 401
+optimum sphere rotation:	0.000 0.019 0.001  (err=2.219e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.0 [30.0 / 158.6] fps
+Writing to socket!
+
+Frame 402
+optimum sphere rotation:	-0.000 0.019 0.000  (err=2.091e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 165.1 [30.0 / 165.2] fps
+
+Frame 403
+optimum sphere rotation:	0.000 0.016 -0.000  (err=2.052e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.4 [30.0 / 174.6] fps
+Writing to socket!
+
+Frame 404
+optimum sphere rotation:	-0.000 0.022 0.001  (err=2.226e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.1 [30.0 / 150.0] fps
+
+Frame 405
+optimum sphere rotation:	-0.000 0.025 0.000  (err=2.299e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.5 [30.0 / 192.6] fps
+Writing to socket!
+
+Frame 406
+optimum sphere rotation:	0.001 0.025 0.001  (err=2.178e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.3 [30.0 / 189.7] fps
+Writing to socket!
+
+Frame 407
+optimum sphere rotation:	0.000 0.020 -0.001  (err=2.174e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.3 [30.0 / 183.3] fps
+Writing to socket!
+
+Frame 408
+optimum sphere rotation:	-0.000 0.011 0.001  (err=2.052e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.9 [30.0 / 179.8] fps
+Writing to socket!
+
+Frame 409
+optimum sphere rotation:	-0.000 0.014 0.000  (err=2.170e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 182.2 [30.0 / 195.0] fps
+
+Frame 410
+optimum sphere rotation:	0.001 0.028 0.002  (err=2.004e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.4 [30.0 / 154.9] fps
+Writing to socket!
+
+Frame 411
+optimum sphere rotation:	-0.001 0.032 -0.000  (err=1.949e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.9 [30.0 / 161.4] fps
+Writing to socket!
+
+Frame 412
+optimum sphere rotation:	0.001 0.013 0.000  (err=2.241e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 168.2 [30.0 / 157.2] fps
+
+Frame 413
+optimum sphere rotation:	0.000 0.006 -0.001  (err=1.958e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.1 [30.0 / 188.0] fps
+
+Frame 414
+optimum sphere rotation:	-0.001 0.008 -0.001  (err=2.693e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.2 [30.0 / 157.5] fps
+
+Frame 415
+optimum sphere rotation:	0.001 0.039 0.002  (err=2.041e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.2 [30.0 / 161.2] fps
+
+Frame 416
+optimum sphere rotation:	0.000 0.023 0.000  (err=2.153e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.5 [30.0 / 176.5] fps
+
+Frame 417
+optimum sphere rotation:	-0.000 0.025 0.000  (err=2.112e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.5 [30.0 / 189.5] fps
+
+Frame 418
+optimum sphere rotation:	-0.000 0.021 0.000  (err=2.190e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.9 [30.0 / 195.9] fps
+
+Frame 419
+optimum sphere rotation:	0.001 0.021 0.000  (err=2.249e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.6 [30.0 / 170.8] fps
+
+Frame 420
+optimum sphere rotation:	-0.000 0.020 0.001  (err=2.326e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 181.3 [30.0 / 192.6] fps
+
+Frame 421
+optimum sphere rotation:	-0.001 0.019 -0.001  (err=2.496e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.1 [30.0 / 156.4] fps
+
+Frame 422
+optimum sphere rotation:	-0.000 0.017 0.002  (err=2.275e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 183.8 [30.0 / 210.0] fps
+
+Frame 423
+optimum sphere rotation:	0.000 0.027 -0.002  (err=2.117e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 180.4 [30.0 / 170.0] fps
+
+Frame 424
+optimum sphere rotation:	0.001 0.012 0.000  (err=2.372e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 177.4 [30.0 / 168.6] fps
+Writing to socket!
+
+Frame 425
+optimum sphere rotation:	-0.000 0.020 -0.001  (err=2.424e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.7 [30.0 / 150.3] fps
+
+Frame 426
+optimum sphere rotation:	0.001 0.024 0.003  (err=2.177e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.1 [30.0 / 148.5] fps
+
+Frame 427
+optimum sphere rotation:	-0.001 0.018 0.002  (err=2.321e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 173.0 [30.0 / 196.7] fps
+
+Frame 428
+optimum sphere rotation:	-0.001 0.025 -0.002  (err=2.260e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 178.2 [30.0 / 193.9] fps
+
+Frame 429
+optimum sphere rotation:	-0.000 0.025 -0.001  (err=2.387e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 177.7 [30.0 / 176.1] fps
+Writing to socket!
+
+Frame 430
+optimum sphere rotation:	0.001 0.019 0.003  (err=2.278e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 176.7 [30.0 / 173.6] fps
+
+Frame 431
+optimum sphere rotation:	0.001 0.024 0.001  (err=2.517e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.7 [30.0 / 184.8] fps
+Writing to socket!
+
+Frame 432
+optimum sphere rotation:	-0.001 0.021 0.002  (err=2.242e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.4 [30.0 / 173.6] fps
+
+Frame 433
+optimum sphere rotation:	0.001 0.021 0.000  (err=2.524e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 185.5 [30.0 / 209.8] fps
+
+Frame 434
+optimum sphere rotation:	-0.001 0.021 -0.002  (err=2.551e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 184.9 [30.0 / 183.0] fps
+
+Frame 435
+optimum sphere rotation:	-0.001 0.020 -0.002  (err=2.352e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 184.2 [30.0 / 182.0] fps
+
+Frame 436
+optimum sphere rotation:	-0.000 0.026 -0.000  (err=2.275e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.7 [30.0 / 162.1] fps
+
+Frame 437
+optimum sphere rotation:	-0.000 0.024 -0.001  (err=2.190e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 182.0 [30.0 / 191.9] fps
+
+Frame 438
+optimum sphere rotation:	0.001 0.023 0.003  (err=2.485e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.0 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 183.4 [30.0 / 187.7] fps
+Writing to socket!
+
+Frame 439
+optimum sphere rotation:	0.001 0.018 0.002  (err=2.309e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 187.3 [30.0 / 199.0] fps
+
+Frame 440
+optimum sphere rotation:	0.001 0.009 -0.000  (err=2.416e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 186.3 [30.0 / 183.5] fps
+
+Frame 441
+optimum sphere rotation:	-0.001 0.025 0.001  (err=2.387e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.2 [30.0 / 149.6] fps
+
+Frame 442
+optimum sphere rotation:	0.000 0.023 0.002  (err=2.386e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.3 [30.0 / 153.8] fps
+
+Frame 443
+optimum sphere rotation:	0.001 0.025 -0.001  (err=2.482e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.7 [30.0 / 192.9] fps
+Writing to socket!
+
+Frame 444
+optimum sphere rotation:	-0.000 0.025 0.000  (err=2.266e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 176.8 [30.0 / 177.2] fps
+
+Frame 445
+optimum sphere rotation:	0.000 0.014 0.000  (err=2.460e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.4 [30.0 / 187.1] fps
+Writing to socket!
+
+Frame 446
+optimum sphere rotation:	0.000 0.034 0.002  (err=2.448e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.9 [30.0 / 165.6] fps
+Writing to socket!
+
+Frame 447
+optimum sphere rotation:	-0.000 0.031 0.000  (err=2.388e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.3 [30.0 / 145.4] fps
+Writing to socket!
+
+Frame 448
+optimum sphere rotation:	0.000 0.008 -0.000  (err=2.332e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.0 [30.0 / 147.3] fps
+
+Frame 449
+optimum sphere rotation:	-0.001 0.023 -0.000  (err=2.354e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.1 [30.0 / 179.3] fps
+
+Frame 450
+optimum sphere rotation:	0.000 0.029 -0.000  (err=2.311e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.2 [30.0 / 131.5] fps
+
+Frame 451
+optimum sphere rotation:	0.000 0.016 0.001  (err=2.496e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.1 [30.0 / 193.7] fps
+
+Frame 452
+optimum sphere rotation:	0.001 0.019 0.000  (err=2.527e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 171.3 [30.0 / 184.0] fps
+
+Frame 453
+optimum sphere rotation:	-0.001 0.029 -0.000  (err=2.685e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.1 [30.0 / 166.4] fps
+
+Frame 454
+optimum sphere rotation:	-0.001 0.016 -0.000  (err=2.416e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.5 [30.0 / 147.7] fps
+
+Frame 455
+optimum sphere rotation:	0.002 0.025 0.002  (err=2.683e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.9 [30.0 / 162.1] fps
+Writing to socket!
+
+Frame 456
+optimum sphere rotation:	-0.001 0.020 0.000  (err=2.402e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.6 [30.0 / 162.9] fps
+Writing to socket!
+
+Frame 457
+optimum sphere rotation:	0.000 0.021 0.001  (err=2.592e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.5 [30.0 / 195.2] fps
+Writing to socket!
+
+Frame 458
+optimum sphere rotation:	0.000 0.028 0.002  (err=2.798e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 171.4 [30.0 / 171.0] fps
+
+Frame 459
+optimum sphere rotation:	0.001 0.024 0.001  (err=2.812e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.3 [30.0 / 199.0] fps
+Writing to socket!
+
+Frame 460
+optimum sphere rotation:	-0.001 0.021 -0.000  (err=2.897e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 182.2 [30.0 / 193.8] fps
+
+Frame 461
+optimum sphere rotation:	0.000 0.010 -0.000  (err=2.932e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 185.7 [30.0 / 196.2] fps
+
+Frame 462
+Writing to socket!
+optimum sphere rotation:	0.001 0.026 0.001  (err=2.958e+03/its=27)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.2 [30.0 / 143.9] fps
+Writing to socket!
+
+Frame 463
+optimum sphere rotation:	-0.003 0.016 -0.000  (err=3.134e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.7 [30.0 / 157.1] fps
+Writing to socket!
+
+Frame 464
+optimum sphere rotation:	0.002 0.022 0.002  (err=2.963e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.9 [30.0 / 199.7] fps
+Writing to socket!
+
+Frame 465
+optimum sphere rotation:	-0.000 0.025 -0.004  (err=2.944e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.1 [30.0 / 178.5] fps
+Writing to socket!
+
+Frame 466
+optimum sphere rotation:	0.000 0.021 0.003  (err=2.876e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.6 [30.0 / 168.2] fps
+
+Frame 467
+optimum sphere rotation:	-0.000 0.025 0.001  (err=2.980e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.4 [30.0 / 162.9] fps
+
+Frame 468
+Writing to socket!
+optimum sphere rotation:	0.002 0.024 -0.000  (err=2.796e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.2 [30.0 / 183.7] fps
+Writing to socket!
+
+Frame 469
+optimum sphere rotation:	-0.000 0.005 -0.002  (err=2.964e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.4 [30.0 / 175.9] fps
+Writing to socket!
+
+Frame 470
+optimum sphere rotation:	-0.002 0.013 0.000  (err=2.803e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.0 [30.0 / 157.9] fps
+
+Frame 471
+optimum sphere rotation:	-0.000 0.031 0.002  (err=2.768e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 8.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.4 [30.0 / 116.6] fps
+
+Frame 472
+optimum sphere rotation:	0.003 0.021 -0.000  (err=2.793e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 148.3 [30.0 / 120.9] fps
+
+Frame 473
+optimum sphere rotation:	0.001 0.019 0.001  (err=2.662e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 147.3 [30.0 / 144.5] fps
+
+Frame 474
+optimum sphere rotation:	-0.001 0.023 0.000  (err=2.591e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.9 [30.0 / 193.8] fps
+Writing to socket!
+
+Frame 475
+optimum sphere rotation:	0.002 0.018 0.001  (err=2.830e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.3 [30.0 / 152.2] fps
+Writing to socket!
+
+Frame 476
+optimum sphere rotation:	-0.000 0.026 0.000  (err=2.819e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 161.4 [30.0 / 174.0] fps
+
+Frame 477
+optimum sphere rotation:	0.000 0.027 0.002  (err=2.665e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.7 [30.0 / 142.6] fps
+
+Frame 478
+optimum sphere rotation:	0.001 0.018 0.000  (err=2.878e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.8 [30.0 / 137.1] fps
+
+Frame 479
+optimum sphere rotation:	-0.001 0.018 -0.001  (err=2.963e+03/its=19)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.1 [30.0 / 169.1] fps
+
+Frame 480
+optimum sphere rotation:	0.000 0.023 -0.001  (err=2.857e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.3 [30.0 / 152.9] fps
+
+Frame 481
+Writing to socket!
+optimum sphere rotation:	-0.000 0.026 -0.001  (err=2.910e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 160.9 [30.0 / 177.6] fps
+Writing to socket!
+
+Frame 482
+optimum sphere rotation:	0.001 0.020 0.004  (err=2.932e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.0 [30.0 / 161.3] fps
+
+Frame 483
+optimum sphere rotation:	-0.001 0.018 -0.000  (err=2.943e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.6 [30.0 / 143.4] fps
+
+Frame 484
+Writing to socket!
+optimum sphere rotation:	0.000 0.029 0.000  (err=3.010e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.9 [30.0 / 177.7] fps
+Writing to socket!
+
+Frame 485
+optimum sphere rotation:	-0.001 0.011 0.000  (err=2.907e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.0 [30.0 / 158.4] fps
+Writing to socket!
+
+Frame 486
+optimum sphere rotation:	0.000 0.027 0.000  (err=3.394e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.2 [30.0 / 169.9] fps
+Writing to socket!
+
+Frame 487
+optimum sphere rotation:	-0.000 0.014 0.000  (err=3.236e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.1 [30.0 / 194.9] fps
+Writing to socket!
+
+Frame 488
+optimum sphere rotation:	0.001 0.015 -0.000  (err=3.389e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.8 [30.0 / 186.0] fps
+Writing to socket!
+
+Frame 489
+optimum sphere rotation:	-0.000 0.020 0.000  (err=3.425e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.7 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 172.2 [30.0 / 164.4] fps
+
+Frame 490
+optimum sphere rotation:	-0.000 0.019 0.000  (err=3.291e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 171.1 [30.0 / 167.5] fps
+Writing to socket!
+
+Frame 491
+optimum sphere rotation:	0.000 0.018 0.001  (err=3.332e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.6 [30.0 / 181.4] fps
+Writing to socket!
+
+Frame 492
+optimum sphere rotation:	0.000 0.028 0.000  (err=3.207e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.8 [30.0 / 182.1] fps
+Writing to socket!
+
+Frame 493
+optimum sphere rotation:	0.000 0.020 -0.000  (err=3.048e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 175.3 [30.0 / 173.8] fps
+Writing to socket!
+
+Frame 494
+optimum sphere rotation:	-0.000 0.021 0.000  (err=3.230e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.8 [30.0 / 145.4] fps
+
+Frame 495
+optimum sphere rotation:	-0.001 0.023 -0.002  (err=3.316e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.1 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.5 [30.0 / 130.7] fps
+
+Frame 496
+optimum sphere rotation:	0.001 0.025 0.001  (err=3.002e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.8 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 153.0 [30.0 / 136.4] fps
+
+Frame 497
+optimum sphere rotation:	0.001 0.026 0.001  (err=3.159e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.0 [30.0 / 144.9] fps
+Writing to socket!
+
+Frame 498
+optimum sphere rotation:	-0.001 0.018 0.001  (err=2.700e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 162.2 [30.0 / 195.7] fps
+Writing to socket!
+
+Frame 499
+optimum sphere rotation:	0.000 0.008 0.000  (err=2.895e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 166.2 [30.0 / 178.1] fps
+
+Frame 500
+optimum sphere rotation:	-0.001 0.018 -0.001  (err=2.826e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 163.1 [30.0 / 153.9] fps
+
+Frame 501
+optimum sphere rotation:	-0.000 0.022 0.001  (err=3.290e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.8 [30.0 / 153.8] fps
+Writing to socket!
+
+Frame 502
+optimum sphere rotation:	0.001 0.022 0.000  (err=3.200e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.2 [30.0 / 166.4] fps
+Writing to socket!
+
+Frame 503
+optimum sphere rotation:	-0.002 0.030 0.001  (err=3.271e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.4 [30.0 / 143.0] fps
+Writing to socket!
+
+Frame 504
+optimum sphere rotation:	0.002 0.022 0.000  (err=3.245e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 154.9 [30.0 / 147.4] fps
+Writing to socket!
+
+Frame 505
+optimum sphere rotation:	-0.000 0.020 -0.001  (err=3.337e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 151.3 [30.0 / 140.5] fps
+Writing to socket!
+
+Frame 506
+optimum sphere rotation:	-0.001 0.020 0.001  (err=3.785e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.4 [30.0 / 171.9] fps
+Writing to socket!
+
+Frame 507
+optimum sphere rotation:	0.002 0.026 0.000  (err=3.861e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 155.8 [30.0 / 154.0] fps
+
+Frame 508
+optimum sphere rotation:	-0.000 0.025 0.001  (err=3.669e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 161.0 [30.0 / 176.7] fps
+
+Frame 509
+optimum sphere rotation:	-0.002 0.011 0.001  (err=3.295e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.0 [30.0 / 165.0] fps
+Writing to socket!
+
+Frame 510
+optimum sphere rotation:	0.000 0.025 0.002  (err=3.488e+03/its=28)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 156.7 [30.0 / 140.6] fps
+Writing to socket!
+
+Frame 511
+optimum sphere rotation:	0.002 0.020 -0.002  (err=3.267e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.3 [30.0 / 187.0] fps
+Writing to socket!
+
+Frame 512
+optimum sphere rotation:	-0.002 0.014 0.002  (err=3.545e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.9 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.9 [30.0 / 159.0] fps
+
+Frame 513
+optimum sphere rotation:	0.001 0.027 0.000  (err=3.384e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.1 [30.0 / 167.4] fps
+
+Frame 514
+Writing to socket!
+optimum sphere rotation:	0.001 0.025 -0.002  (err=3.483e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.1 [30.0 / 168.2] fps
+Writing to socket!
+
+Frame 515
+optimum sphere rotation:	-0.001 0.019 0.003  (err=3.464e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.8 [30.0 / 159.9] fps
+
+Frame 516
+optimum sphere rotation:	-0.000 0.020 -0.002  (err=3.631e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 164.1 [30.0 / 164.9] fps
+
+Frame 517
+optimum sphere rotation:	0.000 0.021 0.001  (err=3.402e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.2 [30.0 / 196.6] fps
+
+Frame 518
+optimum sphere rotation:	0.001 0.011 0.000  (err=3.337e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.4 [30.0 / 144.8] fps
+
+Frame 519
+optimum sphere rotation:	0.000 0.023 -0.002  (err=3.310e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 169.5 [30.0 / 181.8] fps
+
+Frame 520
+Writing to socket!
+optimum sphere rotation:	-0.001 0.024 0.003  (err=3.307e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 170.1 [30.0 / 172.0] fps
+
+Frame 521
+Writing to socket!
+optimum sphere rotation:	0.001 0.029 -0.001  (err=3.504e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.5 [30.0 / 187.9] fps
+
+Frame 522
+optimum sphere rotation:	0.001 0.019 -0.001  (err=3.490e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 179.9 [30.0 / 195.8] fps
+
+Frame 523
+Writing to socket!
+optimum sphere rotation:	-0.002 0.018 0.004  (err=3.597e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 178.4 [30.0 / 173.9] fps
+
+Frame 524
+Writing to socket!
+optimum sphere rotation:	0.002 0.019 -0.001  (err=3.517e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.4 [30.0 / 166.4] fps
+Writing to socket!
+
+Frame 525
+optimum sphere rotation:	0.000 0.030 -0.000  (err=3.925e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.7 [30.0 / 192.8] fps
+Writing to socket!
+
+Frame 526
+optimum sphere rotation:	-0.001 0.008 0.004  (err=3.642e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.4 [30.0 / 134.6] fps
+
+Frame 527
+optimum sphere rotation:	-0.001 0.024 0.001  (err=3.645e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.1 [30.0 / 171.2] fps
+
+Frame 528
+optimum sphere rotation:	0.000 0.025 -0.002  (err=3.663e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.9 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 167.0 [30.0 / 160.7] fps
+
+Frame 529
+optimum sphere rotation:	0.000 0.014 0.002  (err=3.722e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.2 [30.0 / 139.8] fps
+
+Frame 530
+optimum sphere rotation:	0.001 0.015 0.004  (err=3.542e+03/its=25)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.8 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 160.6 [30.0 / 161.7] fps
+
+Frame 531
+optimum sphere rotation:	-0.001 0.027 -0.004  (err=3.550e+03/its=25)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 159.7 [30.0 / 157.1] fps
+
+Writing to socket!
+Frame 532
+optimum sphere rotation:	0.000 0.019 -0.000  (err=3.548e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.8 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 160.3 [30.0 / 161.9] fps
+Writing to socket!
+
+Frame 533
+optimum sphere rotation:	-0.001 0.019 -0.001  (err=3.656e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.2 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.4 [30.0 / 128.8] fps
+Writing to socket!
+
+Frame 534
+optimum sphere rotation:	-0.000 0.021 0.001  (err=3.782e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.7 [30.0 / 181.5] fps
+
+Frame 535
+Writing to socket!
+optimum sphere rotation:	0.000 0.027 0.000  (err=3.587e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 167.1 [30.0 / 189.5] fps
+Writing to socket!
+
+Frame 536
+optimum sphere rotation:	0.001 0.009 0.003  (err=3.502e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 170.1 [30.0 / 179.1] fps
+Writing to socket!
+
+Frame 537
+optimum sphere rotation:	0.000 0.021 -0.000  (err=3.688e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.6 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 158.5 [30.0 / 123.5] fps
+
+Frame 538
+optimum sphere rotation:	-0.000 0.022 0.001  (err=3.425e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 162.3 [30.0 / 174.0] fps
+Writing to socket!
+
+Frame 539
+optimum sphere rotation:	0.001 0.017 0.000  (err=3.588e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 164.5 [30.0 / 170.9] fps
+
+Frame 540
+Writing to socket!
+optimum sphere rotation:	-0.000 0.028 0.000  (err=3.685e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 171.1 [30.0 / 191.1] fps
+Writing to socket!
+
+Frame 541
+optimum sphere rotation:	0.001 0.011 0.001  (err=3.264e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 173.3 [30.0 / 179.6] fps
+
+Frame 542
+Writing to socket!
+optimum sphere rotation:	0.001 0.030 0.005  (err=3.629e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 171.7 [30.0 / 167.2] fps
+Writing to socket!
+
+Frame 543
+optimum sphere rotation:	-0.000 0.026 0.002  (err=3.644e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.7 [30.0 / 187.4] fps
+Writing to socket!
+
+Frame 544
+optimum sphere rotation:	0.001 0.013 -0.002  (err=3.804e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.7 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.4 [30.0 / 138.8] fps
+
+Frame 545
+optimum sphere rotation:	-0.000 0.013 0.001  (err=3.520e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 159.1 [30.0 / 137.3] fps
+
+Frame 546
+optimum sphere rotation:	-0.000 0.025 0.000  (err=3.491e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 158.8 [30.0 / 157.9] fps
+
+Frame 547
+optimum sphere rotation:	0.001 0.020 0.003  (err=3.227e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 163.2 [30.0 / 176.5] fps
+
+Frame 548
+optimum sphere rotation:	0.001 0.021 0.001  (err=3.259e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 171.5 [30.0 / 196.4] fps
+
+Frame 549
+optimum sphere rotation:	0.000 0.020 0.001  (err=3.326e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 173.5 [30.0 / 179.4] fps
+Writing to socket!
+
+Frame 550
+optimum sphere rotation:	-0.000 0.016 -0.001  (err=3.228e+03/its=27)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.9 [30.0 / 143.1] fps
+
+Frame 551
+optimum sphere rotation:	-0.000 0.017 -0.001  (err=3.624e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 166.5 [30.0 / 168.2] fps
+
+Frame 552
+Writing to socket!
+optimum sphere rotation:	0.001 0.034 0.002  (err=3.616e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 163.6 [30.0 / 154.8] fps
+Writing to socket!
+
+Frame 553
+optimum sphere rotation:	-0.002 0.014 0.001  (err=3.344e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 166.9 [30.0 / 176.8] fps
+
+Frame 554
+optimum sphere rotation:	0.001 0.020 -0.002  (err=3.294e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.2 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.9 [30.0 / 130.8] fps
+
+Frame 555
+optimum sphere rotation:	-0.002 0.028 0.002  (err=2.942e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 155.7 [30.0 / 149.4] fps
+Writing to socket!
+
+Frame 556
+optimum sphere rotation:	-0.001 0.030 0.001  (err=3.369e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 162.0 [30.0 / 180.8] fps
+Writing to socket!
+
+Frame 557
+optimum sphere rotation:	0.001 0.009 -0.001  (err=2.871e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.8 [30.0 / 153.2] fps
+
+Frame 558
+Writing to socket!
+optimum sphere rotation:	-0.001 0.015 0.001  (err=3.602e+03/its=19)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 169.3 [30.0 / 197.7] fps
+
+Frame 559
+Writing to socket!
+optimum sphere rotation:	0.004 0.019 -0.003  (err=3.180e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.2 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 159.5 [30.0 / 130.3] fps
+
+Frame 560
+optimum sphere rotation:	-0.002 0.012 -0.002  (err=3.488e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 167.9 [30.0 / 192.8] fps
+
+Writing to socket!
+Frame 561
+optimum sphere rotation:	0.002 0.031 0.002  (err=3.354e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.0 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 172.8 [30.0 / 187.6] fps
+
+Writing to socket!
+Frame 562
+optimum sphere rotation:	-0.001 0.020 0.005  (err=3.089e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 177.8 [30.0 / 192.7] fps
+
+Frame 563
+Writing to socket!
+optimum sphere rotation:	0.002 0.017 -0.002  (err=3.261e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.9 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 181.3 [30.0 / 191.9] fps
+Writing to socket!
+
+Frame 564
+optimum sphere rotation:	-0.002 0.028 0.000  (err=3.263e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.1 [30.0 / 168.7] fps
+Writing to socket!
+
+Frame 565
+optimum sphere rotation:	-0.001 0.020 0.002  (err=2.780e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 178.1 [30.0 / 178.1] fps
+Writing to socket!
+
+Frame 566
+optimum sphere rotation:	-0.001 0.022 0.001  (err=3.069e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.3 [30.0 / 182.7] fps
+
+Writing to socket!
+Frame 567
+optimum sphere rotation:	0.000 0.014 -0.002  (err=2.881e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 177.1 [30.0 / 170.5] fps
+
+Frame 568
+optimum sphere rotation:	0.001 0.022 0.001  (err=2.887e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.4 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.4 [30.0 / 146.2] fps
+
+Frame 569
+optimum sphere rotation:	-0.001 0.026 0.000  (err=2.976e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.8 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 157.3 [30.0 / 121.0] fps
+
+Frame 570
+optimum sphere rotation:	-0.000 0.027 0.000  (err=2.935e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.8 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 152.3 [30.0 / 137.5] fps
+
+Frame 571
+optimum sphere rotation:	0.000 0.015 0.000  (err=2.732e+03/its=28)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 149.0 [30.0 / 138.8] fps
+
+Writing to socket!
+Frame 572
+optimum sphere rotation:	0.000 0.016 0.000  (err=3.042e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 155.9 [30.0 / 176.9] fps
+Writing to socket!
+
+Frame 573
+optimum sphere rotation:	-0.000 0.020 -0.001  (err=2.842e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.9 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 164.0 [30.0 / 188.0] fps
+Writing to socket!
+
+Frame 574
+optimum sphere rotation:	0.000 0.031 0.001  (err=2.988e+03/its=21)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.9 [30.0 / 179.8] fps
+
+Frame 575
+Writing to socket!
+optimum sphere rotation:	0.000 0.014 0.001  (err=2.898e+03/its=22)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 169.8 [30.0 / 175.6] fps
+
+Frame 576
+optimum sphere rotation:	0.002 0.024 -0.003  (err=2.629e+03/its=28)
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.6 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 163.5 [30.0 / 144.3] fps
+
+Writing to socket!
+Frame 577
+optimum sphere rotation:	0.000 0.011 0.004  (err=2.784e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.5 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 165.2 [30.0 / 170.4] fps
+
+Writing to socket!
+Frame 578
+optimum sphere rotation:	-0.001 0.018 -0.000  (err=2.557e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.0 / 7.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 156.0 [30.0 / 128.6] fps
+
+Frame 579
+optimum sphere rotation:	-0.002 0.033 0.003  (err=2.607e+03/its=24)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 8.3 / 0.4 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 145.7 [30.0 / 114.6] fps
+
+Frame 580
+optimum sphere rotation:	0.001 0.008 -0.004  (err=2.653e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 7.9 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 138.8 [30.0 / 118.2] fps
+Writing to socket!
+
+Frame 581
+optimum sphere rotation:	0.001 0.027 0.002  (err=2.650e+03/its=26)
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 141.9 [30.0 / 151.3] fps
+Writing to socket!
+
+Frame 582
+optimum sphere rotation:	0.000 0.026 0.001  (err=2.375e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 151.7 [30.0 / 181.1] fps
+
+Frame 583
+Writing to socket!
+optimum sphere rotation:	0.000 0.026 0.001  (err=2.417e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 163.4 [30.0 / 198.5] fps
+
+Frame 584
+Writing to socket!
+optimum sphere rotation:	-0.002 0.017 0.001  (err=2.257e+03/its=24)
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.6 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 164.8 [30.0 / 168.9] fps
+
+Frame 585
+Writing to socket!
+optimum sphere rotation:	0.002 0.022 -0.004  (err=2.289e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.5 [30.0 / 175.6] fps
+
+Frame 586
+optimum sphere rotation:	-0.000 0.015 0.003  (err=2.085e+03/its=26)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 6.0 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 164.9 [30.0 / 157.1] fps
+
+Frame 587
+optimum sphere rotation:	-0.001 0.021 -0.003  (err=2.018e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.0 / 5.4 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 167.4 [30.0 / 174.9] fps
+
+Frame 588
+optimum sphere rotation:	0.001 0.024 0.001  (err=1.921e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.9 [30.0 / 197.6] fps
+Writing to socket!
+
+Frame 589
+optimum sphere rotation:	0.001 0.019 0.003  (err=1.849e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 168.5 [30.0 / 149.2] fps
+
+Frame 590
+Error grabbing image frame!
+Error grabbing new frame!
+optimum sphere rotation:	0.000 0.009 -0.001  (err=1.806e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 175.6 [30.0 / 196.8] fps
+
+Frame 591
+optimum sphere rotation:	-0.000 0.025 0.000  (err=1.830e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 174.3 [30.0 / 170.5] fps
+
+Frame 592
+optimum sphere rotation:	0.003 0.025 0.002  (err=1.698e+03/its=20)
+Timing grab/opt/map/plot/log/disp: 0.0 / 4.7 / 0.2 / 0.0 / 0.0 / 0.0 ms
+Average frame rate [curr input / output]: 180.3 [30.0 / 198.4] fps
+Writing to socket!
+
+Frame 593
+optimum sphere rotation:	-0.001 0.019 0.003  (err=1.774e+03/its=21)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.1 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 180.9 [30.0 / 182.4] fps
+
+Frame 594
+optimum sphere rotation:	0.000 0.024 -0.001  (err=1.714e+03/its=22)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 179.9 [30.0 / 177.0] fps
+Writing to socket!
+
+Frame 595
+optimum sphere rotation:	-0.001 0.020 -0.000  (err=1.997e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.4 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Writing to socket!
+Average frame rate [curr input / output]: 177.9 [30.0 / 171.7] fps
+
+Frame 596
+optimum sphere rotation:	0.001 0.012 -0.001  (err=1.666e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 4.8 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 180.9 [30.0 / 189.9] fps
+
+Frame 597
+optimum sphere rotation:	-0.000 0.026 0.001  (err=1.792e+03/its=23)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 6.3 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.6 [30.0 / 147.6] fps
+
+Frame 598
+optimum sphere rotation:	0.000 0.014 0.000  (err=1.942e+03/its=20)
+Writing to socket!
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.2 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 174.2 [30.0 / 179.3] fps
+
+Frame 599
+optimum sphere rotation:	0.000 0.027 0.001  (err=1.878e+03/its=23)
+Timing grab/opt/map/plot/log/disp: 0.1 / 5.6 / 0.2 / 0.0 / 0.1 / 0.0 ms
+Average frame rate [curr input / output]: 172.5 [30.0 / 167.4] fps
+
+Trackball timing
+Average grab/opt/map/plot/log/disp time: 0.1 / 5.7 / 0.3 / 0.0 / 0.1 / 0.0 ms
+Average fps: 162.27
+
+Writing to socket!
+Optimiser test data.
+Average number evals / frame: 22.3
+Template saved to disk (test-template.png).
+Closing sphere tracker..
+Closing recorder..
+Closing input stream..
+Closing recorder..
+Closing recorder..
+Closing recorder..

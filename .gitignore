@@ -3,15 +3,10 @@
 
 *.pyc
 
-nlopt-2.4.2-dll64/
-
 example/*.dat
 example/*.log
 example/test-template.png
 example/output.txt
-
-fictrac/
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
