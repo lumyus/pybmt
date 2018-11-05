@@ -107,6 +107,11 @@ class FicTracDriver:
                                                          self.config_file_base],
                                                          stdout=out, stderr=subprocess.STDOUT,
                                                          cwd=self.config_dir)
+
+                    # Lets sleep for a couple seconds, give fictrac a chance to start up.
+                    # FIXME: Eww, this is hacky.
+                    time.sleep(2)
+
                     self._process_messages()
             else:
                 self._process_messages()
