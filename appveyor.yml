@@ -13,7 +13,7 @@ environment:
     PATH: C:\Python37-x64\Scripts;%PATH%
 install:
 - cmd: >-
-    curl -fsS -o fictrac.zip https://github.com/murthylab/fictrac/releases/download/v2.1.0-alpha/fictrac_v2.1.0_control_features_x64_windows.zip
+    curl -LfsS -o fictrac.zip https://github.com/murthylab/fictrac/releases/download/v2.1.0-alpha/fictrac_v2.1.0_control_features_x64_windows.zip
     
     7z x fictrac.zip -oc:\
     
