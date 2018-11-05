@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/abxwkv2tfxcnoepc?svg=true)](https://ci.appveyor.com/project/davidt0x/pybmt)
+
 # Python Ball Motion Tracking (**pybmt**)
 
 Python Ball Motion Tracking (`pymbt`) is a python interface for running Richard J. Moore's [FicTrac](https://github.com/rjdmoore/fictrac) in a closed loop manner. The goal of **pybmt** is to allow researchers to easilly run **FicTrac** from a python program and allow tracking information to be processed in realtime for closed loop experiments. Since **pybmt** is not a replacement for fictrac, the user is expected to be experienced with configuring and calibrating it. This code handles all the details of spawning, managing, and communicating state of fictrac using a simple python based API. We hope that it will be a useful tool for researcher wishing to build their closed loop experiments in python.
@@ -33,20 +35,13 @@ pip install .
 To run a quick demo:
 
 ```
-python pybmt/example/run_example.py
+cd example
+python run_example.py
 ```
 
-## Running the tests
+## Example Experiment
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+To implement your own closed loop experiment logic take a look and `run_example.py` and `pybmt/callback/threshold_callback.py`. The basic idea is that you need to create a new class that inherits from `pybmt.callback.P 
 
 ## Built With
 
