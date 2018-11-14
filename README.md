@@ -2,7 +2,7 @@
 
 # Python Ball Motion Tracking (**pybmt**)
 
-Python Ball Motion Tracking (`pymbt`) is a python interface for running Richard J. Moore's [FicTrac](https://github.com/rjdmoore/fictrac) in a closed-loop manner. The goal of **pybmt** is to allow researchers to easilly run **FicTrac** from a python program and allow tracking information to be processed in realtime for closed-loop experiments. Since **pybmt** is not a replacement for fictrac, the user is expected to be experienced with configuring and calibrating it. This code handles all the details of spawning, managing, and communicating the state of fictrac, using a simple python based API. It is a useful tool for researchers wishing to build their closed-loop experiments in python.
+Python Ball Motion Tracking (`pymbt`) is a python interface for running Richard J. Moore's [FicTrac](https://github.com/rjdmoore/fictrac) in a closed-loop manner - it facilitates behavioral and neural recording experiments that involve head-fixed flies walking on a spherical treadmill (ball), and uses the motion of the ball to modulate various outputs (e.g., the delivery of stimuli). **pybmt** allows researchers to easilly run **FicTrac** from a python program and allow ball tracking information to be processed in real time for closed-loop experiments. Since **pybmt** is not a replacement for FicTrac, the user is expected to be experienced with configuring and calibrating FicTrac. This code handles all the details of spawning, managing, and communicating the state of FicTrac, using a simple python based API. It is a useful tool for researchers wishing to build their closed-loop experiments in python.
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ python run_example.py
 
 ## Example Experiment
 
-To implement your own closed loop experiment logic take a look and `run_example.py` and `pybmt/callback/threshold_callback.py`. The basic idea is that you need to create a new class that inherits from `pybmt.callback.P 
+To implement your own closed-loop experiment logic take a look and `run_example.py` and `pybmt/callback/threshold_callback.py`. The basic idea is that you need to create a new class that inherits from `pybmt.callback.P 
 
 ## Built With
 
@@ -54,9 +54,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **David Turner** - __Murthy Lab__ and __Princeton Neuroscience Institute__ and __Princeton University__ 
+* **David Turner** and **David Deutsch** - __Murthy Lab__, __Princeton Neuroscience Institute__, and __Princeton University__ 
 
-See also the list of [contributors](https://github.com/murthylab/pybmt/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/murthylab/pybmt/contributors) to the code.
 
 ## License
 
