@@ -219,7 +219,7 @@ class FicTracDriver:
             # Get the running average fps
             avg_fps = 1 / (sum(time_history) / len(time_history))
 
-            if avg_fps < self.average_fps_threshold and self.frame_cnt > 300:
+            if self.average_fps_threshold != 0 and avg_fps < self.average_fps_threshold and self.frame_cnt > 300:
                 self.fictrac_process.terminate()
                 raise Exception("Average FPS fell below avg_fps_threshold({}). Processing callback is " +
                                 "probably operating too slow.")

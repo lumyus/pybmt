@@ -62,6 +62,9 @@ def test_driver_local():
     tracDrv = FicTracDriver(config_file=fictrac_config, console_ouput_file=fictrac_console_out,
                             track_change_callback=callback, plot_on=False)
 
+    # Disable average FPS check for this test.
+    tracDrv.average_fps_threshold = 0
+
     # This will start FicTrac and it will block until complete.
     tracDrv.run()
 
