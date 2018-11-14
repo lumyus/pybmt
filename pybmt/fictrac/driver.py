@@ -40,6 +40,10 @@ class FicTracDriver:
         # much, with shared memory this was easier to detect.
         self.average_fps_threshold = 400
 
+        # This is the number of times to try an reconnect the the fictrac client over the socket before failing out.
+        # Each time will cause a sleep of 1 second.
+        self.max_num_connect_retries = 10
+
         # If fictrac is already running, for example, on another machine, then we don't need to worry about running it.
         if remote_endpoint_url is not None:
             self.remote_endpoint_url = "tcp://" + remote_endpoint_url
@@ -178,16 +182,36 @@ class FicTracDriver:
             #    break
 
             # Receive state update from FicTrac process
-            try:
-                data = socket.recv_string()
-            except zmq.error.Again:
+            num_connect_trys = 0
+            while True:
+                try:
+                    data = socket.recv_string()
 
-                # If we get socket error, probably means fictrac is gone.  If we started it, just break.
-                # If we didn't start it, signal the connection error.
-                if self.start_fictrac:
+                    # If we got data successfully, We can break out.
                     break
-                else:
-                    raise Exception("Socket timed out. Couldn't reach fictrac!")
+                except zmq.error.Again:
+
+                    # If we get socket error, probably means fictrac is gone.  If we started it, just break.
+                    # If we didn't start it, signal the connection error.
+                    if self.start_fictrac:
+
+                        if self.frame_cnt == 0:
+                            time.sleep(1)
+                            num_connect_trys = num_connect_trys + 1
+
+                            if num_connect_trys > self.max_num_connect_retries:
+                                isOK = False
+                                break
+                            else:
+                                pass
+                        else:
+                            isOK = False
+                            break
+                    else:
+                        raise Exception("Socket timed out. Couldn't reach fictrac!")
+
+            if not isOK:
+                break
 
             # Message received start the timer, want to keep track of how long it takes to process the message.
             t0 = time.perf_counter()
