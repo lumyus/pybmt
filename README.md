@@ -2,15 +2,15 @@
 
 # Python Ball Motion Tracking (**pybmt**)
 
-Python Ball Motion Tracking (`pymbt`) is a python interface for running Richard J. Moore's [FicTrac](https://github.com/rjdmoore/fictrac) in a closed loop manner. The goal of **pybmt** is to allow researchers to easilly run **FicTrac** from a python program and allow tracking information to be processed in realtime for closed loop experiments. Since **pybmt** is not a replacement for fictrac, the user is expected to be experienced with configuring and calibrating it. This code handles all the details of spawning, managing, and communicating state of fictrac using a simple python based API. We hope that it will be a useful tool for researcher wishing to build their closed loop experiments in python.
+Python Ball Motion Tracking (`pymbt`) is a python interface for running Richard J. Moore's [FicTrac](https://github.com/rjdmoore/fictrac) in a closed-loop manner. The goal of **pybmt** is to allow researchers to easilly run **FicTrac** from a python program and allow tracking information to be processed in realtime for closed-loop experiments. Since **pybmt** is not a replacement for fictrac, the user is expected to be experienced with configuring and calibrating it. This code handles all the details of spawning, managing, and communicating the state of fictrac, using a simple python based API. It is a useful tool for researchers wishing to build their closed-loop experiments in python.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get **pybmt** running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
-**pybmt** requires Python 3.6+ and a working version of **FicTrac** to be present on the system. __IMPORTANT!__ Currently, the only supported version of **FicTrac** is a [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page](https://github.com/murthylab/fictrac/releases/tag/v2.1.0-alpha) for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) in the near future. 
+**pybmt** requires Python 3.6+ and a working version of **FicTrac** to be present on the system. __IMPORTANT!__ Currently, the only supported version of **FicTrac** is [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page](https://github.com/murthylab/fictrac/releases/tag/v2.1.0-alpha) for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) soon. 
 
 Below are instructions for installing our version of **FicTrac** on your system.
 
@@ -54,7 +54,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **David Turner** - __Princeton University__ 
+* **David Turner** - __Murthy Lab__ and __Princeton Neuroscience Institute__ and __Princeton University__ 
 
 See also the list of [contributors](https://github.com/murthylab/pybmt/contributors) who participated in this project.
 
@@ -64,7 +64,7 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 
 ## Research
 
-If you use **pybmt** and **FicTrac** as part of your research, please cite the original FicTrac publication:
+If you use **pybmt** and **FicTrac** as part of your research, please acknowledge David Turner, David Deutsch, and Mala Murthy (Princeton Neuroscience Institute), and also cite the original FicTrac publication:
 
 > RJD Moore, GJ Taylor, AC Paulk, T Pearson, B van Swinderen, MV Srinivasan (2014). *"FicTrac: a visual method for tracking spherical motion and generating fictive animal paths"*, Journal of Neuroscience Methods, Volume 225, 30th March 2014, Pages 106-119. [[J. Neuroscience Methods link]](https://doi.org/10.1016/j.jneumeth.2014.01.010) [[Preprint (pdf) link]](https://www.dropbox.com/s/sw6qcmphk417bgi/2014-Moore_etal-JNM_preprint-FicTrac.pdf?dl=0)
 
