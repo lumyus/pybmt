@@ -107,7 +107,7 @@ class FicTracDriver:
             # Start FicTrac if we need to
             if self.start_fictrac:
                 with open(self.console_output_file, "wb") as out:
-                    self.fictrac_process = subprocess.Popen([self.fictrac_bin_fullpath, "--exit_when_done",
+                    self.fictrac_process = subprocess.Popen([self.fictrac_bin_fullpath,
                                                          self.config_file_base],
                                                          stdout=out, stderr=subprocess.STDOUT,
                                                          cwd=self.config_dir)
