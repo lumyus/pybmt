@@ -10,7 +10,7 @@ These instructions will get **pybmt** running on your local machine for developm
 
 ### Prerequisites
 
-**pybmt** requires Python 3.6+ and a working version of **FicTrac** to be present on the system. __IMPORTANT!__ Currently, the only supported version of **FicTrac** is [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page](https://github.com/murthylab/fictrac/releases/tag/v2.0.2-alpha) for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) soon. 
+**pybmt** requires Python 3.6+ and a working version of **FicTrac** to be present on the system. __IMPORTANT!__ Currently, the only supported version of **FicTrac** is [our forked version](https://github.com/murthylab/fictrac/tree/control_features) of **FicTrac Version 2.0**. Check the [releases page](https://github.com/murthylab/fictrac/releases/tag/v2.0.2) for pre-built binaries for your system. We hope to have these changes merged into the upstream [FicTrac GitHub repo](https://github.com/rjdmoore/fictrac) soon. 
 
 Below are instructions for installing our version of **FicTrac** on your system.
 
