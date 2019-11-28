@@ -1,9 +1,6 @@
 import numpy as np
 import ctypes
 
-# The number of FicTrac fields in the output file
-NUM_FICTRAC_FIELDS = 23
-
 class FicTracState(ctypes.Structure):
     """
     This class represents the FicTrac tracking state. These are the exact same values written to the output log file
@@ -26,6 +23,7 @@ class FicTracState(ctypes.Structure):
         ('inty', ctypes.c_double),
         ('timestamp', ctypes.c_double),
         ('seq_num', ctypes.c_int),
+        ('delta_timestamp', ctypes.c_double),
     ]
 
     @classmethod
@@ -38,13 +36,16 @@ class FicTracState(ctypes.Structure):
         :return: The FicTracState structure with values corresponding to data.
         """
 
+        # The number of FicTrac fields in the output file
+        num_fictrac_fields = 24
+
         # Create a FicTrac state object\structure
         fstate = cls()
 
         # Parse the string
         values = [x.strip() for x in data.split(',')]
 
-        if len(values) != NUM_FICTRAC_FIELDS:
+        if len(values) != num_fictrac_fields:
             raise ValueError("Message from FicTrac did not have appropriate number of fields.")
 
         # Convert strings to appropriate types and assign fields
@@ -93,7 +94,8 @@ class FicTracState(ctypes.Structure):
                          self.intx,
                          self.inty,
                          self.timestamp,
-                         self.seq_num
+                         self.seq_num,
+                         self.delta_timestamp
                          ])
 
     def __repr__(self):
