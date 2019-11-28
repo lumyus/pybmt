@@ -250,6 +250,8 @@ class FicTracDriver:
 
             self.frame_cnt = self.frame_cnt + 1
 
+        self.fictrac_process.terminate()
+
     def _cleanup(self):
         """
         This is method is called whenever PyBMT run is shutting down things.
