@@ -16,7 +16,7 @@ Below are instructions for installing our version of **FicTrac** on your system.
 
 ### Windows
 
-Download our custom pre-built version of **FicTrac** [here](https://github.com/murthylab/fictrac/releases/download/v2.1.0-alpha/fictrac_v2.1.0_control_features_x64_windows.zip). Extract the archive and add the resultant folder to your system path. 
+Download our custom pre-built version of **FicTrac** [here](https://github.com/murthylab/fictrac/releases/download/v2.0.2/fictrac_v2.0.2_control_features_x64_windows.zip). Extract the archive and add the resultant folder to your system path. 
 
 ### Linux
 
