@@ -13,7 +13,7 @@ def run_pybmt_example():
     # Instantiate a FicTracDriver object to handle running of FicTrac in the background and communication
     # of program state.
     tracDrv = FicTracDriver(config_file=fictrac_config, console_ouput_file=fictrac_console_out,
-                            track_change_callback=callback, plot_on=False)
+                            track_change_callback=callback, plot_on=False, fic_trac_bin_path='/home/cedric/fictrac/bin/fictrac')
 
     # This will start FicTrac and block until complete
     tracDrv.run()

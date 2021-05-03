@@ -1,4 +1,4 @@
-## FicTrac config file (build Nov 21 2019)
+## FicTrac v2.1.1 config file (build date May  3 2021)
 c2a_cnrs_yz      : { 304, 37, 293, 37, 293, 48, 304, 48 }
 c2a_r            : { -1.209684, 1.208704, 1.208508 }
 c2a_src          : c2a_cnrs_yz

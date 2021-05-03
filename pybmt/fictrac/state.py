@@ -24,6 +24,7 @@ class FicTracState(ctypes.Structure):
         ('timestamp', ctypes.c_double),
         ('seq_num', ctypes.c_int),
         ('delta_timestamp', ctypes.c_double),
+        ('alt_timestamp', ctypes.c_double),
     ]
 
     @classmethod
@@ -37,7 +38,7 @@ class FicTracState(ctypes.Structure):
         """
 
         # The number of FicTrac fields in the output file
-        num_fictrac_fields = 24
+        num_fictrac_fields = 25
 
         # Create a FicTrac state object\structure
         fstate = cls()
@@ -95,7 +96,8 @@ class FicTracState(ctypes.Structure):
                          self.inty,
                          self.timestamp,
                          self.seq_num,
-                         self.delta_timestamp
+                         self.delta_timestamp,
+                         self.alt_timestamp
                          ])
 
     def __repr__(self):
