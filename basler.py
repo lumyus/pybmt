@@ -153,8 +153,8 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
             camera.ExposureAuto.SetValue('Off')
             camera.ExposureMode.SetValue("TriggerWidth")
             # camera.AcquisitionFrameRateEnable.SetValue(false)
-            #camera.StartGrabbingMax(FrameCount)
-            camera.AcquisitionMode.SetValue('Continuous')
+            camera.StartGrabbingMax(FrameCount)
+            #camera.AcquisitionMode.SetValue('Continuous')
 
             # Print the model name of the camera.
             print("Setup of camera ", camera_name, " complete.")
