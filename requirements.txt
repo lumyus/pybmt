@@ -1,3 +1,6 @@
-numpy
-pyzmq
+numpy~=1.20.3
+pyzmq~=22.0.3
 matplotlib
+setuptools~=56.2.0
+pyserial~=3.5
+pypylon~=1.7.2

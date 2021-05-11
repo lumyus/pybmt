@@ -1,12 +1,10 @@
-from pypylon import pylon
-from pypylon import genicam
-import sys
-import time
-import serial
-import pickle
-import multiprocessing
-import numpy as np
 import glob
+import pickle
+import time
+
+import serial
+from pypylon import genicam
+from pypylon import pylon
 
 FrameRate = 100  # (fps)
 ExposureTime = 500  # (us)
@@ -154,7 +152,7 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
             camera.ExposureMode.SetValue("TriggerWidth")
             # camera.AcquisitionFrameRateEnable.SetValue(false)
             camera.StartGrabbingMax(FrameCount)
-            #camera.AcquisitionMode.SetValue('Continuous')
+            # camera.AcquisitionMode.SetValue('Continuous')
 
             # Print the model name of the camera.
             print("Setup of camera ", camera_name, " complete.")
@@ -231,6 +229,7 @@ def countdown(t):
         time.sleep(1)
         t -= 1
 
+
 def write_videos(path):
     print('Writing videos...')
     files = glob.glob(path + '*.pkl')
@@ -251,6 +250,36 @@ def imgs_to_video(imgs, fps, out_path):
     for i, img in enumerate(imgs):
         out.write(img)
     out.release()
+
+
+# =============================================================================
+# Capture script
+# =============================================================================
+def all_cameras_record(arduino, cam_array):
+
+    trigger_arduino(arduino, ExposureTime, FrameRate, FrameCount)
+    now = time.time()
+    grab_frames(cam_array, path, FrameCount=FrameCount)
+    then = time.time()
+    execution_time = then - now
+
+    print("Execution time {} ms".format(execution_time * 1000))
+
+
+# =============================================================================
+# Init script
+# =============================================================================
+def init_cameras(serial_numbers):
+
+    tlFactory, camera_devices = find_cameras(serial_numbers)
+    cam_array = attach_cameras(tlFactory, camera_devices)
+
+    cam_array = open_cameras(cam_array)
+    cam_array = set_camera_params(cam_array, shape, MaxNumBuffer, FrameCount)
+
+    print("Cameras initialized..")
+
+    return cam_array
 
 
 # =============================================================================

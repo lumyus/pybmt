@@ -1,3 +1,4 @@
+import basler
 from pybmt.callback.base import PyBMTCallback
 from collections import deque
 
@@ -11,7 +12,7 @@ class ThresholdCallback(PyBMTCallback):
     stimuli response.
     """
 
-    def __init__(self, speed_threshold=0.009, num_frames_mean=25):
+    def __init__(self, speed_threshold=0.009, num_frames_mean=25, arduino=None, cameras=None):
         """
         Setup a closed loop experiment that keeps track of a running average of the ball speed and generates a stimulus
         when the speed crosses a threshold.
@@ -25,6 +26,8 @@ class ThresholdCallback(PyBMTCallback):
 
         self.speed_threshold = speed_threshold
         self.num_frames_mean = num_frames_mean
+        self.arduino = arduino
+        self.cameras = cameras
 
     def setup_callback(self):
         """
@@ -61,6 +64,7 @@ class ThresholdCallback(PyBMTCallback):
         if avg_speed > self.speed_threshold and not self.is_signal_on:
             print("Stimulus ON!")
             # Start image aquisition of Basler cameras in sync with Basler.py code
+            basler.all_cameras_record(arduino=self.arduino, cam_array=self.cameras)
             self.is_signal_on = True
 
         if avg_speed < self.speed_threshold and self.is_signal_on:
