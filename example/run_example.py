@@ -4,7 +4,7 @@ from pybmt.fictrac.driver import FicTracDriver
 import basler
 
 
-serial_numbers=['40022761'] # Enter all serial numbers except the one camera used for Fictrac (40018632, 40022761)
+serial_numbers=['40018632'] # Enter all serial numbers except the one camera used for Fictrac (40018632, 40022761)
 
 def run_pybmt_example():
 

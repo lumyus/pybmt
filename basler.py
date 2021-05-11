@@ -40,10 +40,25 @@ def trigger_arduino(arduino, ExposureTime, FrameRate=1, FrameCount=1):
 
     print("Arduino triggered at " + str(FrameRate) + " fps!")
 
+def start_arduino(arduino, ExposureTime, FrameRate=1):
+    arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(1) + '_' + str(ExposureTime)).encode())
+    time.sleep(0.1)
+    response = arduino.readline()
+    response = response.decode().rstrip().lstrip().split('_')
+    assert (float(response[0]) == 1 / FrameRate * 1000000) & (float(response[1]) == 1) & (
+            float(response[2]) == ExposureTime), 'data not sent to Arduino.'
 
-def stop(arduino):
-    # Send trigger start command to Arduino
-    arduino.write(b'stop')
+    print("Arduino started at " + str(FrameRate) + " fps!")
+
+def stop_arduino(arduino):
+    arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(0) + '_' + str(ExposureTime)).encode())
+    time.sleep(0.1)
+    response = arduino.readline()
+    response = response.decode().rstrip().lstrip().split('_')
+    assert (float(response[0]) == 1 / FrameRate * 1000000) & (float(response[1]) == 0) & (
+            float(response[2]) == ExposureTime), 'data not sent to Arduino.'
+
+    print("Arduino stopped")
 
 
 def find_cameras(serial_numbers):
@@ -146,6 +161,7 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
             camera.Width = shape[0]
             camera.Height = shape[1]
             camera.MaxNumBuffer = MaxNumBuffer  # count of buffers allocated for grabbing
+            camera.AcquisitionMode.SetValue('Continuous')
             camera.TriggerSelector.SetValue('FrameStart')
             camera.TriggerMode.SetValue('On')  # hardware trigger
             camera.TriggerSource.SetValue('Line1')
@@ -153,8 +169,9 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
             camera.ExposureAuto.SetValue('Off')
             camera.ExposureMode.SetValue("TriggerWidth")
             # camera.AcquisitionFrameRateEnable.SetValue(false)
-            camera.StartGrabbingMax(FrameCount)
-            # camera.AcquisitionMode.SetValue('Continuous')
+            NumberOfPictures = 3
+            camera.StartGrabbingMax(NumberOfPictures, pylon.GrabStrategy_OneByOne)
+
 
             # Print the model name of the camera.
             print("Setup of camera ", camera_name, " complete.")
@@ -168,9 +185,9 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
 
 def read_cam(camera, timeout=5000, FrameCount=1):
     imgs_cam = []
-    print('Grabbing frames...')
     try:
-        for frame in range(FrameCount):
+        while camera.IsGrabbing():
+            print('Grabbing frames...')
             grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
             imgs_cam.append(grabResult.GetArray())
             grabResult.Release()
@@ -258,7 +275,7 @@ def imgs_to_video(imgs, fps, out_path):
 # Capture script
 # =============================================================================
 def all_cameras_record(arduino, cam_array):
-    trigger_arduino(arduino, ExposureTime, FrameRate, FrameCount)
+    start_arduino(arduino, ExposureTime, FrameRate)
     now = time.time()
     grab_frames(cam_array, path, FrameCount=FrameCount)
     then = time.time()
@@ -266,6 +283,12 @@ def all_cameras_record(arduino, cam_array):
 
     print("Execution time {} ms".format(execution_time * 1000))
 
+def all_cameras_stop(arduino, cam_array):
+    stop_arduino(arduino)
+    print("Arduino stopped")
+    for i, camera in enumerate(cam_array):
+        camera.StopGrabbing()
+    print("Cameras stopped")
 
 # =============================================================================
 # Init script

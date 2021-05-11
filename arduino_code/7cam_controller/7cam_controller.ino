@@ -55,13 +55,6 @@ void loop() {
       
       // start exposure
       digitalWrite(led, HIGH);
-
-      if(maxFrameCount<10){
-        digitalWrite(motor, HIGH);
-        delay(500);
-        digitalWrite(motor, LOW);
-        delay(500);
-      }
       
       unsigned long now = millis();
       unsigned long previousMicros = micros();
@@ -69,7 +62,7 @@ void loop() {
       digitalWrite(cam, HIGH);
       camState = 1;
       
-      while (frameCount < maxFrameCount){
+      while (maxFrameCount){
 
         currentMicros=micros();
 
