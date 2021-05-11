@@ -1,4 +1,4 @@
-## FicTrac v2.1.1 config file (build date May  3 2021)
+## FicTrac v2.1.1 config file (build date May  4 2021)
 c2a_cnrs_yz      : { 304, 37, 293, 37, 293, 48, 304, 48 }
 c2a_r            : { -1.209684, 1.208704, 1.208508 }
 c2a_src          : c2a_cnrs_yz
@@ -19,7 +19,7 @@ roi_r            : 0.022890
 save_debug       : n
 save_raw         : n
 socket_port      : 5556
-src_fn           : test.mp4
+src_fn           : 0
 src_fps          : -1.000000
 thr_ratio        : 1.25
 thr_win_pc       : 0.25

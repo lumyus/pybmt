@@ -9,26 +9,25 @@ from pypylon import pylon
 FrameRate = 100  # (fps)
 ExposureTime = 500  # (us)
 MaxNumBuffer = 100
-FrameCount = 500  # Number of images to be grabbed
+FrameCount = 100  # Number of images to be grabbed
 maxCamerasToUse = 2  # Limits the amount of cameras used for grabbing
 maxTime = 5  # acquisition time [min]
 shape = (1920, 1232)
-arduinoPort = '/dev/ttyACM1'
-serial_numbers = ['40029805']  # Enter all serial numbers except the one camera used for Fictrac
-path = '/home/gosztolai/Documents/'
+arduinoPort = '/dev/ttyACM0'
+serial_numbers = ['40022761']
+path = '/home/nely/Desktop/Cedric/'
 
 
 def connect_arduino(arduinoPort):
     try:
         arduino = serial.Serial(arduinoPort, 9600, timeout=1)
+        print('Arduino connected.')
         time.sleep(1)
+        return arduino
 
     except:
         print("Arduino not found. Check serial port number.")
-
-    print('Arduino connected.')
-
-    return arduino
+        return 0
 
 
 def trigger_arduino(arduino, ExposureTime, FrameRate=1, FrameCount=1):
@@ -48,6 +47,9 @@ def stop(arduino):
 
 
 def find_cameras(serial_numbers):
+
+    if len(serial_numbers) == 0: print('No serial numbers found. Enter them before starting.')
+
     try:
         tlFactory = pylon.TlFactory.GetInstance()
 
@@ -256,7 +258,6 @@ def imgs_to_video(imgs, fps, out_path):
 # Capture script
 # =============================================================================
 def all_cameras_record(arduino, cam_array):
-
     trigger_arduino(arduino, ExposureTime, FrameRate, FrameCount)
     now = time.time()
     grab_frames(cam_array, path, FrameCount=FrameCount)
@@ -270,7 +271,6 @@ def all_cameras_record(arduino, cam_array):
 # Init script
 # =============================================================================
 def init_cameras(serial_numbers):
-
     tlFactory, camera_devices = find_cameras(serial_numbers)
     cam_array = attach_cameras(tlFactory, camera_devices)
 
