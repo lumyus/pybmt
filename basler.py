@@ -16,7 +16,7 @@ shape = (1920, 1232)
 arduinoPort = '/dev/ttyACM0'
 serial_numbers = ['40022761']
 path = '/home/nely/Desktop/Cedric/'
-
+is_fly_moving = False
 
 def connect_arduino(arduinoPort):
     try:
@@ -40,7 +40,7 @@ def trigger_arduino(arduino, ExposureTime, FrameRate=1, FrameCount=1):
 
     print("Arduino triggered at " + str(FrameRate) + " fps!")
 
-def start_arduino(arduino, ExposureTime, FrameRate=1):
+def start_arduino(arduino):
     arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(1) + '_' + str(ExposureTime)).encode())
     time.sleep(0.1)
     response = arduino.readline()
@@ -168,9 +168,6 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
             camera.TriggerActivation.SetValue('RisingEdge')
             camera.ExposureAuto.SetValue('Off')
             camera.ExposureMode.SetValue("TriggerWidth")
-            # camera.AcquisitionFrameRateEnable.SetValue(false)
-            NumberOfPictures = 3
-            camera.StartGrabbingMax(NumberOfPictures, pylon.GrabStrategy_OneByOne)
 
 
             # Print the model name of the camera.
@@ -186,15 +183,12 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
 def read_cam(camera, timeout=5000, FrameCount=1):
     imgs_cam = []
     try:
-        while camera.IsGrabbing():
+        grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
+        if grabResult.GrabSucceeded():
             print('Grabbing frames...')
-            grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
+            # Timestamps timestamp = grabResult.TimeStamp
             imgs_cam.append(grabResult.GetArray())
             grabResult.Release()
-
-            # print(frame)
-
-        # camera.StopGrabbing()
 
     except genicam.GenericException as e:
         print("Some frames have been dropped.")
@@ -274,14 +268,10 @@ def imgs_to_video(imgs, fps, out_path):
 # =============================================================================
 # Capture script
 # =============================================================================
-def all_cameras_record(arduino, cam_array):
-    start_arduino(arduino, ExposureTime, FrameRate)
-    now = time.time()
+def all_cameras_record(cam_array):
+    for i, camera in enumerate(cam_array):
+        camera.StartGrabbing()
     grab_frames(cam_array, path, FrameCount=FrameCount)
-    then = time.time()
-    execution_time = then - now
-
-    print("Execution time {} ms".format(execution_time * 1000))
 
 def all_cameras_stop(arduino, cam_array):
     stop_arduino(arduino)

@@ -28,6 +28,7 @@ class ThresholdCallback(PyBMTCallback):
         self.num_frames_mean = num_frames_mean
         self.arduino = arduino
         self.cameras = cameras
+        self.camera_started = False
 
     def setup_callback(self):
         """
@@ -61,15 +62,20 @@ class ThresholdCallback(PyBMTCallback):
         # Get the running average speed
         avg_speed = sum(self.speed_history)/len(self.speed_history)
 
-        if avg_speed > self.speed_threshold and not self.is_signal_on:
-            print("Stimulus ON!")
+        if avg_speed > self.speed_threshold:
+            print("Fly is moving!")
             # Start image aquisition of Basler cameras in sync with Basler.py code
-            basler.all_cameras_record(arduino=self.arduino, cam_array=self.cameras)
+            if not self.camera_started:
+                basler.start_arduino(arduino=self.arduino)
+                self.camera_started = True
+            basler.all_cameras_record( cam_array=self.cameras)
             self.is_signal_on = True
 
         if avg_speed < self.speed_threshold and self.is_signal_on:
             # Stop image aquisition of Basler cameras in sync with Basler.py code
-            print("Stimulus OFF!")
+            print("Fly is resting or dead!")
+            basler.all_cameras_stop(arduino=self.arduino, cam_array=self.cameras)
+            self.camera_started = False
             self.is_signal_on = False
 
         return True

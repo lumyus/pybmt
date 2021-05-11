@@ -5,6 +5,8 @@ import basler
 
 
 serial_numbers=['40018632'] # Enter all serial numbers except the one camera used for Fictrac (40018632, 40022761)
+FrameRate = 100  # (fps)
+ExposureTime = 500  # (us)
 
 def run_pybmt_example():
 
@@ -12,6 +14,7 @@ def run_pybmt_example():
     fictrac_console_out = "output.txt"
 
     arduino = basler.connect_arduino(arduinoPort='/dev/ttyACM0')
+
     cameras = basler.init_cameras(serial_numbers=serial_numbers)
 
     print('Starting Fictrac..')
