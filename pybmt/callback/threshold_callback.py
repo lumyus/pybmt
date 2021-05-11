@@ -60,9 +60,11 @@ class ThresholdCallback(PyBMTCallback):
 
         if avg_speed > self.speed_threshold and not self.is_signal_on:
             print("Stimulus ON!")
+            # Start image aquisition of Basler cameras in sync with Basler.py code
             self.is_signal_on = True
 
         if avg_speed < self.speed_threshold and self.is_signal_on:
+            # Stop image aquisition of Basler cameras in sync with Basler.py code
             print("Stimulus OFF!")
             self.is_signal_on = False
 
