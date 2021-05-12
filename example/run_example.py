@@ -38,8 +38,11 @@ def run_basler_aquisition(is_fly_moving):
     cameras = basler.init_cameras(serial_numbers=serial_numbers)
     for i, camera in enumerate(cameras):
         camera.StartGrabbing(pylon.GrabStrategy_OneByOne)
-    while bool(is_fly_moving.val):
-        basler.grab_frames(cameras)
+
+    # make this cancelable
+    while True:
+        while bool(is_fly_moving.val):
+            basler.grab_frames(cameras)
 
 def testrunner():
     while True:
@@ -47,6 +50,7 @@ def testrunner():
 
 if __name__ == "__main__":
 
+    # https://stackoverflow.com/questions/56549971/sharing-boolean-between-processes
     process1 = multiprocessing.Process(target=run_fictrac, args=(fly_status,))
     process2 = multiprocessing.Process(target=run_basler_aquisition, args=(fly_status,))
 
