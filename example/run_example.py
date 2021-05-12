@@ -32,7 +32,6 @@ def run_fictrac(is_fly_moving):
 
 
 def run_basler_aquisition(is_fly_moving):
-
     arduino = basler.connect_arduino(arduinoPort='/dev/ttyACM0')
     basler.start_arduino(arduino=arduino)
     cameras = basler.init_cameras(serial_numbers=serial_numbers)
