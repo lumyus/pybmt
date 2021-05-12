@@ -14,9 +14,8 @@ maxCamerasToUse = 2  # Limits the amount of cameras used for grabbing
 maxTime = 5  # acquisition time [min]
 shape = (1920, 1232)
 arduinoPort = '/dev/ttyACM0'
-serial_numbers = ['40022761']
-path = '/home/nely/Desktop/Cedric/'
-FLY_STATE = None
+serial_numbers = ['40022761', '40014604', '40018619']
+path = '/home/nely/Desktop/Cedric/images/'
 
 def connect_arduino(arduinoPort):
     try:
@@ -35,18 +34,17 @@ def trigger_arduino(arduino, ExposureTime, FrameRate=1, FrameCount=1):
     time.sleep(0.1)
     response = arduino.readline()
     response = response.decode().rstrip().lstrip().split('_')
-    assert (float(response[0]) == 1 / FrameRate * 1000000) & (float(response[1]) == FrameCount) & (
-            float(response[2]) == ExposureTime), 'data not sent to Arduino.'
 
     print("Arduino triggered at " + str(FrameRate) + " fps!")
 
 def start_arduino(arduino):
+    print(FrameRate)
+    print(ExposureTime)
     arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(1) + '_' + str(ExposureTime)).encode())
-    time.sleep(0.1)
+    time.sleep(1.1)
     response = arduino.readline()
     response = response.decode().rstrip().lstrip().split('_')
-    assert (float(response[0]) == 1 / FrameRate * 1000000) & (float(response[1]) == 1) & (
-            float(response[2]) == ExposureTime), 'data not sent to Arduino.'
+    print(response)
 
     print("Arduino started at " + str(FrameRate) + " fps!")
 
@@ -180,17 +178,16 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
     return cam_array
 
 
-def read_cam(camera, timeout=5000, FrameCount=1):
+def read_cam(camera, flystate, timeout=5000, FrameCount=1):
     imgs_cam = []
     try:
-        while camera.IsGrabbing():
             # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
             grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
 
             print("GrabSucceeded: ", grabResult.GrabSucceeded())
             imgs_cam.append(grabResult.GetArray())
             grabResult.Release()
-        camera.Close()
+
 
     except genicam.GenericException as e:
         print("Some frames have been dropped.")
@@ -199,13 +196,32 @@ def read_cam(camera, timeout=5000, FrameCount=1):
     return imgs_cam
 
 
-def grab_frames(cam_array, path='/home/nely/Desktop/Cedric/', FrameCount=1):
+def grab_frames(cam_array, flystate, path='/home/nely/Desktop/Cedric/images/', FrameCount=1):
+
+    imgs_cam0 = []
+    imgs_cam1 = []
+
     imgs = {}
-    for i, camera in enumerate(cam_array):
-        imgs['cam' + str(i)] = read_cam(camera, FrameCount=FrameCount)
+
+    while cam_array.IsGrabbing():
+        if not bool(flystate.value): break
+        for i, camera in enumerate(cam_array):
+            # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
+            grabResult = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
+
+            print("GrabSucceeded: ", grabResult.GrabSucceeded())
+            if i == 0:
+                imgs_cam0.append(grabResult.GetArray())
+            if i == 1:
+                imgs_cam1.append(grabResult.GetArray())
+            grabResult.Release()
+
+    imgs['cam' + str(0)] = imgs_cam0
+    imgs['cam' + str(1)] = imgs_cam1
 
     if path is not None:
-        save_frames(imgs, path)
+        if len(imgs['cam0']):
+            save_frames(imgs, path)
 
 
 def save_frames(imgs, fname=''):
@@ -232,7 +248,11 @@ def write_videos(path):
         imgs = pickle.load(open(f, 'rb'))
         imgs = imgs['cam0']
         time = f.split('_')[-1][:-4]
-        imgs_to_video(imgs, 25, path + time + '.mp4')
+        imgs_to_video(imgs, 25, path + time + 'cam0.mp4')
+        imgs = pickle.load(open(f, 'rb'))
+        imgs = imgs['cam1']
+        time = f.split('_')[-1][:-4]
+        imgs_to_video(imgs, 25, path + time + 'cam1.mp4')
 
 
 def imgs_to_video(imgs, fps, out_path):
@@ -249,10 +269,6 @@ def imgs_to_video(imgs, fps, out_path):
 # =============================================================================
 # Capture script
 # =============================================================================
-
-def is_fly_moving(case):
-    fly_state = case
-    return fly_state
 
 def all_cameras_stop(cam_array):
     for i, camera in enumerate(cam_array):
@@ -305,7 +321,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-    # Select the acquisition start trigger 
+    # Select the acquisition start trigger
     # camera.TriggerSelector.SetValue(TriggerSelector_AcquisitionStart)]
 
     # Check the acquisition start trigger acquisition status
@@ -322,8 +338,8 @@ if __name__ == "__main__":
     # Read the acquisition status
     # IsWaitingForFrameTrigger = Camera.AcquisitionStatus.GetValue()
 
-    # readout time 
-    # ReadoutTime = camera.ReadoutTimeAbs.GetValue()    
+    # readout time
+    # ReadoutTime = camera.ReadoutTimeAbs.GetValue()
 
-    # Set the acquisition frame count 
+    # Set the acquisition frame count
     # camera.AcquisitionFrameCount.SetValue(5)

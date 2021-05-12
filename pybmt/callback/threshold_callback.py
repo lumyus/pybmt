@@ -5,7 +5,6 @@ from collections import deque
 
 from pybmt.fictrac.state import FicTracState
 
-
 class ThresholdCallback(PyBMTCallback):
     """
     This class implements control logic for triggering a stimulus when tracking velocity reaches a certain
@@ -59,7 +58,7 @@ class ThresholdCallback(PyBMTCallback):
         # Get the running average speed
         avg_speed = sum(self.speed_history) / len(self.speed_history)
 
-        if avg_speed > self.speed_threshold:
+        if avg_speed > self.speed_threshold and not self.is_signal_on:
             print("Fly is moving!")
             # Start image aquisition of Basler cameras in sync with Basler.py code
             self.is_fly_moving.value = 1
