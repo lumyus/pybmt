@@ -16,7 +16,7 @@ shape = (1920, 1232)
 arduinoPort = '/dev/ttyACM0'
 serial_numbers = ['40022761']
 path = '/home/nely/Desktop/Cedric/'
-is_fly_moving = False
+FLY_STATE = None
 
 def connect_arduino(arduinoPort):
     try:
@@ -183,12 +183,14 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
 def read_cam(camera, timeout=5000, FrameCount=1):
     imgs_cam = []
     try:
-        grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
-        if grabResult.GrabSucceeded():
-            print('Grabbing frames...')
-            # Timestamps timestamp = grabResult.TimeStamp
+        while camera.IsGrabbing():
+            # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
+            grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
+
+            print("GrabSucceeded: ", grabResult.GrabSucceeded())
             imgs_cam.append(grabResult.GetArray())
             grabResult.Release()
+        camera.Close()
 
     except genicam.GenericException as e:
         print("Some frames have been dropped.")
@@ -197,31 +199,10 @@ def read_cam(camera, timeout=5000, FrameCount=1):
     return imgs_cam
 
 
-def grab_frames(cam_array, path=None, FrameCount=1):
+def grab_frames(cam_array, path='/home/nely/Desktop/Cedric/', FrameCount=1):
     imgs = {}
     for i, camera in enumerate(cam_array):
         imgs['cam' + str(i)] = read_cam(camera, FrameCount=FrameCount)
-
-        # number of frames to grab
-        # camera.StartGrabbingMax(100)
-        # camera.StartGrabbing(pylon.GrabStrategy_OneByOne)
-
-    # jobs = []
-    # for i, camera in enumerate(cam_array):
-    #     process = multiprocessing.Process(target=read_cam, 
-    #                                       args=(camera,))
-    #     jobs.append(process)
-
-    # # Start the processes     
-    # for j in jobs:
-    #     j.start()
-
-    # # Ensure all of the processes have finished
-    # for j in jobs:
-    #     j.join()
-
-    # with multiprocessing.Pool(2) as p:  # One for each image
-    #     p.map(read_cam, enumerate(cam_array))
 
     if path is not None:
         save_frames(imgs, path)
@@ -268,14 +249,12 @@ def imgs_to_video(imgs, fps, out_path):
 # =============================================================================
 # Capture script
 # =============================================================================
-def all_cameras_record(cam_array):
-    for i, camera in enumerate(cam_array):
-        camera.StartGrabbing()
-    grab_frames(cam_array, path, FrameCount=FrameCount)
 
-def all_cameras_stop(arduino, cam_array):
-    stop_arduino(arduino)
-    print("Arduino stopped")
+def is_fly_moving(case):
+    fly_state = case
+    return fly_state
+
+def all_cameras_stop(cam_array):
     for i, camera in enumerate(cam_array):
         camera.StopGrabbing()
     print("Cameras stopped")

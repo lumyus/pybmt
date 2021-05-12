@@ -1,4 +1,5 @@
 import basler
+import multithread
 from pybmt.callback.base import PyBMTCallback
 from collections import deque
 
@@ -12,7 +13,7 @@ class ThresholdCallback(PyBMTCallback):
     stimuli response.
     """
 
-    def __init__(self, speed_threshold=0.009, num_frames_mean=25, arduino=None, cameras=None):
+    def __init__(self, speed_threshold=0.009, num_frames_mean=25, is_fly_moving=None):
         """
         Setup a closed loop experiment that keeps track of a running average of the ball speed and generates a stimulus
         when the speed crosses a threshold.
@@ -26,9 +27,7 @@ class ThresholdCallback(PyBMTCallback):
 
         self.speed_threshold = speed_threshold
         self.num_frames_mean = num_frames_mean
-        self.arduino = arduino
-        self.cameras = cameras
-        self.camera_started = False
+        self.is_fly_moving = is_fly_moving
 
     def setup_callback(self):
         """
@@ -39,9 +38,7 @@ class ThresholdCallback(PyBMTCallback):
 
         # Our buffer of past speeds
         self.speed_history = deque(maxlen=self.num_frames_mean)
-
         self.is_signal_on = False
-
 
     def process_callback(self, track_state: FicTracState):
         """
@@ -60,22 +57,18 @@ class ThresholdCallback(PyBMTCallback):
         self.speed_history.append(speed)
 
         # Get the running average speed
-        avg_speed = sum(self.speed_history)/len(self.speed_history)
+        avg_speed = sum(self.speed_history) / len(self.speed_history)
 
         if avg_speed > self.speed_threshold:
             print("Fly is moving!")
             # Start image aquisition of Basler cameras in sync with Basler.py code
-            if not self.camera_started:
-                basler.start_arduino(arduino=self.arduino)
-                self.camera_started = True
-            basler.all_cameras_record( cam_array=self.cameras)
+            self.is_fly_moving.value = 1
             self.is_signal_on = True
 
         if avg_speed < self.speed_threshold and self.is_signal_on:
             # Stop image aquisition of Basler cameras in sync with Basler.py code
             print("Fly is resting or dead!")
-            basler.all_cameras_stop(arduino=self.arduino, cam_array=self.cameras)
-            self.camera_started = False
+            self.is_fly_moving.value = 0
             self.is_signal_on = False
 
         return True
