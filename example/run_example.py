@@ -10,13 +10,12 @@ import basler
 serial_numbers=['40018632'] # Enter all serial numbers except the one camera used for Fictrac (40018632, 40022761)
 FrameRate = 100  # (fps)
 ExposureTime = 500  # (us)
-fly_status = multiprocessing.Value('i', 0)
+
 
 def run_fictrac(is_fly_moving):
 
     fictrac_config = "config.txt"
     fictrac_console_out = "output.txt"
-
 
     print('Starting Fictrac..')
 
@@ -33,6 +32,7 @@ def run_fictrac(is_fly_moving):
 
 
 def run_basler_aquisition(is_fly_moving):
+
     arduino = basler.connect_arduino(arduinoPort='/dev/ttyACM0')
     basler.start_arduino(arduino=arduino)
     cameras = basler.init_cameras(serial_numbers=serial_numbers)
@@ -51,8 +51,12 @@ def testrunner():
 if __name__ == "__main__":
 
     # https://stackoverflow.com/questions/56549971/sharing-boolean-between-processes
-    process1 = multiprocessing.Process(target=run_fictrac, args=(fly_status,))
-    process2 = multiprocessing.Process(target=run_basler_aquisition, args=(fly_status,))
+    # https://stackoverflow.com/questions/27868395/python-multiprocessing-object-passed-by-value
+
+    shared_fly_status = multiprocessing.Manager().Value('i', 0)
+
+    process1 = multiprocessing.Process(target=run_fictrac, args=(shared_fly_status,))
+    process2 = multiprocessing.Process(target=run_basler_aquisition, args=(shared_fly_status,))
 
     process1.start()
     process2.start()
