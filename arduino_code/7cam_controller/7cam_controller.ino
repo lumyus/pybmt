@@ -1,8 +1,8 @@
 char serialData;
 
-unsigned long fps;
+unsigned long fps = 100;
 int maxFrameCount;
-unsigned long ExposureTime;
+unsigned long ExposureTime = 500;
 unsigned long currentMicros = 0;
 int camState = 0;
 int led=13;

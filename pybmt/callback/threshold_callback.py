@@ -64,6 +64,7 @@ class ThresholdCallback(PyBMTCallback):
             self.is_fly_moving.value = 1
             self.is_signal_on = True
 
+
         if avg_speed < self.speed_threshold and self.is_signal_on:
             # Stop image aquisition of Basler cameras in sync with Basler.py code
             print("Fly is resting or dead!")

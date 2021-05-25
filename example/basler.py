@@ -8,55 +8,11 @@ from pypylon import pylon
 
 FrameRate = 100  # (fps)
 ExposureTime = 500  # (us)
-MaxNumBuffer = 100
 FrameCount = 100  # Number of images to be grabbed
 maxCamerasToUse = 2  # Limits the amount of cameras used for grabbing
 maxTime = 5  # acquisition time [min]
 shape = (1920, 1232)
-arduinoPort = '/dev/ttyACM0'
-serial_numbers = ['40022761', '40014604', '40018619']
 path = '/home/nely/Desktop/Cedric/images/'
-
-def connect_arduino(arduinoPort):
-    try:
-        arduino = serial.Serial(arduinoPort, 9600, timeout=1)
-        print('Arduino connected.')
-        time.sleep(1)
-        return arduino
-
-    except:
-        print("Arduino not found. Check serial port number.")
-        return 0
-
-
-def trigger_arduino(arduino, ExposureTime, FrameRate=1, FrameCount=1):
-    arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(FrameCount) + '_' + str(ExposureTime)).encode())
-    time.sleep(0.1)
-    response = arduino.readline()
-    response = response.decode().rstrip().lstrip().split('_')
-
-    print("Arduino triggered at " + str(FrameRate) + " fps!")
-
-def start_arduino(arduino):
-    print(FrameRate)
-    print(ExposureTime)
-    arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(1) + '_' + str(ExposureTime)).encode())
-    time.sleep(1.1)
-    response = arduino.readline()
-    response = response.decode().rstrip().lstrip().split('_')
-    print(response)
-
-    print("Arduino started at " + str(FrameRate) + " fps!")
-
-def stop_arduino(arduino):
-    arduino.write(('trig_' + str(1 / FrameRate * 1000000) + '_' + str(0) + '_' + str(ExposureTime)).encode())
-    time.sleep(0.1)
-    response = arduino.readline()
-    response = response.decode().rstrip().lstrip().split('_')
-    assert (float(response[0]) == 1 / FrameRate * 1000000) & (float(response[1]) == 0) & (
-            float(response[2]) == ExposureTime), 'data not sent to Arduino.'
-
-    print("Arduino stopped")
 
 
 def find_cameras(serial_numbers):
@@ -146,7 +102,7 @@ def close_cameras(cam_array):
     return cam_array
 
 
-def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=1):
+def set_camera_params(cam_array, shape=(960, 480), FrameCount=1):
     try:
         for i, camera in enumerate(cam_array):
             # camera name
@@ -158,7 +114,7 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
             # set camera parameters
             camera.Width = shape[0]
             camera.Height = shape[1]
-            camera.MaxNumBuffer = MaxNumBuffer  # count of buffers allocated for grabbing
+            camera.MaxNumBuffer = 200  # count of buffers allocated for grabbing
             camera.AcquisitionMode.SetValue('Continuous')
             camera.TriggerSelector.SetValue('FrameStart')
             camera.TriggerMode.SetValue('On')  # hardware trigger
@@ -178,30 +134,15 @@ def set_camera_params(cam_array, shape=(960, 480), MaxNumBuffer=100, FrameCount=
     return cam_array
 
 
-def read_cam(camera, flystate, timeout=5000, FrameCount=1):
-    imgs_cam = []
-    try:
-            # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
-            grabResult = camera.RetrieveResult(timeout, pylon.TimeoutHandling_ThrowException)
-
-            print("GrabSucceeded: ", grabResult.GrabSucceeded())
-            imgs_cam.append(grabResult.GetArray())
-            grabResult.Release()
-
-
-    except genicam.GenericException as e:
-        print("Some frames have been dropped.")
-        print(e.GetDescription())
-
-    return imgs_cam
-
-
 def grab_frames(cam_array, flystate, path='/home/nely/Desktop/Cedric/images/', FrameCount=1):
 
     imgs_cam0 = []
     imgs_cam1 = []
 
     imgs = {}
+
+    # Start the stopwatch / counter
+    start = time.clock()
 
     while cam_array.IsGrabbing():
         if not bool(flystate.value): break
@@ -221,6 +162,10 @@ def grab_frames(cam_array, flystate, path='/home/nely/Desktop/Cedric/images/', F
 
     if path is not None:
         if len(imgs['cam0']):
+            # Stop the stopwatch / counter
+            end = time.clock()
+
+            print("Elapsed time:", end - start)
             save_frames(imgs, path)
 
 
@@ -248,11 +193,11 @@ def write_videos(path):
         imgs = pickle.load(open(f, 'rb'))
         imgs = imgs['cam0']
         time = f.split('_')[-1][:-4]
-        imgs_to_video(imgs, 25, path + time + 'cam0.mp4')
+        imgs_to_video(imgs, 1, path + time + 'cam0.mp4')
         imgs = pickle.load(open(f, 'rb'))
         imgs = imgs['cam1']
         time = f.split('_')[-1][:-4]
-        imgs_to_video(imgs, 25, path + time + 'cam1.mp4')
+        imgs_to_video(imgs, 1, path + time + 'cam1.mp4')
 
 
 def imgs_to_video(imgs, fps, out_path):
@@ -283,7 +228,7 @@ def init_cameras(serial_numbers):
     cam_array = attach_cameras(tlFactory, camera_devices)
 
     cam_array = open_cameras(cam_array)
-    cam_array = set_camera_params(cam_array, shape, MaxNumBuffer, FrameCount)
+    cam_array = set_camera_params(cam_array, shape, FrameCount)
 
     print("Cameras initialized..")
 
@@ -294,28 +239,8 @@ def init_cameras(serial_numbers):
 # Main script
 # =============================================================================
 def main():
-    arduino = connect_arduino(arduinoPort)
-    tlFactory, camera_devices = find_cameras(serial_numbers)
-    cam_array = attach_cameras(tlFactory, camera_devices)
 
-    usr_input = None
-    while usr_input != 'exit':
-
-        usr_input = input('Choose trigger mode (single/burst/motion/videos/exit)! ')
-
-        if usr_input == 'burst':
-            cam_array = open_cameras(cam_array)
-            cam_array = set_camera_params(cam_array, shape, MaxNumBuffer, FrameCount)
-            trigger_arduino(arduino, ExposureTime, FrameRate, FrameCount)
-            now = time.time()
-            grab_frames(cam_array, path, FrameCount=FrameCount)
-            then = time.time()
-            execution_time = then - now
-
-            print("Execution time {} ms".format(execution_time * 1000))
-
-        elif usr_input == 'videos':
-            write_videos(path)
+    write_videos(path)
 
 
 if __name__ == "__main__":
