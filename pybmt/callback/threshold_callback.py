@@ -54,7 +54,6 @@ class ThresholdCallback(PyBMTCallback):
 
         # Add the speed to our history
         self.speed_history.append(speed)
-
         # Get the running average speed
         avg_speed = sum(self.speed_history) / len(self.speed_history)
 
