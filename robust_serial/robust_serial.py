@@ -15,6 +15,10 @@ class Order(Enum):
     ERROR = 4
     RECEIVED = 5
     START_CAM = 7
+    TURN_LEFT_LIGHT_ON = 8,
+    TURN_RIGHT_LIGHT_OFF = 9
+    TURN_RIGHT_LIGHT_ON = 10
+    TURN_LEFT_LIGHT_OFF = 11
 
 def read_order(f):
     """

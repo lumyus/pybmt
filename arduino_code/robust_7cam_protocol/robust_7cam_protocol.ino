@@ -11,9 +11,14 @@ bool camera_activated = true;
 long previousMicros = -1;
 long currentMicros = 0;
 int camState = 0;
-int FrameRate = 100;
+
+int fps = 100;
+int exposure_time = 500;
 
 int number_of_frames = 0;
+
+bool turn_on_left_led = false;
+bool turn_on_right_led = false;
 
 void setup()
 {
@@ -23,6 +28,8 @@ void setup()
   // Init Motor
   pinMode(LED_PIN, OUTPUT);
   pinMode(CAM_PIN, OUTPUT);
+  pinMode(LEFT_LIGHT_PIN, OUTPUT);
+  pinMode(RIGHT_LIGHT_PIN, OUTPUT);
 
   // Wait until the arduino is connected to master
   while(!is_connected)
@@ -45,6 +52,20 @@ void loop()
   }else{
     digitalWrite(LED_PIN, LOW);
   }
+
+  if(turn_on_left_led == true){
+    digitalWrite(LEFT_LIGHT_PIN, HIGH);
+  }else{
+    digitalWrite(LEFT_LIGHT_PIN, LOW);
+  }
+
+  if(turn_on_right_led == true){
+    digitalWrite(RIGHT_LIGHT_PIN, HIGH);
+  }else{
+    digitalWrite(RIGHT_LIGHT_PIN, LOW);
+  }
+
+
 }
 
 void handle_cameras(){
@@ -58,7 +79,7 @@ void handle_cameras(){
         currentMicros = micros();
         long elapsed_time = currentMicros - previousMicros;
 
-        if(currentMicros - previousMicros > 500){
+        if(currentMicros - previousMicros > exposure_time){
           if(camState==1){
             digitalWrite(CAM_PIN, LOW);
             camState = 0;
@@ -66,7 +87,7 @@ void handle_cameras(){
           }
         }
         
-        if(currentMicros - previousMicros > 10000){
+        if(currentMicros - previousMicros > fps*100){
           if(camState==0){
             digitalWrite(CAM_PIN, HIGH);
             camState = 1;
@@ -112,8 +133,36 @@ void get_messages_from_serial()
         // update the camera state
         case START_CAM:
         {
-          //camera_activated = true;
+          camera_activated = true;
           write_order(START_CAM);
+          break;
+        }
+
+        case TURN_LEFT_LIGHT_ON:
+        {
+          turn_on_left_led = true;
+          write_order(TURN_LEFT_LIGHT_ON);
+          break;
+        }
+
+        case TURN_LEFT_LIGHT_OFF:
+        {
+          turn_on_left_led = false;
+          write_order(TURN_LEFT_LIGHT_OFF);
+          break;
+        }
+
+        case TURN_RIGHT_LIGHT_ON:
+        {
+          turn_on_right_led = true;
+          write_order(TURN_RIGHT_LIGHT_ON);
+          break;
+        }
+
+        case TURN_RIGHT_LIGHT_OFF:
+        {
+          turn_on_right_led = false;
+          write_order(TURN_RIGHT_LIGHT_OFF);
           break;
         }
         
