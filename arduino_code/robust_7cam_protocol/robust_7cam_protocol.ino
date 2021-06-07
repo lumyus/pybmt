@@ -141,7 +141,7 @@ void get_messages_from_serial()
         case TURN_LEFT_LIGHT_ON:
         {
           turn_on_left_led = true;
-          write_order(TURN_LEFT_LIGHT_ON);
+          //write_order(TURN_LEFT_LIGHT_ON);
           break;
         }
 

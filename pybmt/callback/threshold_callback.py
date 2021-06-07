@@ -1,5 +1,6 @@
-import basler
+
 import multithread
+
 from pybmt.callback.base import PyBMTCallback
 from collections import deque
 
@@ -62,13 +63,14 @@ class ThresholdCallback(PyBMTCallback):
             # Start image aquisition of Basler cameras in sync with Basler.py code
             self.is_fly_moving.value = 1
             self.is_signal_on = True
-
+            switch_left_led(True)
 
         if avg_speed < self.speed_threshold and self.is_signal_on:
             # Stop image aquisition of Basler cameras in sync with Basler.py code
             print("Fly is resting or dead!")
             self.is_fly_moving.value = 0
             self.is_signal_on = False
+            switch_left_led(False)
 
         return True
 
