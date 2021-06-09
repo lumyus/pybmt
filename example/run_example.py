@@ -2,15 +2,10 @@ import multiprocessing
 
 from pypylon import pylon
 
-from pybmt.arduino_serial import ArduinoProtocol
+from pybmt.arduino_serial import ArduinoSerial
 from pybmt.callback.threshold_callback import ThresholdCallback
 from pybmt.fictrac.driver import FicTracDriver
 import basler
-
-
-FrameRate = 100  # (fps)
-ExposureTime = 500  # (us)
-
 
 def run_fictrac(is_fly_moving):
 
@@ -33,16 +28,17 @@ def run_fictrac(is_fly_moving):
 
 def run_basler_aquisition(is_fly_moving):
 
-    arduino_protocol = ArduinoProtocol()
+    arduino_protocol = ArduinoSerial()
     arduino_protocol.connect_arduino()
-    arduino_protocol.switch_left_led(True)
-    cameras = basler.init_cameras(serial_numbers=['40018619']) #'40014604' fictrac
-    cameras.StartGrabbing(pylon.GrabStrategy_OneByOne)
+
+    basler_cameras = basler.Basler()
+
+    cameras = basler_cameras.init_cameras(serial_numbers=['40018619'], shape=(1920,1200)) # TODO: Import these rather than specifying them in code
 
     # make this cancelable
     while True:
         while bool(is_fly_moving.value):
-            basler.grab_frames(cameras, is_fly_moving)
+            basler_cameras.grab_frames(cameras, is_fly_moving)
 
 if __name__ == "__main__":
 

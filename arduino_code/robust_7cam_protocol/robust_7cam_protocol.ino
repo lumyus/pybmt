@@ -12,8 +12,8 @@ long previousMicros = -1;
 long currentMicros = 0;
 int camState = 0;
 
-int fps = 100;
-int exposure_time = 500;
+int fps = 0;
+int exposure_time = 0;
 
 int number_of_frames = 0;
 
@@ -133,36 +133,48 @@ void get_messages_from_serial()
         // update the camera state
         case START_CAM:
         {
-          camera_activated = true;
-          write_order(START_CAM);
+          if(fps && exposure_time){
+           camera_activated = true;
+          }
+          //write_order(START_CAM);
+          break;
+        }
+
+         case CONFIGURE_CAM_FPS:
+        {
+          fps = read_i16();
+          //write_order(START_CAM);
+          break;
+        }
+
+         case CONFIGURE_CAM_EXPOSURE_TIME:
+        {
+          exposure_time = read_i16();
+          //write_order(START_CAM);
           break;
         }
 
         case TURN_LEFT_LIGHT_ON:
         {
           turn_on_left_led = true;
-          //write_order(TURN_LEFT_LIGHT_ON);
           break;
         }
 
         case TURN_LEFT_LIGHT_OFF:
         {
           turn_on_left_led = false;
-          write_order(TURN_LEFT_LIGHT_OFF);
           break;
         }
 
         case TURN_RIGHT_LIGHT_ON:
         {
           turn_on_right_led = true;
-          write_order(TURN_RIGHT_LIGHT_ON);
           break;
         }
 
         case TURN_RIGHT_LIGHT_OFF:
         {
           turn_on_right_led = false;
-          write_order(TURN_RIGHT_LIGHT_OFF);
           break;
         }
         

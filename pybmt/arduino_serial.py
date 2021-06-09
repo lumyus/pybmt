@@ -2,11 +2,12 @@ from __future__ import print_function, division, absolute_import
 
 import time
 
-from robust_serial import write_order, Order, read_order
+from robust_serial import write_order, Order, read_order, write_i8
 from robust_serial.utils import open_serial_port
 
 
-class ArduinoProtocol:
+class ArduinoSerial:
+
     serial_file = 0
 
     def connect_arduino(self):
@@ -37,30 +38,35 @@ class ArduinoProtocol:
         else:
             print("Error with connection to Arduino!!")
 
-        # Equivalent to write_i8(serial_file, Order.MOTOR.value)
-        write_order(self.serial_file, Order.START_CAM)
-        read_order(self.serial_file)
+        # Write all required parameters for the  hardware trigger of the camera before starting it
+        write_i8(self.serial_file, Order.CONFIGURE_CAM_FPS.value)
+        if read_order(self.serial_file) == Order.RECEIVED:
+            print("Hardware trigger configured [FPS] successfully!")
 
+        write_i8(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME.value)
+        if read_order(self.serial_file) == Order.RECEIVED:
+            print("Hardware trigger configured [EXPOSURE_TIME] successfully!")
+
+        write_order(self.serial_file, Order.START_CAM)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Camera hardware triggering started!")
 
-    def switch_left_led(self, turn_on):
-        if turn_on:
-            write_order(self.serial_file, Order.TURN_LEFT_LIGHT_ON)
-            if read_order(self.serial_file) != Order.RECEIVED:
-                print('An error occurred while trying to send a order to the Arduino!')
+    def switch_left_led(self, turn_on_left):
 
+        if turn_on_left:
+            write_order(self.serial_file, Order.TURN_LEFT_LIGHT_ON)
         else:
             write_order(self.serial_file, Order.TURN_LEFT_LIGHT_OFF)
-            if read_order(self.serial_file) != Order.RECEIVED:
-                print('An error occurred while trying to send a order to the Arduino!')
 
-    def switch_right_led(self, turn_on):
-        if turn_on:
+        if read_order(self.serial_file) != Order.RECEIVED:
+            print('An error occurred while trying to send a order [TURN_LEFT_LIGHT_ON/OFF] to the Arduino!')
+
+    def switch_right_led(self, turn_on_right):
+
+        if turn_on_right:
             write_order(self.serial_file, Order.TURN_RIGHT_LIGHT_ON)
-            if read_order(self.serial_file) != Order.RECEIVED:
-                print('An error occurred while trying to send a order to the Arduino!')
         else:
             write_order(self.serial_file, Order.TURN_RIGHT_LIGHT_OFF)
-            if read_order(self.serial_file) != Order.RECEIVED:
-                print('An error occurred while trying to send a order to the Arduino!')
+
+        if read_order(self.serial_file) != Order.RECEIVED:
+            print('An error occurred while trying to send a order [TURN_RIGHT_LIGHT_ON/OFF] to the Arduino!')
