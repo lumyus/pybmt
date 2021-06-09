@@ -1,5 +1,6 @@
 
 import multithread
+from ball_movements import BallMovements
 
 from pybmt.callback.base import PyBMTCallback
 from collections import deque
@@ -13,7 +14,7 @@ class ThresholdCallback(PyBMTCallback):
     stimuli response.
     """
 
-    def __init__(self, speed_threshold=0.009, num_frames_mean=25, is_ball_moving=None):
+    def __init__(self, speed_threshold=0.009, num_frames_mean=25, shared_status=None):
         """
         Setup a closed loop experiment that keeps track of a running average of the ball speed and generates a stimulus
         when the speed crosses a threshold.
@@ -27,7 +28,7 @@ class ThresholdCallback(PyBMTCallback):
 
         self.speed_threshold = speed_threshold
         self.num_frames_mean = num_frames_mean
-        self.is_fly_moving = is_ball_moving
+        self.shared_status = shared_status
 
     def setup_callback(self):
         """
@@ -61,14 +62,17 @@ class ThresholdCallback(PyBMTCallback):
         if avg_speed > self.speed_threshold and not self.is_signal_on:
             print("Fly is moving!")
             # Start image aquisition of Basler cameras in sync with Basler.py code
-            self.is_fly_moving.value = 1
+            self.shared_status.value = BallMovements.BALL_MOVING
             self.is_signal_on = True
 
         if avg_speed < self.speed_threshold and self.is_signal_on:
             # Stop image aquisition of Basler cameras in sync with Basler.py code
             print("Fly is resting or dead!")
-            self.is_fly_moving.value = 0
+            self.shared_status.value = BallMovements.BALL_STOPPED
             self.is_signal_on = False
+
+
+        # For any other condition use self.shared_status.value = XXX where we specificed what XXX means
 
         return True
 
