@@ -38,6 +38,7 @@ def run_basler_aquisition(is_ball_moving):
     arduino_protocol.connect_arduino()
 
     basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers,buffer=200)
+    basler_cameras.run()
 
     # make this cancelable
 

@@ -64,9 +64,10 @@ class Basler:
         self.open_cameras()
         self.set_camera_params()
 
-        self.cam_array.StartGrabbing(pylon.GrabStrategy_OneByOne)
-
         print("Cameras initialized..")
+
+    def run(self):
+        self.cam_array.StartGrabbing(pylon.GrabStrategy_OneByOne)
 
     def find_cameras(self):
 
