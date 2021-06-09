@@ -13,7 +13,7 @@ class ThresholdCallback(PyBMTCallback):
     stimuli response.
     """
 
-    def __init__(self, speed_threshold=0.009, num_frames_mean=25, is_fly_moving=None):
+    def __init__(self, speed_threshold=0.009, num_frames_mean=25, is_ball_moving=None):
         """
         Setup a closed loop experiment that keeps track of a running average of the ball speed and generates a stimulus
         when the speed crosses a threshold.
@@ -27,7 +27,7 @@ class ThresholdCallback(PyBMTCallback):
 
         self.speed_threshold = speed_threshold
         self.num_frames_mean = num_frames_mean
-        self.is_fly_moving = is_fly_moving
+        self.is_fly_moving = is_ball_moving
 
     def setup_callback(self):
         """
