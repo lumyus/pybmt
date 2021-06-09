@@ -54,6 +54,7 @@ def run_basler_aquisition(is_ball_moving):
                 time_stamp = time.strftime("%Y%m%d-%H%M%S")
                 pickle.dump(captured_frames, open(output_path + 'results_' + time_stamp + '.pkl', 'wb'))
                 print(f"Saving completed. Exported frames: {len(captured_frames[0])}")
+                captured_frames.clear()
 
 
 if __name__ == "__main__":
