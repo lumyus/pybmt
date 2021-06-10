@@ -8,11 +8,14 @@ from robust_serial.utils import open_serial_port
 
 class ArduinoSerial:
 
-    serial_file = 0
+    def __init__(self, baudrate):
+
+        self.serial_file = 0
+        self.baudrate = baudrate
 
     def connect_arduino(self):
         try:
-            self.serial_file = open_serial_port(baudrate=115200, timeout=None)
+            self.serial_file = open_serial_port(baudrate=self.baudrate, timeout=None)
         except Exception as e:
             raise e
         time.sleep(3)  # TODO: This is a hack

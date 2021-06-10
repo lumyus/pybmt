@@ -7,7 +7,7 @@ from pypylon import pylon
 
 from ball_movements import BallMovements
 from pybmt.arduino_serial import ArduinoSerial
-from pybmt.callback.threshold_callback import ThresholdCallback
+from pybmt.callback.movement_callback import MovementCallback
 from pybmt.fictrac.driver import FicTracDriver
 from basler import Basler
 
@@ -19,13 +19,15 @@ def run_fictrac(status):
     print('Starting Fictrac..')
 
     # Instantiate the callback object thats methods are invoked when new tracking state is detected.
-    callback = ThresholdCallback(shared_status=status)
+    callback = MovementCallback(shared_status=status)
 
     # Instantiate a FicTracDriver object to handle running of FicTrac in the background and communication
     # of program state.
     tracDrv = FicTracDriver(config_file=fictrac_config, console_ouput_file=fictrac_console_out,
                             track_change_callback=callback, plot_on=False,
                             fic_trac_bin_path='/home/nely/Desktop/Cedric/fictrac/bin/fictrac')
+
+
 
     # This will start FicTrac and block until complete
     tracDrv.run()
@@ -35,20 +37,20 @@ def run_basler_aquisition(status):
     serial_numbers = ['40018619']
     frame_size = (1920, 1200)
     output_path = '/home/nely/Desktop/Cedric/images/'
+    baudrate = 115200
+    buffer = 200
 
-    arduino_protocol = ArduinoSerial()
+    arduino_protocol = ArduinoSerial(baudrate)
     arduino_protocol.connect_arduino()
 
-    basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers,buffer=200)
+    basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers,buffer=buffer)
     basler_cameras.run()
-
-    # make this cancelable
 
     captured_frames = []
 
     while True:
 
-        ball_status = int(BallMovements(status.value))
+        ball_status = BallMovements(status.value)
 
         if ball_status == BallMovements.BALL_MOVING:
             # grab the available frames for each camera

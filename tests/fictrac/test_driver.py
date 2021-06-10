@@ -4,7 +4,7 @@ import glob
 import numpy as np
 import pytest
 
-from pybmt.callback.threshold_callback import ThresholdCallback
+from pybmt.callback.movement_callback import MovementCallback
 from pybmt.fictrac.driver import FicTracDriver
 
 @pytest.fixture(autouse=True)
@@ -55,7 +55,7 @@ def test_driver_local():
     fictrac_console_out = "tests/fictrac/test_config_data/output.txt"
 
     # Instantiate the callback object that's methods are invoked when new tracking state is detected.
-    callback = ThresholdCallback()
+    callback = MovementCallback()
 
     # Instantiate a FicTracDriver object to handle running of FicTrac in the background and communication
     # of program state.

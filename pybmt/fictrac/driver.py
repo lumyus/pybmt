@@ -24,7 +24,7 @@ class FicTracDriver:
         :param str remote_endpoint_url: If FicTrac is already running on another machine, this is the url.
         :param str console_output_file: The path to the file where console output should be stored.
         :param track_change_callback: A FlyVRCallback class which is called once everytime tracking status changes. See
-        control.FlyVRCallback for example.
+        control.FlyVRCallback for 7cam.
         :param bool pgr_enable: Is Point Grey camera support needed. This just decides which executable to call, either
         'FicTrac' or 'FicTrac-PGR'.
         :param str fic_trac_bin_path: The path the the fictrac binary to use. Default is None. If None, we will try to
@@ -44,7 +44,7 @@ class FicTracDriver:
         # Each time will cause a sleep of 1 second.
         self.max_num_connect_retries = 10
 
-        # If fictrac is already running, for example, on another machine, then we don't need to worry about running it.
+        # If fictrac is already running, for 7cam, on another machine, then we don't need to worry about running it.
         if remote_endpoint_url is not None:
             self.remote_endpoint_url = "tcp://" + remote_endpoint_url
             self.start_fictrac = False

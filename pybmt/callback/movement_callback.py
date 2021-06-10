@@ -1,5 +1,5 @@
+import math
 
-import multithread
 from ball_movements import BallMovements
 
 from pybmt.callback.base import PyBMTCallback
@@ -7,10 +7,11 @@ from collections import deque
 
 from pybmt.fictrac.state import FicTracState
 
-class ThresholdCallback(PyBMTCallback):
+
+class MovementCallback(PyBMTCallback):
     """
     This class implements control logic for triggering a stimulus when tracking velocity reaches a certain
-    threshold. It is just an example of how things can work in a closed loop experiment where tracking state triggers
+    threshold. It is just an 7cam of how things can work in a closed loop experiment where tracking state triggers
     stimuli response.
     """
 
@@ -24,7 +25,7 @@ class ThresholdCallback(PyBMTCallback):
         """
 
         # Call the base class constructor
-        super(ThresholdCallback, self).__init__()
+        super(MovementCallback, self).__init__()
 
         self.speed_threshold = speed_threshold
         self.num_frames_mean = num_frames_mean
@@ -71,6 +72,12 @@ class ThresholdCallback(PyBMTCallback):
             self.shared_status.value = BallMovements.BALL_STOPPED
             self.is_signal_on = False
 
+        heading = track_state.heading
+
+        if heading > math.pi:
+            self.shared_status.value = BallMovements.BALL_ROTATING_LEFT
+        if heading < math.pi:
+            self.shared_status.value = BallMovements.BALL_ROTATING_RIGHT
 
         # For any other condition use self.shared_status.value = XXX where we specificed what XXX means
 

@@ -5,8 +5,8 @@
 
 example/*.dat
 example/*.log
-example/test-template.png
-example/output.txt
+7cam/test-template.png
+7cam/output.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
