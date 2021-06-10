@@ -97,6 +97,7 @@ def run_experimentation_thread(status):
 
 
 def handle_experiment(ball_status, arduino_protocol):
+
     if ball_status == BallMovements.BALL_ROTATING_LEFT:
         # turn the left LED ON
         arduino_protocol.switch_left_led(True)
