@@ -3,6 +3,7 @@ import pickle
 import time
 from enum import Enum
 
+import yaml
 from pypylon import pylon
 
 from ball_movements import BallMovements
@@ -12,9 +13,20 @@ from pybmt.fictrac.driver import FicTracDriver
 from basler import Basler
 
 
-def run_fictrac(status):
-    fictrac_config = "config.txt"
-    fictrac_console_out = "output.txt"
+def read_yaml(file_path):
+    with open(file_path, "r") as f:
+        return yaml.safe_load(f)
+
+
+def run_fictrac_thread(status):
+
+    time.sleep(10) # TODO: THIS IS HACKY. GOAL IS TO WAIT FOR THE CAMERAS OF BASLER THREAD TO BE SELECTED
+
+    config = read_yaml("config.yml")["FICTRAC_PARAMS"]
+
+    fictrac_config = config["FICTRAC_CONFIGURATION_FILE"]
+    fictrac_console_out = config["FICTRAC_CONSOLE_OUT_FILE"]
+    fic_trac_bin_path = config["FICTRAC_BIN_PATH"]
 
     print('Starting Fictrac..')
 
@@ -25,28 +37,34 @@ def run_fictrac(status):
     # of program state.
     tracDrv = FicTracDriver(config_file=fictrac_config, console_ouput_file=fictrac_console_out,
                             track_change_callback=callback, plot_on=False,
-                            fic_trac_bin_path='/home/nely/Desktop/Cedric/fictrac/bin/fictrac')
-
-
+                            fic_trac_bin_path=fic_trac_bin_path)
 
     # This will start FicTrac and block until complete
     tracDrv.run()
 
 
-def run_basler_aquisition(status):
-    serial_numbers = ['40018619']
-    frame_size = (1920, 1200)
-    output_path = '/home/nely/Desktop/Cedric/images/'
-    baudrate = 115200
-    buffer = 200
+def run_experimentation_thread(status):
 
-    arduino_protocol = ArduinoSerial(baudrate)
+    config = read_yaml("config.yml")["BASLER_PARAMS"]
+
+    serial_numbers = config["SERIAL_NUMBERS"]
+    frame_size = config["FRAME_SIZE"]
+    output_path = config["OUTPUT_PATH"]
+    baud_rate = config["BAUD_RATE"]
+    buffer = config["BUFFER"]
+
+    arduino_protocol = ArduinoSerial(baud_rate)
     arduino_protocol.connect_arduino()
 
-    basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers,buffer=buffer)
+    if not arduino_protocol.connect_arduino():
+        print("Connection with Arduino failed!")
+        raise Exception
+
+    basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
     basler_cameras.run()
 
     captured_frames = []
+    recording_start_time = 0
 
     while True:
 
@@ -54,22 +72,45 @@ def run_basler_aquisition(status):
 
         if ball_status == BallMovements.BALL_MOVING:
             # grab the available frames for each camera
+            recording_start_time = time.perf_counter()
             captured_frames.append(basler_cameras.grab_frames())
 
-        elif status.value == BallMovements.BALL_STOPPED:
+        elif ball_status == BallMovements.BALL_STOPPED:
             # Fictrac is not registering movement anymore. Save the captured frames.
             if len(captured_frames):
+
+                if len(set(map(len, captured_frames))) == 0:
+                    print("ATTENTION. The cameras did not record the same amount of frames!")
+                    print("Stopping the program now!")
+                    break
+
+                recording_end_time = time.perf_counter()
+                average_fps_obtained = len(captured_frames[0]) / ((recording_end_time - recording_start_time) / 1e9)
+
                 time_stamp = time.strftime("%Y%m%d-%H%M%S")
                 pickle.dump(captured_frames, open(output_path + 'results_' + time_stamp + '.pkl', 'wb'))
-                print(f"Saving completed. Exported frames: {len(captured_frames[0])}")
+                print(
+                    f"Saving completed. Exported frames: {len(captured_frames[0])}. Averaged FPS during recording: {average_fps_obtained}")
                 captured_frames.clear()
 
-        elif status.value == BallMovements.BALL_ROTATING_LEFT:
-            arduino_protocol.switch_left_led(True)
-            arduino_protocol.switch_right_led(False)
-        elif status.value == BallMovements.BALL_ROTATING_RIGHT:
-            arduino_protocol.switch_right_led(True)
-            arduino_protocol.switch_left_led(False)
+        handle_experiment(ball_status, arduino_protocol)
+
+
+def handle_experiment(ball_status, arduino_protocol):
+    if ball_status == BallMovements.BALL_ROTATING_LEFT:
+        # turn the left LED ON
+        arduino_protocol.switch_left_led(True)
+        arduino_protocol.switch_right_led(False)
+
+    elif ball_status == BallMovements.BALL_ROTATING_RIGHT:
+        # turn the right LED ON
+        arduino_protocol.switch_right_led(True)
+        arduino_protocol.switch_left_led(False)
+
+    elif ball_status == BallMovements.BALL_STOPPED:
+        # turn both LEDs OFF
+        arduino_protocol.switch_left_led(False)
+        arduino_protocol.switch_right_led(False)
 
 
 if __name__ == "__main__":
@@ -82,8 +123,8 @@ if __name__ == "__main__":
 
     shared_status = multiprocessing.Manager().Value('i', BallMovements.BALL_STOPPED)
 
-    process1 = multiprocessing.Process(target=run_fictrac, args=(shared_status,))
-    process2 = multiprocessing.Process(target=run_basler_aquisition, args=(shared_status,))
+    process1 = multiprocessing.Process(target=run_experimentation_thread, args=(shared_status,))
+    process2 = multiprocessing.Process(target=run_fictrac_thread, args=(shared_status,))
 
     process1.start()
     process2.start()

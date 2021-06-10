@@ -72,7 +72,7 @@ class Basler:
     def find_cameras(self):
 
         if len(self.serial_numbers) == 0:
-            print('No serial numbers found. Enter them before starting.')
+            print('No serial numbers for the cameras found. Enter them before starting.')
 
         try:
             tl_factory = pylon.TlFactory.GetInstance()

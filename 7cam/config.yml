@@ -1,0 +1,11 @@
+BASLER_PARAMS:
+  SERIAL_NUMBERS: ['40018619']
+  FRAME_SIZE: (1920, 1200)
+  OUTPUT_PATH: '/home/nely/Desktop/Cedric/images/'
+  BAUD_RATE: 115200
+  BUFFER: 200
+
+FICTRAC_PARAMS:
+  FICTRAC_CONFIGURATION_FILE: "fictrac_config.txt"
+  FICTRAC_CONSOLE_OUT_FILE: "output.txt"
+  FICTRAC_BIN_PATH: "/home/nely/Desktop/Cedric/fictrac/bin/fictrac"

@@ -39,20 +39,27 @@ class ArduinoSerial:
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Connected to Arduino!")
         else:
-            print("Error with connection to Arduino!!")
+            return 0
 
         # Write all required parameters for the  hardware trigger of the camera before starting it
         write_i8(self.serial_file, Order.CONFIGURE_CAM_FPS.value)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [FPS] successfully!")
+        else:
+            return 0
 
         write_i8(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME.value)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [EXPOSURE_TIME] successfully!")
+        else:
+            return 0
 
         write_order(self.serial_file, Order.START_CAM)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Camera hardware triggering started!")
+            return 1
+        else:
+            return 0
 
     def switch_left_led(self, turn_on_left):
 
