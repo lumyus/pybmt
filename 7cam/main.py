@@ -10,7 +10,7 @@ from ball_movements import BallMovements
 from pybmt.arduino_serial import ArduinoSerial
 from pybmt.callback.movement_callback import MovementCallback
 from pybmt.fictrac.driver import FicTracDriver
-from basler import Basler
+from basler import Basler, write_videos
 
 
 def read_yaml(file_path):
@@ -121,6 +121,13 @@ if __name__ == "__main__":
     # Easiest way to connect a specific camera to fictrac:
     # Pass a list of cameras that we want to connect to. The one not on the list will be connected to Fictrac
     # We need to start the Fictrac process after the cameras have been initialized
+
+    EXPORT_VIDEOS = False
+
+    if EXPORT_VIDEOS:
+        config = read_yaml("config.yml")["BASLER_PARAMS"]
+        write_videos(config["OUTPUT_PATH"])
+        exit(0)
 
     shared_status = multiprocessing.Manager().Value('i', BallMovements.BALL_STOPPED)
 
