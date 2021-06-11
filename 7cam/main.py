@@ -29,10 +29,10 @@ def run_fictrac_process(status):
 
     while True:
         print('Running performance test!')
-        time.sleep(2)
-        status.value = BallMovements.BALL_MOVING
         time.sleep(5)
-        status.value = BallMovements.BALL_STOPPED
+        status.value = BallMovements.BALL_MOVING.value
+        time.sleep(5)
+        status.value = BallMovements.BALL_STOPPED.value
 
     print('Starting Fictrac..')
 
@@ -60,12 +60,12 @@ def run_aquisation_process(status):
     baud_rate = config["BAUD_RATE"]
     buffer = config["BUFFER"]
 
-   # arduino_protocol = ArduinoSerial(baud_rate)
+    arduino_protocol = ArduinoSerial(baud_rate)
 
     #TODO Remove this part and add it to the ArduiinoSerial class
-    #if not arduino_protocol.connect_arduino():
-    #    print("Connection with Arduino failed!")
-    #    raise Exception
+    if not arduino_protocol.connect_arduino():
+        print("Connection with Arduino failed!")
+        raise Exception
 
 
     basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
@@ -83,7 +83,7 @@ def run_aquisation_process(status):
 
             if recording_start_time == 0:
                 recording_start_time = time.perf_counter()
-                captured_frames.append(basler_cameras.grab_frames(status.value))
+                captured_frames = basler_cameras.grab_frames(status)
 
         elif ball_status == BallMovements.BALL_STOPPED:
             # Fictrac is not registering movement anymore. Save the captured frames.
@@ -94,14 +94,15 @@ def run_aquisation_process(status):
                     print("Stopping the program now!")
                     break
 
+                frames_per_camera = len(captured_frames[0])-buffer
                 elapsed_time = time.perf_counter() - recording_start_time
-                average_fps_obtained = int((len(captured_frames)-buffer) / elapsed_time)
+                average_fps_obtained = int(frames_per_camera / elapsed_time)
                 recording_start_time = 0
 
                 time_stamp = time.strftime("%Y%m%d-%H%M%S")
                 pickle.dump(captured_frames, open(output_path + 'results_' + time_stamp + '.pkl', 'wb'))
                 print(
-                    f"Saving completed. Exported frames: {len(captured_frames)}. Averaged FPS during recording: {average_fps_obtained}")
+                    f"Saving completed. Exported frames: {frames_per_camera}. Averaged FPS during recording: {average_fps_obtained}")
                 captured_frames.clear()
 
         #handle_experiment(ball_status, arduino_protocol)

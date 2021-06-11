@@ -162,7 +162,9 @@ class Basler:
         imgs = [[]] * self.cam_array.GetSize()
 
         while self.cam_array.IsGrabbing():
-            if status.value == BallMovements.BALL_STOPPED: break
+
+            if BallMovements(status.value) == BallMovements.BALL_STOPPED:
+                break
 
             for i, camera in enumerate(self.cam_array):
                 # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
