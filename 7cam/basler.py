@@ -2,6 +2,7 @@ import glob
 import pickle
 import time
 
+import numpy as np
 import serial
 from pypylon import genicam
 from pypylon import pylon
@@ -156,13 +157,12 @@ class Basler:
 
     def grab_frames(self):
 
-        imgs = []
+        imgs = [[]] * self.cam_array.GetSize()
 
         for i, camera in enumerate(self.cam_array):
             # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
             grabResult = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
             imgs[i].append(grabResult.GetArray())
-
             grabResult.Release()
 
         return imgs
