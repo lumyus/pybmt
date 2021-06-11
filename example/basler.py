@@ -130,6 +130,7 @@ class Basler:
             for i, camera in enumerate(cam_array):
                 # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
                 grabResult = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
+                print("GrabSucceeded: ", grabResult.GrabSucceeded())
                 imgs[i].append(grabResult.GetArray())
 
                 grabResult.Release()
