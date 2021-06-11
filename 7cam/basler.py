@@ -71,6 +71,8 @@ class Basler:
 
     def run(self):
         self.cam_array.StartGrabbing(pylon.GrabStrategy_OneByOne)
+    def stop(self):
+        self.cam_array.StopGrabbing()
 
     def find_cameras(self):
 
@@ -159,7 +161,9 @@ class Basler:
 
     def grab_frames(self, status):
 
-        imgs = [[]] * self.cam_array.GetSize()
+        imgs = [[] for i in range(self.cam_array.GetSize())]
+        recording_start_time = time.perf_counter()
+        self.run()
 
         while self.cam_array.IsGrabbing():
 
@@ -172,4 +176,6 @@ class Basler:
                 imgs[i].append(grabResult.GetArray())
                 grabResult.Release()
 
-        return imgs
+        self.stop()
+        recording_end_time = time.perf_counter()
+        return imgs, recording_end_time-recording_start_time

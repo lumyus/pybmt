@@ -2,7 +2,7 @@ from __future__ import print_function, division, absolute_import
 
 import time
 
-from robust_serial import write_order, Order, read_order, write_i8
+from robust_serial import write_order, Order, read_order, write_i8, write_i16
 from robust_serial.utils import open_serial_port
 
 
@@ -42,13 +42,17 @@ class ArduinoSerial:
             return 0
 
         # Write all required parameters for the  hardware trigger of the camera before starting it
-        write_i8(self.serial_file, Order.CONFIGURE_CAM_FPS.value)
+        write_order(self.serial_file, Order.CONFIGURE_CAM_FPS)
+        fps = 50
+        fps_to_us = int((1/fps)*1000000)
+        write_i16(self.serial_file, fps_to_us)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [FPS] successfully!")
         else:
             return 0
 
-        write_i8(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME.value)
+        write_order(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME)
+        write_i16(self.serial_file, 500)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [EXPOSURE_TIME] successfully!")
         else:

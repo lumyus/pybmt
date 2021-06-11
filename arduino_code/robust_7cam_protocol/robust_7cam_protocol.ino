@@ -6,16 +6,17 @@
 #include "parameters.h"
 
 bool is_connected = false; ///< True if the connection with the master is available
-bool camera_activated = true;
+bool camera_activated = false;
 
-long previousMicros = -1;
-long currentMicros = 0;
+
+
+unsigned long previousMicros = 0;
+
+
 int camState = 0;
 
-int fps = 0;
-int exposure_time = 0;
-
-int number_of_frames = 0;
+unsigned long fps = 0;
+unsigned long exposure_time = 0;
 
 bool turn_on_left_led = false;
 bool turn_on_right_led = false;
@@ -70,32 +71,24 @@ void loop()
 
 void handle_cameras(){
 
-      if(previousMicros < 0){
+      if(previousMicros == 0){
         previousMicros =  micros();
         digitalWrite(CAM_PIN, HIGH);
         camState = 1;
       }
      
-        currentMicros = micros();
-        long elapsed_time = currentMicros - previousMicros;
-
-        if(currentMicros - previousMicros > exposure_time){
-          if(camState==1){
-            digitalWrite(CAM_PIN, LOW);
-            camState = 0;
-            
-          }
+        unsigned long currentMicros = micros();
+        unsigned long elapsed_time = currentMicros - previousMicros;
+       
+        if(elapsed_time > exposure_time && camState==1){
+         digitalWrite(CAM_PIN, LOW);
+         camState = 0;
         }
         
-        if(currentMicros - previousMicros > fps*100){
-          if(camState==0){
-            digitalWrite(CAM_PIN, HIGH);
-            camState = 1;
-            number_of_frames++;
-            //Serial.print(currentMicros - previousMicros);
-            previousMicros =  currentMicros;
-            
-          }
+        if(elapsed_time > fps && camState==0){
+          digitalWrite(CAM_PIN, HIGH);
+          camState = 1;
+          previousMicros =  currentMicros;
         }
 }
 
