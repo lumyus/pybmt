@@ -136,8 +136,8 @@ class Basler:
                 # pylon.FeaturePersistence.Load('./camera_params/' + cam_name + '.pfs', camera.GetNodeMap())
 
                 # set camera parameters
-                camera.Width = self.shape[0]
-                camera.Height = self.shape[1]
+                camera.Width = int(self.shape[0])
+                camera.Height = int(self.shape[1])
                 camera.MaxNumBuffer = self.buffer  # count of buffers allocated for grabbing
                 camera.AcquisitionMode.SetValue('Continuous')
                 camera.TriggerSelector.SetValue('FrameStart')

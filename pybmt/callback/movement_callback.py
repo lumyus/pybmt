@@ -72,12 +72,13 @@ class MovementCallback(PyBMTCallback):
             self.shared_status.value = BallMovements.BALL_STOPPED
             self.is_signal_on = False
 
-        heading = track_state.heading
+        #TODO; Change this to not always say left or right. average value again or the same as above
+        '''heading = track_state.heading
 
         if heading > math.pi:
             self.shared_status.value = BallMovements.BALL_ROTATING_LEFT
         if heading < math.pi:
-            self.shared_status.value = BallMovements.BALL_ROTATING_RIGHT
+            self.shared_status.value = BallMovements.BALL_ROTATING_RIGHT '''
 
         # For any other condition use self.shared_status.value = XXX where we specificed what XXX means
 

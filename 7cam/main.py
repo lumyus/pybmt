@@ -18,9 +18,7 @@ def read_yaml(file_path):
         return yaml.safe_load(f)
 
 
-def run_fictrac_thread(status):
-
-    time.sleep(10) # TODO: THIS IS HACKY. GOAL IS TO WAIT FOR THE CAMERAS OF BASLER THREAD TO BE SELECTED
+def run_fictrac_process(status):
 
     config = read_yaml("config.yml")["FICTRAC_PARAMS"]
 
@@ -43,10 +41,11 @@ def run_fictrac_thread(status):
     tracDrv.run()
 
 
-def run_experimentation_thread(status):
+def run_aquisation_process(status):
 
     config = read_yaml("config.yml")["BASLER_PARAMS"]
 
+    #TODO serial number is randomly selecting a fictrac cam at the moment
     serial_numbers = config["SERIAL_NUMBERS"]
     frame_size = config["FRAME_SIZE"]
     output_path = config["OUTPUT_PATH"]
@@ -54,8 +53,8 @@ def run_experimentation_thread(status):
     buffer = config["BUFFER"]
 
     arduino_protocol = ArduinoSerial(baud_rate)
-    arduino_protocol.connect_arduino()
 
+    #TODO Remove this part and add it to the ArduiinoSerial class
     if not arduino_protocol.connect_arduino():
         print("Connection with Arduino failed!")
         raise Exception
@@ -69,11 +68,13 @@ def run_experimentation_thread(status):
     while True:
 
         ball_status = BallMovements(status.value)
+        print(f'FrameAquistionProcess: {ball_status}')
 
         if ball_status == BallMovements.BALL_MOVING:
             # grab the available frames for each camera
+
             recording_start_time = time.perf_counter()
-            captured_frames.append(basler_cameras.grab_frames())
+            captured_frames = basler_cameras.grab_frames(ball_status)
 
         elif ball_status == BallMovements.BALL_STOPPED:
             # Fictrac is not registering movement anymore. Save the captured frames.
@@ -131,8 +132,8 @@ if __name__ == "__main__":
 
     shared_status = multiprocessing.Manager().Value('i', BallMovements.BALL_STOPPED)
 
-    process1 = multiprocessing.Process(target=run_experimentation_thread, args=(shared_status,))
-    process2 = multiprocessing.Process(target=run_fictrac_thread, args=(shared_status,))
+    process1 = multiprocessing.Process(target=run_aquisation_process, args=(shared_status,))
+    process2 = multiprocessing.Process(target=run_fictrac_process, args=(shared_status,))
 
     process1.start()
     process2.start()

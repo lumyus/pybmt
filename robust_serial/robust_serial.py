@@ -19,6 +19,8 @@ class Order(Enum):
     TURN_RIGHT_LIGHT_OFF = 9
     TURN_RIGHT_LIGHT_ON = 10
     TURN_LEFT_LIGHT_OFF = 11
+    CONFIGURE_CAM_FPS = 12
+    CONFIGURE_CAM_EXPOSURE_TIME = 13
 
 def read_order(f):
     """
