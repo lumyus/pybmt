@@ -38,15 +38,6 @@ class ArduinoSerial:
         else:
             print("Error with connection to Arduino!!")
 
-        # Write all required parameters for the  hardware trigger of the camera before starting it
-        write_i8(self.serial_file, Order.CONFIGURE_CAM_FPS.value)
-        if read_order(self.serial_file) == Order.RECEIVED:
-            print("Hardware trigger configured [FPS] successfully!")
-
-        write_i8(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME.value)
-        if read_order(self.serial_file) == Order.RECEIVED:
-            print("Hardware trigger configured [EXPOSURE_TIME] successfully!")
-
         write_order(self.serial_file, Order.START_CAM)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Camera hardware triggering started!")

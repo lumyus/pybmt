@@ -33,7 +33,7 @@ def run_basler_aquisition(is_fly_moving):
 
     basler_cameras = basler.Basler()
 
-    cameras = basler_cameras.init_cameras(serial_numbers=['40018619'], shape=(1920,1200)) # TODO: Import these rather than specifying them in code
+    cameras = basler_cameras.init_cameras(serial_numbers=['40018631'], shape=(1920,1200)) # TODO: Import these rather than specifying them in code
 
     # make this cancelable
     while True:

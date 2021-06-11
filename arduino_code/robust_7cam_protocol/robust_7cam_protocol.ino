@@ -12,8 +12,8 @@ long previousMicros = -1;
 long currentMicros = 0;
 int camState = 0;
 
-int fps = 0;
-int exposure_time = 0;
+int fps = 100;
+int exposure_time = 500;
 
 int number_of_frames = 0;
 
@@ -140,14 +140,14 @@ void get_messages_from_serial()
           break;
         }
 
-         case CONFIGURE_CAM_FPS:
+         case 16:
         {
           fps = read_i16();
           //write_order(START_CAM);
           break;
         }
 
-         case CONFIGURE_CAM_EXPOSURE_TIME:
+         case 19:
         {
           exposure_time = read_i16();
           //write_order(START_CAM);

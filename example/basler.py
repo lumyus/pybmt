@@ -51,7 +51,7 @@ class Basler:
         try:
             # Create an array of instant cameras for the found devices
             # and avoid exceeding a maximum number of devices.
-            cam_array = pylon.InstantCameraArray(min(len(camera_devices), maxCamerasToUse))
+            cam_array = pylon.InstantCameraArray(min(len(camera_devices), 5))
 
             for i, camera in enumerate(cam_array):
                 # Create an instant camera object
