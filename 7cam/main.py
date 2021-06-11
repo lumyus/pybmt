@@ -28,10 +28,11 @@ def run_fictrac_process(status):
     fic_trac_bin_path = config["FICTRAC_BIN_PATH"]
 
     while True:
-        status.value = BallMovements.BALL_STOPPED
-        time.sleep(5)
+        print('Running performance test!')
+        time.sleep(2)
         status.value = BallMovements.BALL_MOVING
         time.sleep(5)
+        status.value = BallMovements.BALL_STOPPED
 
     print('Starting Fictrac..')
 
@@ -82,8 +83,7 @@ def run_aquisation_process(status):
 
             if recording_start_time == 0:
                 recording_start_time = time.perf_counter()
-
-            captured_frames.append(basler_cameras.grab_frames())
+                captured_frames.append(basler_cameras.grab_frames(status.value))
 
         elif ball_status == BallMovements.BALL_STOPPED:
             # Fictrac is not registering movement anymore. Save the captured frames.
@@ -95,7 +95,7 @@ def run_aquisation_process(status):
                     break
 
                 elapsed_time = time.perf_counter() - recording_start_time
-                average_fps_obtained = len(captured_frames) / elapsed_time
+                average_fps_obtained = int((len(captured_frames)-buffer) / elapsed_time)
                 recording_start_time = 0
 
                 time_stamp = time.strftime("%Y%m%d-%H%M%S")

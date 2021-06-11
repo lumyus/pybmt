@@ -7,6 +7,8 @@ import serial
 from pypylon import genicam
 from pypylon import pylon
 
+from ball_movements import BallMovements
+
 
 def imgs_to_video(imgs, fps, out_path):
     '''Write video from a list of images'''
@@ -155,14 +157,17 @@ class Basler:
             print("An exception occurred.")
             print(e.GetDescription())
 
-    def grab_frames(self):
+    def grab_frames(self, status):
 
         imgs = [[]] * self.cam_array.GetSize()
 
-        for i, camera in enumerate(self.cam_array):
-            # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
-            grabResult = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
-            imgs[i].append(grabResult.GetArray())
-            grabResult.Release()
+        while self.cam_array.IsGrabbing():
+            if status.value == BallMovements.BALL_STOPPED: break
+
+            for i, camera in enumerate(self.cam_array):
+                # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
+                grabResult = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
+                imgs[i].append(grabResult.GetArray())
+                grabResult.Release()
 
         return imgs

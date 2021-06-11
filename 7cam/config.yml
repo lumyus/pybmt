@@ -3,7 +3,7 @@ BASLER_PARAMS:
   FRAME_SIZE: ['1920', '1200']
   OUTPUT_PATH: '/home/nely/Desktop/Cedric/images/'
   BAUD_RATE: 115200
-  BUFFER: 200
+  BUFFER: 1
 
 FICTRAC_PARAMS:
   FICTRAC_CONFIGURATION_FILE: "fictrac_config.txt"
