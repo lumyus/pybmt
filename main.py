@@ -14,7 +14,7 @@ from utils import read_yaml
 def performance_test(status):
 
     while True:
-        print('Running performance test!')
+        print('Running performance test...')
         time.sleep(5)
         status.value = BallMovements.BALL_MOVING.value
         starttime = time.perf_counter()
