@@ -4,11 +4,11 @@ import time
 
 import yaml
 
+from image_acquisition.image_acquisition import ImageAcquisition, write_videos
 from motion_tracking.utils.ball_movements import BallMovements
 from arduino_serial.arduino_serial import ArduinoSerial
 from motion_tracking.callback.movement_callback import MovementCallback
 from motion_tracking.fictrac_handler.driver import FicTracDriver
-from basler import Basler, write_videos
 
 
 def read_yaml(file_path):
@@ -65,7 +65,7 @@ def run_acquisition_process(status):
     output_path = config["OUTPUT_PATH"]
     buffer = config["BUFFER"]
 
-    basler_cameras = Basler(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
+    basler_cameras = ImageAcquisition(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
 
     captured_frames = []
     recording_time = 0
