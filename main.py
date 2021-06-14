@@ -3,12 +3,10 @@ import pickle
 import time
 
 from image_acquisition.image_acquisition import ImageAcquisition
-from image_acquisition.utils import write_videos
-
 from arduino_serial.arduino_serial import ArduinoSerial
 from motion_tracking.callback.movement_callback import MovementCallback
 from motion_tracking.fictrac_handler.driver import FicTracDriver
-from utils import read_yaml, BallMovements
+from utils import read_yaml, BallMovements, write_videos
 
 
 def performance_test(status):
