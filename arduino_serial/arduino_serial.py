@@ -11,11 +11,11 @@ class ArduinoSerial:
 
     def __init__(self):
 
-        config = read_yaml("config.yml")["ARDUINO_PARAMS"]
+        arduino_config = read_yaml("config.yml")["ARDUINO_PARAMS"]
 
-        self.baudrate = config["BAUD_RATE"]
-        self.fps = config["FPS"]
-        self.exposure_time = config["EXPOSURE_TIME"]
+        self.baudrate = arduino_config["BAUD_RATE"]
+        self.fps = arduino_config["FPS"]
+        self.exposure_time = arduino_config["EXPOSURE_TIME"]
 
         self.serial_file = 0
 
