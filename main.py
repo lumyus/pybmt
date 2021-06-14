@@ -65,7 +65,7 @@ def run_acquisition_process(status):
     output_path = config["OUTPUT_PATH"]
     buffer = config["BUFFER"]
 
-    basler_cameras = ImageAcquisition(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
+    cameras = ImageAcquisition(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
 
     captured_frames = []
     recording_time = 0
@@ -76,7 +76,7 @@ def run_acquisition_process(status):
 
         if ball_status == BallMovements.BALL_MOVING:
             # grab the available frames for each camera
-            captured_frames, recording_time = basler_cameras.grab_frames(status)
+            captured_frames, recording_time = cameras.grab_frames(status)
 
         elif ball_status == BallMovements.BALL_STOPPED:
             # Fictrac is not registering movement anymore. Save the captured frames.
