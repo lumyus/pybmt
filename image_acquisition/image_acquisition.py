@@ -5,7 +5,7 @@ import time
 from pypylon import genicam
 from pypylon import pylon
 
-from motion_tracking.utils.ball_movements import BallMovements
+from utils import BallMovements
 
 
 def attach_cameras(tl_factory, camera_devices):

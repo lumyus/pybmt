@@ -1,9 +1,10 @@
-from motion_tracking.utils.ball_movements import BallMovements
+
 
 from motion_tracking.callback.base import PyBMTCallback
 from collections import deque
 
 from motion_tracking.fictrac_handler.state import FicTracState
+from utils import BallMovements
 
 
 class MovementCallback(PyBMTCallback):
