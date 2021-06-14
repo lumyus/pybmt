@@ -2,12 +2,10 @@ import glob
 import pickle
 import time
 
-import numpy as np
-import serial
 from pypylon import genicam
 from pypylon import pylon
 
-from ball_movements import BallMovements
+from motion_tracking.utils.ball_movements import BallMovements
 
 
 def imgs_to_video(imgs, fps, out_path):
@@ -53,7 +51,7 @@ def attach_cameras(tl_factory, camera_devices):
         return 0
 
 
-class Basler:
+class ImageAcquisition:
 
     def __init__(self, shape, serial_numbers, buffer):
 

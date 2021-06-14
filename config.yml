@@ -2,11 +2,15 @@ BASLER_PARAMS:
   SERIAL_NUMBERS: ['40018631', '40018632', '40023151','40023153','40022761']
   FRAME_SIZE: ['960', '480']
   OUTPUT_PATH: '/home/nely/Desktop/Cedric/images/'
-  BAUD_RATE: 115200
   BUFFER: 1
 
 FICTRAC_PARAMS:
   FICTRAC_CONFIGURATION_FILE: "fictrac_config.txt"
   FICTRAC_CONSOLE_OUT_FILE: "output.txt"
-  FICTRAC_BIN_PATH: "/home/nely/Desktop/Cedric/fictrac/bin/fictrac"
+  FICTRAC_BIN_PATH: "/home/nely/Desktop/Cedric/fictrac_handler/bin/fictrac_handler"
   FICTRAC_CAM: 40018619
+
+ARDUINO_PARAMS:
+  BAUD_RATE: 115200
+
+TESTING: True

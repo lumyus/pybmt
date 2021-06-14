@@ -30,7 +30,7 @@ class PyBMTCallback:
         This method is called each time an update is detected in the online tracking state. Code placed within this
         method should execute as quickly and deterministically as possible.
 
-        :param tracking_update: A ctypes structure of type fictrac.SHMEMFicTracState
+        :param tracking_update: A ctypes structure of type fictrac_handler.SHMEMFicTracState
         :return: bool True to keep running, False to stop running.
         """
         pass

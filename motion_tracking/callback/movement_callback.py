@@ -1,17 +1,15 @@
-import math
+from motion_tracking.utils.ball_movements import BallMovements
 
-from ball_movements import BallMovements
-
-from pybmt.callback.base import PyBMTCallback
+from motion_tracking.callback.base import PyBMTCallback
 from collections import deque
 
-from pybmt.fictrac.state import FicTracState
+from motion_tracking.fictrac_handler.state import FicTracState
 
 
 class MovementCallback(PyBMTCallback):
     """
     This class implements control logic for triggering a stimulus when tracking velocity reaches a certain
-    threshold. It is just an 7cam of how things can work in a closed loop experiment where tracking state triggers
+    threshold. It is just an image_acquisition of how things can work in a closed loop experiment where tracking state triggers
     stimuli response.
     """
 
@@ -44,13 +42,23 @@ class MovementCallback(PyBMTCallback):
 
     def process_callback(self, track_state: FicTracState):
         """
-        This function is called with each update of fictrac's tracking state.
+        This function is called with each update of fictrac_handler's tracking state.
         A closed loop experiment that keeps track of a running average of the ball speed and generates a stimulus
         when the speed crosses a threshold.
 
         :param track_state:
         :return:
         """
+
+        '''
+              heading = track_state.heading
+
+              if heading > math.pi:
+                  self.shared_status.value = BallMovements.BALL_ROTATING_LEFT
+              if heading < math.pi:
+                  self.shared_status.value = BallMovements.BALL_ROTATING_RIGHT '''
+
+        # For any other condition use self.shared_status.value = XXX where we specificed what XXX means
 
         # Get the current ball speed
         speed = track_state.speed
@@ -72,15 +80,8 @@ class MovementCallback(PyBMTCallback):
             self.shared_status.value = BallMovements.BALL_STOPPED
             self.is_signal_on = False
 
-        #TODO; Change this to not always say left or right. average value again or the same as above
-        '''heading = track_state.heading
 
-        if heading > math.pi:
-            self.shared_status.value = BallMovements.BALL_ROTATING_LEFT
-        if heading < math.pi:
-            self.shared_status.value = BallMovements.BALL_ROTATING_RIGHT '''
 
-        # For any other condition use self.shared_status.value = XXX where we specificed what XXX means
 
         return True
 

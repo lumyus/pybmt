@@ -105,7 +105,7 @@ class FicTracState(ctypes.Structure):
 
     def __str__(self):
         """
-        Convert the fictrac state to a string.
+        Convert the fictrac_handler state to a string.
 
         :return: The string representing the state.
         """

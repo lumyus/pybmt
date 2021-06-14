@@ -5,8 +5,8 @@ from collections import deque
 
 import zmq
 
-from pybmt.fictrac.state import FicTracState
-from pybmt.tools import which
+from motion_tracking.fictrac_handler.state import FicTracState
+from motion_tracking.fictrac_handler.tools import which
 
 
 class FicTracDriver:
@@ -24,11 +24,11 @@ class FicTracDriver:
         :param str remote_endpoint_url: If FicTrac is already running on another machine, this is the url.
         :param str console_output_file: The path to the file where console output should be stored.
         :param track_change_callback: A FlyVRCallback class which is called once everytime tracking status changes. See
-        control.FlyVRCallback for 7cam.
+        control.FlyVRCallback for image_acquisition.
         :param bool pgr_enable: Is Point Grey camera support needed. This just decides which executable to call, either
         'FicTrac' or 'FicTrac-PGR'.
-        :param str fic_trac_bin_path: The path the the fictrac binary to use. Default is None. If None, we will try to
-        find fictrac on the path.
+        :param str fic_trac_bin_path: The path the the fictrac_handler binary to use. Default is None. If None, we will try to
+        find fictrac_handler on the path.
         :param str remote_enpoint_url
         """
 
@@ -40,11 +40,11 @@ class FicTracDriver:
         # much, with shared memory this was easier to detect.
         self.average_fps_threshold = 400
 
-        # This is the number of times to try an reconnect the the fictrac client over the socket before failing out.
+        # This is the number of times to try an reconnect the the fictrac_handler client over the socket before failing out.
         # Each time will cause a sleep of 1 second.
         self.max_num_connect_retries = 10
 
-        # If fictrac is already running, for 7cam, on another machine, then we don't need to worry about running it.
+        # If fictrac_handler is already running, for image_acquisition, on another machine, then we don't need to worry about running it.
         if remote_endpoint_url is not None:
             self.remote_endpoint_url = "tcp://" + remote_endpoint_url
             self.start_fictrac = False
@@ -68,11 +68,11 @@ class FicTracDriver:
             self.pgr_enable = pgr_enable
             self.plot_on = plot_on
 
-            # If the user didn't specify the path to fictrac, look for it on the path.
+            # If the user didn't specify the path to fictrac_handler, look for it on the path.
             if fic_trac_bin_path is None:
-                self.fictrac_bin = 'fictrac'
+                self.fictrac_bin = 'fictrac_handler'
                 if self.pgr_enable:
-                    self.fictrac_bin = 'fictrac-pgr'
+                    self.fictrac_bin = 'fictrac_handler-pgr'
 
                 # If this is Windows, we need to add the .exe extension.
                 if os.name == 'nt':
@@ -87,7 +87,7 @@ class FicTracDriver:
             else:
                 self.fictrac_bin_fullpath = fic_trac_bin_path
 
-                # TODO: Make sure we are using the correct version of fictrac.
+                # TODO: Make sure we are using the correct version of fictrac_handler.
 
         self.fictrac_process = None
 
@@ -112,7 +112,7 @@ class FicTracDriver:
                                                          stdout=out, stderr=subprocess.STDOUT,
                                                          cwd=self.config_dir)
 
-                    # Lets sleep for a couple seconds, give fictrac a chance to start up.
+                    # Lets sleep for a couple seconds, give fictrac_handler a chance to start up.
                     # FIXME: Eww, this is hacky.
                     time.sleep(2)
 
@@ -170,7 +170,7 @@ class FicTracDriver:
         avg_fps = 0
         self.frame_cnt = 0
 
-        # Lets keep track of the last fictrac state we received
+        # Lets keep track of the last fictrac_handler state we received
         last_fstate: FicTracState = None
         fstate: FicTracState = None
         isOK = True
@@ -191,7 +191,7 @@ class FicTracDriver:
                     break
                 except zmq.error.Again:
 
-                    # If we get socket error, probably means fictrac is gone.  If we started it, just break.
+                    # If we get socket error, probably means fictrac_handler is gone.  If we started it, just break.
                     # If we didn't start it, signal the connection error.
                     if self.start_fictrac:
 
@@ -208,7 +208,7 @@ class FicTracDriver:
                             isOK = False
                             break
                     else:
-                        raise Exception("Socket timed out. Couldn't reach fictrac!")
+                        raise Exception("Socket timed out. Couldn't reach fictrac_handler!")
 
             if not isOK:
                 break
@@ -220,7 +220,7 @@ class FicTracDriver:
             if data == "END":
                 break
 
-            # Lets keep track of the last fictrac state we received
+            # Lets keep track of the last fictrac_handler state we received
             last_fstate = fstate
 
             # Parse the data packet into our state structure. Get our new state.

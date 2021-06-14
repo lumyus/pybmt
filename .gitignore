@@ -5,8 +5,8 @@
 
 example/*.dat
 example/*.log
-7cam/test-template.png
-7cam/output.txt
+image_acquisition/test-template.png
+fictrac/output.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -2,16 +2,18 @@ from __future__ import print_function, division, absolute_import
 
 import time
 
-from robust_serial import write_order, Order, read_order, write_i8, write_i16
-from robust_serial.utils import open_serial_port
+from arduino_serial import write_order, Order, read_order, write_i8, write_i16
+from arduino_serial.utils import open_serial_port
 
 
 class ArduinoSerial:
 
-    def __init__(self, baudrate):
+    def __init__(self, baudrate, fps, exposure_time):
 
         self.serial_file = 0
         self.baudrate = baudrate
+        self.fps = fps
+        self.exposure_time = exposure_time
 
     def connect_arduino(self):
         try:
@@ -43,8 +45,7 @@ class ArduinoSerial:
 
         # Write all required parameters for the  hardware trigger of the camera before starting it
         write_order(self.serial_file, Order.CONFIGURE_CAM_FPS)
-        fps = 50
-        fps_to_us = int((1/fps)*1000000)
+        fps_to_us = int((1/self.fps)*1000000)
         write_i16(self.serial_file, fps_to_us)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [FPS] successfully!")
@@ -52,7 +53,7 @@ class ArduinoSerial:
             return 0
 
         write_order(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME)
-        write_i16(self.serial_file, 500)
+        write_i16(self.serial_file, self.exposure_time)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [EXPOSURE_TIME] successfully!")
         else:

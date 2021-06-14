@@ -26,7 +26,7 @@ def plot_task_fictrac(remote_endpoint_url,
     plt.ion()
 
     fig = plt.figure()
-    fig.canvas.set_window_title('traces: fictrac')
+    fig.canvas.set_window_title('traces: fictrac_handler')
 
     # Number of fields to display
     num_channels = len(fictrac_state_fields)
