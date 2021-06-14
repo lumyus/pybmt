@@ -8,29 +8,6 @@ from pypylon import pylon
 from motion_tracking.utils.ball_movements import BallMovements
 
 
-def imgs_to_video(imgs, fps, out_path):
-    '''Write video from a list of images'''
-    import cv2
-
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    out = cv2.VideoWriter(out_path, fourcc, fps, imgs[0].shape[:2][::-1], 0)
-    for i, img in enumerate(imgs):
-        out.write(img)
-    out.release()
-
-
-def write_videos(path):
-
-    print('Writing videos...')
-    files = glob.glob(path + '*.pkl')
-
-    for f in files:
-        imgs = pickle.load(open(f, 'rb'))
-        for i, camera_images in enumerate(imgs):
-            time = f.split('_')[-1][:-4]
-            imgs_to_video(camera_images, 1, path + time + 'cam' + str(i) + '.mp4')
-
-
 def attach_cameras(tl_factory, camera_devices):
     try:
         # Create an array of instant cameras for the found devices
@@ -69,6 +46,7 @@ class ImageAcquisition:
 
     def run(self):
         self.cam_array.StartGrabbing(pylon.GrabStrategy_OneByOne)
+
     def stop(self):
         self.cam_array.StopGrabbing()
 
@@ -176,4 +154,4 @@ class ImageAcquisition:
 
         self.stop()
         recording_end_time = time.perf_counter()
-        return imgs, recording_end_time-recording_start_time
+        return imgs, recording_end_time - recording_start_time

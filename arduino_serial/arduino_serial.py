@@ -4,18 +4,26 @@ import time
 
 from arduino_serial import write_order, Order, read_order, write_i8, write_i16
 from arduino_serial.utils import open_serial_port
+from utils import read_yaml
 
 
 class ArduinoSerial:
 
-    def __init__(self, baudrate, fps, exposure_time):
+    def __init__(self):
+
+        config = read_yaml("config.yml")["ARDUINO_PARAMS"]
+
+        self.baudrate = config["BAUD_RATE"]
+        self.fps = config["FPS"]
+        self.exposure_time = config["EXPOSURE_TIME"]
 
         self.serial_file = 0
-        self.baudrate = baudrate
-        self.fps = fps
-        self.exposure_time = exposure_time
 
-    def connect_arduino(self):
+        if not self.connect():
+            print("Connection with Arduino failed!")
+            raise Exception
+
+    def connect(self):
         try:
             self.serial_file = open_serial_port(baudrate=self.baudrate, timeout=None)
         except Exception as e:
@@ -43,6 +51,7 @@ class ArduinoSerial:
         else:
             return 0
 
+    def configure_hardware_trigger(self):
         # Write all required parameters for the  hardware trigger of the camera before starting it
         write_order(self.serial_file, Order.CONFIGURE_CAM_FPS)
         fps_to_us = int((1/self.fps)*1000000)
@@ -50,21 +59,20 @@ class ArduinoSerial:
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [FPS] successfully!")
         else:
-            return 0
+            raise Exception
 
         write_order(self.serial_file, Order.CONFIGURE_CAM_EXPOSURE_TIME)
         write_i16(self.serial_file, self.exposure_time)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Hardware trigger configured [EXPOSURE_TIME] successfully!")
         else:
-            return 0
+            raise Exception
 
         write_order(self.serial_file, Order.START_CAM)
         if read_order(self.serial_file) == Order.RECEIVED:
             print("Camera hardware triggering started!")
-            return 1
         else:
-            return 0
+            raise Exception
 
     def switch_left_led(self, turn_on_left):
 

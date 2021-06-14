@@ -2,21 +2,17 @@ import multiprocessing
 import pickle
 import time
 
-import yaml
-
-from image_acquisition.image_acquisition import ImageAcquisition, write_videos
+from image_acquisition.image_acquisition import ImageAcquisition
+from image_acquisition.utils import write_videos
 from motion_tracking.utils.ball_movements import BallMovements
 from arduino_serial.arduino_serial import ArduinoSerial
 from motion_tracking.callback.movement_callback import MovementCallback
 from motion_tracking.fictrac_handler.driver import FicTracDriver
-
-
-def read_yaml(file_path):
-    with open(file_path, "r") as f:
-        return yaml.safe_load(f)
+from utils import read_yaml
 
 
 def performance_test(status):
+
     while True:
         print('Running performance test!')
         time.sleep(5)
@@ -27,13 +23,13 @@ def performance_test(status):
         status.value = BallMovements.BALL_STOPPED.value
 
 
-def run_fictrac_process(status):
+def run_motion_tracking_process(status):
 
-    config = read_yaml("config.yml")["FICTRAC_PARAMS"]
+    motion_tracking_config = read_yaml("config.yml")["FICTRAC_PARAMS"]
 
-    fictrac_config = config["FICTRAC_CONFIGURATION_FILE"]
-    fictrac_console_out = config["FICTRAC_CONSOLE_OUT_FILE"]
-    fic_trac_bin_path = config["FICTRAC_BIN_PATH"]
+    fictrac_config = motion_tracking_config["FICTRAC_CONFIGURATION_FILE"]
+    fictrac_console_out = motion_tracking_config["FICTRAC_CONSOLE_OUT_FILE"]
+    fic_trac_bin_path = motion_tracking_config["FICTRAC_BIN_PATH"]
 
     TESTING = read_yaml("config.yml")["TESTING"]
 
@@ -55,31 +51,33 @@ def run_fictrac_process(status):
         tracDrv.run()
 
 
-def run_acquisition_process(status):
+def run_image_acquisition_process(status):
 
-    config = read_yaml("config.yml")["BASLER_PARAMS"]
+    image_acquisition_config = read_yaml("config.yml")["IMAGE_ACQUISITION_PARAMS"]
 
-    #TODO serial number is randomly selecting a fictrac_handler cam at the moment
-    serial_numbers = config["SERIAL_NUMBERS"]
-    frame_size = config["FRAME_SIZE"]
-    output_path = config["OUTPUT_PATH"]
-    buffer = config["BUFFER"]
+    arduino_protocol = ArduinoSerial()
+    arduino_protocol.configure_hardware_trigger()
+
+    serial_numbers = image_acquisition_config["CAMERA_SERIAL_NUMBERS"]
+    frame_size = image_acquisition_config["FRAME_SIZE"]
+    output_path = image_acquisition_config["OUTPUT_PATH"]
+    buffer = image_acquisition_config["BUFFERED_FRAMES"]
 
     cameras = ImageAcquisition(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
 
-    captured_frames = []
     recording_time = 0
+    captured_frames = []
 
     while True:
 
         ball_status = BallMovements(status.value)
 
         if ball_status == BallMovements.BALL_MOVING:
-            # grab the available frames for each camera
+
             captured_frames, recording_time = cameras.grab_frames(status)
 
         elif ball_status == BallMovements.BALL_STOPPED:
-            # Fictrac is not registering movement anymore. Save the captured frames.
+
             if len(captured_frames):
 
                 if len(set(map(len, captured_frames))) == 0:
@@ -99,18 +97,9 @@ def run_acquisition_process(status):
                 captured_frames.clear()
 
 
-def run_experimentation_process(status):
+def run_experiment_execution_process(status):
 
-    config = read_yaml("config.yml")["ARDUINO_PARAMS"]
-    baud_rate = config["BAUD_RATE"]
-    fps = config["FPS"]
-    exposure_time = config["EXPOSURE_TIME"]
-
-    arduino_protocol = ArduinoSerial(baud_rate, fps, exposure_time)
-
-    if not arduino_protocol.connect_arduino():
-        print("Connection with Arduino failed!")
-        raise Exception
+    arduino_protocol = ArduinoSerial()
 
     while True:
 
@@ -119,22 +108,6 @@ def run_experimentation_process(status):
             arduino_protocol.switch_left_led(True)
         if ball_status == BallMovements.BALL_STOPPED:
             arduino_protocol.switch_left_led(False)
-
-        ''' 
-       if ball_status == BallMovements.BALL_ROTATING_LEFT:
-            # turn the left LED ON
-            arduino_protocol.switch_left_led(True)
-            arduino_protocol.switch_right_led(False)
-
-        elif ball_status == BallMovements.BALL_ROTATING_RIGHT:
-            # turn the right LED ON
-            arduino_protocol.switch_right_led(True)
-            arduino_protocol.switch_left_led(False)
-
-        elif ball_status == BallMovements.BALL_STOPPED:
-            # turn both LEDs OFF
-            arduino_protocol.switch_left_led(False)
-            arduino_protocol.switch_right_led(False) '''
 
 
 if __name__ == "__main__":
@@ -154,14 +127,14 @@ if __name__ == "__main__":
 
     shared_status = multiprocessing.Manager().Value('i', BallMovements.BALL_STOPPED)
 
-    process1 = multiprocessing.Process(target=run_acquisition_process, args=(shared_status,))
-    process2 = multiprocessing.Process(target=run_fictrac_process, args=(shared_status,))
-    process3 = multiprocessing.Process(target=run_experimentation_process, args=(shared_status,))
+    image_acquisition_process = multiprocessing.Process(target=run_image_acquisition_process, args=(shared_status,))
+    motion_tracking_process = multiprocessing.Process(target=run_motion_tracking_process, args=(shared_status,))
+    experiment_execution_process = multiprocessing.Process(target=run_experiment_execution_process, args=(shared_status,))
 
-    process1.start()
-    process2.start()
-    process3.start()
+    image_acquisition_process.start()
+    motion_tracking_process.start()
+    experiment_execution_process.start()
 
-    process1.join()
-    process2.join()
-    process3.join()
+    image_acquisition_process.join()
+    motion_tracking_process.join()
+    experiment_execution_process.join()
