@@ -23,13 +23,13 @@ def performance_test(status):
 
 def run_motion_tracking_process(status):
 
-    motion_tracking_config = read_yaml("config.yml")["FICTRAC_PARAMS"]
+    motion_tracking_config = read_yaml("config.yaml")["FICTRAC_PARAMS"]
 
     fictrac_config = motion_tracking_config["FICTRAC_CONFIGURATION_FILE"]
     fictrac_console_out = motion_tracking_config["FICTRAC_CONSOLE_OUT_FILE"]
     fic_trac_bin_path = motion_tracking_config["FICTRAC_BIN_PATH"]
 
-    TESTING = read_yaml("config.yml")["TESTING"]
+    TESTING = read_yaml("config.yaml")["TESTING"]
 
     if TESTING:
         performance_test(status)
@@ -51,7 +51,7 @@ def run_motion_tracking_process(status):
 
 def run_image_acquisition_process(status):
 
-    image_acquisition_config = read_yaml("config.yml")["IMAGE_ACQUISITION_PARAMS"]
+    image_acquisition_config = read_yaml("config.yaml")["IMAGE_ACQUISITION_PARAMS"]
 
     arduino_protocol = ArduinoSerial()
     arduino_protocol.configure_hardware_trigger()
@@ -97,15 +97,15 @@ def run_image_acquisition_process(status):
 
 def run_experiment_execution_process(status):
 
-    arduino_protocol = ArduinoSerial()
+    arduino = ArduinoSerial()
 
     while True:
 
         ball_status = BallMovements(status.value)
         if ball_status == BallMovements.BALL_MOVING:
-            arduino_protocol.switch_left_led(True)
+            arduino.switch_left_led(True)
         if ball_status == BallMovements.BALL_STOPPED:
-            arduino_protocol.switch_left_led(False)
+            arduino.switch_left_led(False)
 
 
 if __name__ == "__main__":
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     EXPORT_VIDEOS = False
 
     if EXPORT_VIDEOS:
-        config = read_yaml("config.yml")["IMAGE_ACQUISITION_PARAMS"]
+        config = read_yaml("config.yaml")["IMAGE_ACQUISITION_PARAMS"]
         write_videos(config["OUTPUT_PATH"])
         exit(0)
 

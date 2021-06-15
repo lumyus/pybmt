@@ -11,7 +11,7 @@ class ArduinoSerial:
 
     def __init__(self):
 
-        arduino_config = read_yaml("config.yml")["ARDUINO_PARAMS"]
+        arduino_config = read_yaml("config.yaml")["ARDUINO_PARAMS"]
 
         self.baudrate = arduino_config["BAUD_RATE"]
         self.fps = arduino_config["FPS"]
