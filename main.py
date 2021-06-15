@@ -13,15 +13,18 @@ from utils import read_yaml, BallMovements, write_videos
 
 
 def performance_test(status):
+    test_config = read_yaml("config.yml")["TESTING"]
+    test_duration = test_config["TEST_DURATION"]
+    fps_during_test = test_config["TEST_FPS"]
 
     while True:
-        print('Running performance test...')
+
+        print(f'Running performance test for {test_duration} seconds. Total frames to be acquired: {fps_during_test*test_duration}')
         time.sleep(5)
         status.value = BallMovements.BALL_MOVING.value
-        starttime = time.perf_counter()
-        time.sleep(30)
-        print(f'Time for experiment: {time.perf_counter() - starttime}')
+        time.sleep(test_duration)
         status.value = BallMovements.BALL_STOPPED.value
+        print(f'Performance test completed!')
 
 
 def run_motion_tracking_process(status):
@@ -66,7 +69,7 @@ def run_image_acquisition_process(status):
 
     cameras = ImageAcquisition(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
 
-    recording_time = 0
+    acquisition_time = 0
     captured_frames = []
 
     while True:
@@ -75,7 +78,7 @@ def run_image_acquisition_process(status):
 
         if ball_status == BallMovements.BALL_MOVING:
 
-            captured_frames, recording_time = cameras.grab_frames(status)
+            captured_frames, acquisition_time = cameras.grab_frames(status)
 
         elif ball_status == BallMovements.BALL_STOPPED:
 
@@ -87,14 +90,16 @@ def run_image_acquisition_process(status):
                     break
 
                 frames_per_camera = len(captured_frames[0])
-                average_fps_obtained = frames_per_camera / recording_time
+                average_acquisition_fps = frames_per_camera / acquisition_time
+
+                print(f"Acquisition stopped. Total recorded frames: {frames_per_camera}. Acquisition FPS: {average_acquisition_fps}")
 
                 time_stamp = time.strftime("%Y%m%d-%H%M%S")
                 print(f'Saving the data..')
                 saving_time = time.perf_counter()
                 pickle.dump(captured_frames, open(output_path + 'results_' + time_stamp + '.pkl', 'wb'))
                 print(
-                    f"Saving completed within {time.perf_counter()-saving_time} seconds. Exported frames: {frames_per_camera}. Averaged FPS during recording: {average_fps_obtained}")
+                    f"Saving completed within {time.perf_counter()-saving_time} seconds. Exported frames: {frames_per_camera}. Averaged FPS during recording: {average_acquisition_fps}")
                 captured_frames.clear()
 
 
