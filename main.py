@@ -119,7 +119,7 @@ if __name__ == "__main__":
     EXPORT_VIDEOS = False
 
     if EXPORT_VIDEOS:
-        config = read_yaml("config.yml")["BASLER_PARAMS"]
+        config = read_yaml("config.yml")["IMAGE_ACQUISITION_PARAMS"]
         write_videos(config["OUTPUT_PATH"])
         exit(0)
 
