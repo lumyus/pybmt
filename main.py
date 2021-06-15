@@ -1,6 +1,9 @@
 import multiprocessing
 import pickle
 import time
+from collections import deque
+
+import numpy
 
 from image_acquisition.image_acquisition import ImageAcquisition
 from arduino_serial.arduino_serial import ArduinoSerial
@@ -114,7 +117,8 @@ if __name__ == "__main__":
 
     # Easiest way to connect a specific camera to fictrac_handler:
     # Pass a list of cameras that we want to connect to. The one not on the list will be connected to Fictrac
-    # We need to start the Fictrac process after the cameras have been initialized
+    # We need to start the Fictrac process after the cameras have been initialize
+
 
     EXPORT_VIDEOS = False
 

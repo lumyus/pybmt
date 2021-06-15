@@ -148,9 +148,10 @@ class ImageAcquisition:
 
             for i, camera in enumerate(self.cam_array):
                 # Wait for an image and then retrieve it. A timeout of 5000 ms is used.
-                grabResult = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
-                imgs[i].append(grabResult.GetArray())
-                grabResult.Release()
+                grab = camera.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
+                if grab and grab.GrabSucceeded():
+                    imgs[i].append(grab.GetArray())
+                    grab.Release()
 
         self.stop()
         recording_end_time = time.perf_counter()
