@@ -1,6 +1,7 @@
 from __future__ import print_function, division, absolute_import
 
 import time
+from multiprocessing import current_process
 
 from arduino_serial import write_order, Order, read_order, write_i8, write_i16
 from arduino_serial.utils import open_serial_port
@@ -32,7 +33,7 @@ class ArduinoSerial:
         is_connected = False
         # Initialize communication with Arduino
         while not is_connected:
-            print("Waiting for Arduino...")
+            print(f"[{current_process().name}] is waiting for Arduino...")
             write_order(self.serial_file, Order.HELLO)
             bytes_array = bytearray(self.serial_file.read(1))
             if not bytes_array:
@@ -42,7 +43,7 @@ class ArduinoSerial:
             if byte in [Order.HELLO.value, Order.ALREADY_CONNECTED.value]:
                 is_connected = True
 
-        print("Connecting to Arduino...")
+        print(f"[{current_process().name}] is connecting to Arduino...")
         read_order(self.serial_file)
         read_order(self.serial_file)
 

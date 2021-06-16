@@ -125,9 +125,9 @@ if __name__ == "__main__":
 
     shared_ball_status = multiprocessing.Manager().Value('i', BallMovements.BALL_STOPPED)
 
-    image_acquisition_process = multiprocessing.Process(target=run_image_acquisition_process, args=(shared_ball_status,))
-    motion_tracking_process = multiprocessing.Process(target=run_motion_tracking_process, args=(shared_ball_status,))
-    experiment_execution_process = multiprocessing.Process(target=run_experiment_execution_process, args=(shared_ball_status,))
+    image_acquisition_process = multiprocessing.Process(name='image_acquisition_process', target=run_image_acquisition_process, args=(shared_ball_status,))
+    motion_tracking_process = multiprocessing.Process(name='motion_tracking_process', target=run_motion_tracking_process, args=(shared_ball_status,))
+    experiment_execution_process = multiprocessing.Process(name='experiment_execution_process', target=run_experiment_execution_process, args=(shared_ball_status,))
 
     image_acquisition_process.start()
     motion_tracking_process.start()
