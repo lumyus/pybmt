@@ -42,6 +42,6 @@ def write_videos(path):
         imgs = pickle.load(open(f, 'rb'))
         for i, camera_images in enumerate(imgs):
             time = f.split('_')[-1][:-4]
-            imgs_to_video(camera_images, 1, path + time + 'cam' + str(i) + '.mp4')
+            imgs_to_video(camera_images, 100, path + time + 'cam' + str(i) + '.mp4')
 
 

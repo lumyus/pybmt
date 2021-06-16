@@ -20,10 +20,6 @@ class ArduinoSerial:
 
         self.serial_file = 0
 
-        if not self.connect():
-            print("Connection with Arduino failed!")
-            raise Exception
-
     def connect(self):
         try:
             self.serial_file = open_serial_port(baudrate=self.baudrate, timeout=None)
@@ -48,7 +44,8 @@ class ArduinoSerial:
         read_order(self.serial_file)
 
         if read_order(self.serial_file) == Order.RECEIVED:
-            print("Connected to Arduino!")
+            print(f"[{current_process().name}] is connected to Arduino!")
+            self.configure_hardware_trigger()
         else:
             return 0
 

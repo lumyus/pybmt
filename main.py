@@ -53,15 +53,13 @@ def run_image_acquisition_process(status):
 
     image_acquisition_config = read_yaml("config.yaml")["IMAGE_ACQUISITION_PARAMS"]
 
-    arduino_protocol = ArduinoSerial()
-    arduino_protocol.configure_hardware_trigger()
-
     serial_numbers = image_acquisition_config["CAMERA_SERIAL_NUMBERS"]
     frame_size = image_acquisition_config["FRAME_SIZE"]
     output_path = image_acquisition_config["OUTPUT_PATH"]
     buffer = image_acquisition_config["BUFFERED_FRAMES"]
 
     cameras = ImageAcquisition(shape=frame_size, serial_numbers=serial_numbers, buffer=buffer)
+    cameras.run()
 
     recording_time = 0
     captured_frames = []
@@ -98,6 +96,7 @@ def run_image_acquisition_process(status):
 def run_experiment_execution_process(status):
 
     arduino = ArduinoSerial()
+    arduino.connect()
 
     while True:
 
@@ -116,7 +115,7 @@ if __name__ == "__main__":
     # Pass a list of cameras that we want to connect to. The one not on the list will be connected to Fictrac
     # We need to start the Fictrac process after the cameras have been initialized
 
-    EXPORT_VIDEOS = False
+    EXPORT_VIDEOS = True
 
     if EXPORT_VIDEOS:
         config = read_yaml("config.yaml")["IMAGE_ACQUISITION_PARAMS"]

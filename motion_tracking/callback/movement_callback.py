@@ -14,7 +14,7 @@ class MovementCallback(PyBMTCallback):
     stimuli response.
     """
 
-    def __init__(self, speed_threshold=0.009, num_frames_mean=25, shared_status=None):
+    def __init__(self, speed_threshold=0.005, num_frames_mean=10, shared_status=None):
         """
         Setup a closed loop experiment that keeps track of a running average of the ball speed and generates a stimulus
         when the speed crosses a threshold.

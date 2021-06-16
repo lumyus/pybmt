@@ -139,7 +139,7 @@ class ImageAcquisition:
 
         imgs = [[] for i in range(self.cam_array.GetSize())]
         recording_start_time = time.perf_counter()
-        self.run()
+        #self.run()
 
         while self.cam_array.IsGrabbing():
 
@@ -152,6 +152,6 @@ class ImageAcquisition:
                 imgs[i].append(grabResult.GetArray())
                 grabResult.Release()
 
-        self.stop()
+        #self.stop()
         recording_end_time = time.perf_counter()
         return imgs, recording_end_time - recording_start_time
